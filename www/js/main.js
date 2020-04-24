@@ -65,7 +65,7 @@
         var screens = {
             home: document.getElementById('homeScreen'),
             instruction: document.getElementById('instructionScreen'),
-            connect: document.getElementById('connect')
+            setting: document.getElementById('setting')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
