@@ -64,10 +64,11 @@
         // Pantallas de la aplicación referenciadas en un objeto
         var screens = {
             home: document.getElementById('homeScreen'),
-            instruction: document.getElementById('instructionScreen')
+            instruction: document.getElementById('instructionScreen'),
+            setting: document.getElementById('setting')
         };
 
-        // Escuchador de cambio de estado, en este caso para cuando el app deje de
+        // Escuchador de cambio de estado, en este caso para cuando el app deje de  
         // recargar, cuando se realiza esta acción el subscriptor desaparece
         var loadingUnsubscribe = store.subscribe(function (state) {
             if (!state.isLoading) {
