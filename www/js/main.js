@@ -64,7 +64,8 @@
         // Pantallas de la aplicación referenciadas en un objeto
         var screens = {
             home: document.getElementById('homeScreen'),
-            instruction: document.getElementById('instructionScreen')
+            instruction: document.getElementById('instructionScreen'),
+            connection: document.getElementById('loginScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de
@@ -111,3 +112,5 @@
  */
 // eslint-disable-next-line no-unused-vars
 var navigate = function (screen) { };
+
+"use strict";
