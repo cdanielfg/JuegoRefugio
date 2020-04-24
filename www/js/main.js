@@ -65,7 +65,9 @@
         var screens = {
             home: document.getElementById('homeScreen'),
             instruction: document.getElementById('instructionScreen'),
-            setting: document.getElementById('setting')
+            setting: document.getElementById('setting'),
+            credits: document.getElementById('credits'),
+            tepa: document.getElementById('tepa')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
