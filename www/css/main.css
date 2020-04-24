@@ -188,7 +188,49 @@ body {
     margin-top: 1.5rem;
     width: 180px;
   }
-  .form-group{
+
+  .estilotextarea 
+  {
+    width:50%;
+    height:3%;
+    border: 1px solid #990000;
+    border-radius: 5px;
+  }
+.connect{
+  text-align: center;
+}
+
+.divCredits {
+  text-align: center;
+  width: 28%;
+  height: 26%;
+  margin-left: 0%;
+  padding-top: 0em;
+  background-color: white;
+  border-radius: 0%;
+}
+.divTepa{
+  text-align: center;
+  width: 28%;
+  height: 26%;
+  padding-left: 2em;
+
+  background-color: white;
+  border-radius: 4%;
+}
+
+.itemDiv{
+  display: inline-block;
+
+}
+#name{
+  font-size: 25px;
+}
+.scrollDiv{
+  overflow: auto;
+}
+
+.form-group{
     text-align: center;
     margin:10px;
     padding:10px;
