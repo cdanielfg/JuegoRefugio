@@ -195,3 +195,13 @@ body {
     width: 180px;
   }
 
+  .estilotextarea 
+  {
+    width:50%;
+    height:3%;
+    border: 1px solid #990000;
+    border-radius: 5px;
+  }
+.connect{
+  text-align: center;
+}
