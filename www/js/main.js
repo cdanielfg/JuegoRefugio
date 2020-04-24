@@ -74,7 +74,7 @@
             connection: document.getElementById('loginScreen')
         };
 
-        // Escuchador de cambio de estado, en este caso para cuando el app deje de
+        // Escuchador de cambio de estado, en este caso para cuando el app deje de  
         // recargar, cuando se realiza esta acción el subscriptor desaparece
         var loadingUnsubscribe = store.subscribe(function (state) {
             if (!state.isLoading) {
@@ -118,3 +118,5 @@
  */
 // eslint-disable-next-line no-unused-vars
 var navigate = function (screen) { };
+
+"use strict";

@@ -20,7 +20,9 @@
             <h1>Buddy Finder</h1>
             <button class="btn-block home-btn">Jugar</button>
             <button class="btn-block home-btn" onclick="navigate('instruction')">Instrucciones</button>
-            <button class="btn-block home-btn">Conectar</button>
+            <button class="btn-block home-btn" onclick="navigate('setting')">Acerca de</button>
+            <button class="btn-block home-btn" onclick="navigate('connect')">Conectar</button>
+            <button class="btn-block home-btn" onclick="navigate('connection')">Conectar</button>
         </section>
 
         <section class="instruction screen center-items" id="instructionScreen">
@@ -81,7 +83,7 @@
             <button class="btn-block home-btn">Apoyar a la fundación</button><br>
             <button onclick="navigate('home')">Go to home</button>
         </section>
-
+      
         <section class="credits screen center-items scrollDiv" id="creditsScreen">
 
             <br><br><br><br><br><br><br><br><br><br>
@@ -164,7 +166,6 @@
             <center>
                 <h1>TEPA<br>FOUNDATION</h1>
             </center>
-
             <div class="divTepa scrollDiv">
                 <p class="itemDiv">
                     <h2>What is it?</h2>
@@ -212,6 +213,25 @@
                 <input type="submit" value="Ingresar con Facebook" class="btn btn-primary"><br><br>
                 <a href="#">Crear nueva cuenta</a>
             </form>
+            <br> 
+        </section>
+  
+        <section class="login screen center-items" id="loginScreen">
+                <form class="loginForm">
+                    <h2 class="text-center">Iniciar Sesión</h2>
+                    <div class="form-group">
+                        <label>Usuario</label><br>
+                        <input type="text" name="user" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label><br>
+                        <input type="password" name="password" class="form-control">
+                    </div>
+                    <input type="submit" value="Iniciar" class="btn btn-primary"><br>
+                    <input type="submit" value="Ingresar con Facebook" class="btn btn-primary"><br><br>
+                    <a href="#">Crear nueva cuenta</a>
+                </form>
+        </section>
 
     </main>
 
