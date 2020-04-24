@@ -20,6 +20,7 @@
             <h1>Buddy Finder</h1>
             <button class="btn-block home-btn">Jugar</button>
             <button class="btn-block home-btn" onclick="navigate('instruction')">Instrucciones</button>
+            <button class="btn-block home-btn" onclick="navigate('setting')">Configuración</button>
             <button class="btn-block home-btn" onclick="navigate('connect')">Conectar</button>
         </section>
 
@@ -28,17 +29,15 @@
             <button onclick="navigate('home')">Go to home</button>
         </section>
 
-        <section class="connect screen center-items" id="connect">
-    
-            <div>
-                <form action="/action_page.php">
-                  <input type="text" id="fname" name="firstname" placeholder="Username"> <br>
-                  <input type="text" id="lname" name="lastname" placeholder="Email"> <br>
-                  <input type="text" id="lname" name="lastname" placeholder="Password"> <br><br>
-                  <input type="submit" value="Send"> <br>
-                </form>
-                <button class="btn-block home-btn">Conectar con facebook</button><br>
-              </div>
+        <section class="instruction screen center-items" id="connect">
+            <button class="btn-block home-btn">Conectar con facebook</button><br>
+            <button onclick="navigate('home')">Go to home</button>
+        </section>
+        <section class="instruction screen center-items" id="setting">
+            <button class="btn-block home-btn">Créditos</button><br>
+            <button class="btn-block home-btn">Instrucciones</button><br>
+            <button class="btn-block home-btn">Fundaciín TEPA</button><br>
+            <button class="btn-block home-btn">Apoyar a la fundación</button><br>
             <button onclick="navigate('home')">Go to home</button>
         </section>
     </main>
