@@ -65,12 +65,18 @@
         var screens = {
             home: document.getElementById('homeScreen'),
             instruction: document.getElementById('instructionScreen'),
+
             store: document.getElementById('storeScreen'),
             map: document.getElementById('mapScreen'),
             book: document.getElementById('bookScreen')
+
+            setting: document.getElementById('setting'),
+            credits: document.getElementById('credits'),
+            tepa: document.getElementById('tepa')
+
         };
 
-        // Escuchador de cambio de estado, en este caso para cuando el app deje de
+        // Escuchador de cambio de estado, en este caso para cuando el app deje de  
         // recargar, cuando se realiza esta acción el subscriptor desaparece
         var loadingUnsubscribe = store.subscribe(function (state) {
             if (!state.isLoading) {
