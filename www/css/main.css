@@ -195,3 +195,30 @@ body {
     width: 180px;
   }
 
+  .store-container{
+    margin: 10% 3% 10% 3%;
+    padding: 1px 20px 30px 20px;
+    text-align: center;
+    /*background-image: url("../img/fondo.png"); */
+    background-color: #33E6FF;
+    border-radius: 30px;
+  }
+
+  .store-items-container{
+    margin-top: 5%;
+  }
+
+  .store-booster{
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 20px;
+  }
+
+  .store-logo-booster{
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    display: inline-block;
+  }
+
