@@ -195,27 +195,46 @@ body {
     width: 180px;
   }
 
-  .store-container{
+  .map {
+    background-position: center center;
+    justify-content: center;
+    align-items: center
+  }
+
+  .map-container {
+    margin: 20% 3% 30% 3%;
+    padding: 5px 20px 30px 20px;
+    text-align: center;
+    background-image: url("../img/descarga.jpg");
+    border-radius: 30px;
+    float: center;
+  }
+
+  .map-item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .store-container {
     margin: 10% 3% 10% 3%;
     padding: 1px 20px 30px 20px;
     text-align: center;
-    /*background-image: url("../img/fondo.png"); */
     background-color: #33E6FF;
     border-radius: 30px;
   }
 
-  .store-items-container{
+  .store-items-container {
     margin-top: 5%;
   }
 
-  .store-booster{
+  .store-booster {
     width: 200px;
     height: 50px;
     margin-left: 20px;
     border-radius: 20px;
   }
 
-  .store-logo-booster{
+  .store-logo-booster {
     width: 50px;
     height: 50px;
     border-radius: 150px;

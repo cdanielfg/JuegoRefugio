@@ -65,7 +65,9 @@
         var screens = {
             home: document.getElementById('homeScreen'),
             instruction: document.getElementById('instructionScreen'),
-            store: document.getElementById('storeScreen')
+            store: document.getElementById('storeScreen'),
+            map: document.getElementById('mapScreen'),
+            book: document.getElementById('bookScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de
