@@ -65,9 +65,15 @@
         var screens = {
             home: document.getElementById('homeScreen'),
             instruction: document.getElementById('instructionScreen'),
+
+            store: document.getElementById('storeScreen'),
+            map: document.getElementById('mapScreen'),
+            book: document.getElementById('bookScreen')
+
             setting: document.getElementById('setting'),
             credits: document.getElementById('credits'),
             tepa: document.getElementById('tepa')
+
             connection: document.getElementById('loginScreen')
         };
 
