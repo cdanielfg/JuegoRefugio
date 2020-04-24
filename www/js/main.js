@@ -68,6 +68,7 @@
             setting: document.getElementById('setting'),
             credits: document.getElementById('credits'),
             tepa: document.getElementById('tepa')
+            connection: document.getElementById('loginScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
@@ -114,3 +115,5 @@
  */
 // eslint-disable-next-line no-unused-vars
 var navigate = function (screen) { };
+
+"use strict";
