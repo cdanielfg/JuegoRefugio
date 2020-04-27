@@ -138,6 +138,12 @@ html {
   transform: none;
 }
 
+.objeto{
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
  /* Splash Screen styles */
   
   .splash {
@@ -422,6 +428,88 @@ input::placeholder{
 /* Store Styles */
 #restaurant-background{
   background-image: url(../img/FONDO_Restaurante-1.svg);
+  width: 480px;
+  height: 990px;
+}
+#restaurant-chair1{
+  top: 530px;
+    left: 100px;
+    width: 130px;
+    height: 130px;
+    background-image: url(../img/restaurant_chair-1.svg);
+    z-index: 4;
+}
+#restaurant-chair2{
+  top: 400px;
+  left: -80px;
+  width: 130px;
+  height: 130px;
+  background-image: url(../img/restaurant_chair-2.svg);
+  z-index: 5;
+}
+#restaurant-door1{
+  top: -270px;
+  left: 180px;
+  width: 200px;
+  height: 195px;
+  background-image: url(../img/restaurant_door-1.svg);
+}
+#restaurant-door2{
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/restaurant_door-7.svg);
+}
+#restaurant-car{
+  top: 180px;
+  left: 140px;
+  width: 340px;
+  height: 312px;
+  background-image: url(../img/restaurant_car.svg);
+}
+#restaurant-table{
+  top: 270px;
+  left: 10px;
+  width: 150px;
+  height: 130px;
+  background-image: url(../img/restaurant_table-1.svg);
+  z-index: 3;
+}
+#restaurant-bush1{
+  top: -346px;
+  left: -20px;
+  width: 140px;
+  height: 80px;
+  background-image: url(../img/restaurant_bush-1.svg);
+  z-index: 1;
+}
+#restaurant-bush2{
+  top: -430px;
+  left: 60px;
+  width: 140px;
+  height: 80px;
+  background-image: url(../img/restaurant_bush-2.svg);
+  z-index: 2;
+}
+#top-sign{
+  top: -1450px;
+  left: 112px;
+  width: 260px;
+  height: 370px;
+  background-image: url(../img/top-sign-10.svg);
+}
+#money-bag{
+  top: -1250px;
+    left: 350px;
+    width: 40px;
+    height: 40px;
+  background-image: url(../img/Money_Bag-1.svg);
+}
+
+/* Park Styles */
+#park-background{
+  background-image: url(../img/FONDO_Parque-1.svg);
   width: 480px;
   height: 990px;
 }

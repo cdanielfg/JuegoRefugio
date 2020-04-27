@@ -76,7 +76,8 @@
             tepa: document.getElementById('tepaScreen'),
             connection: document.getElementById('loginScreen'),
             signup: document.getElementById('signupScreen'),
-            restaurant: document.getElementById('restaurantScreen')
+            restaurant: document.getElementById('restaurantScreen'),
+            park: document.getElementById('parkScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
