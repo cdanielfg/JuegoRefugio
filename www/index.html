@@ -8,20 +8,26 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+
+
 </head>
 
 <body>
     <main class="app">
-        <section class="splash loading screen center-items" id="splashScreen">
-            <div>Aqui va el splash</div>
+        <section class="splash loading screen" id="splashScreen">
+            <video class="splash-app-video" src="img/SPLASH_Logo_BuddyFinder.mp4" autoplay muted loop></video>
+        </section>
+
+        <section class="splash loading screen center-items" id="thanksScreen">
+            <video class="splash-app-video" src="img/Welcome message.mp4" autoplay muted loop></video>
         </section>
 
         <section class="home screen active" id="homeScreen">
-            <h1>Buddy Finder</h1>
-            <button class="btn-block home-btn">Jugar</button>
-            <button class="btn-block home-btn" onclick="navigate('instruction')">Instrucciones</button>
-            <button class="btn-block home-btn" onclick="navigate('setting')">Acerca de</button>
-            <button class="btn-block home-btn" onclick="navigate('connection')">Conectar</button>
+            <div class="home-btn">PLAY</div>
+            <div class="home-btn" onclick="navigate('instruction')">HOW TO PLAY</div>
+            <div class="home-btn" onclick="navigate('setting')">SUPPORT US</div>
+            <!--
+            <button class="btn-block home-btn" onclick="navigate('connection')">Conectar</button>-->
         </section>
 
         <section class="instruction screen center-items" id="instructionScreen">
@@ -72,25 +78,20 @@
 
         <section class="instruction screen center-items" id="connect">
             <button class="btn-block home-btn">Conectar con facebook</button><br>
-            <button onclick="navigate('home')">Go to home</button>
         </section>
 
-        <section class="instruction screen center-items" id="settingScreen">
-            <button class="btn-block home-btn" onclick="navigate('credits')">Créditos</button><br>
-            <button class="btn-block home-btn">Instrucciones</button><br>
-            <button class="btn-block home-btn" onclick="navigate('tepa')">Fundación TEPA</button><br>
-            <button class="btn-block home-btn">Apoyar a la fundación</button><br>
-            <button onclick="navigate('home')">Go to home</button>
+        <section class="setting screen center-items" id="settingScreen">
+            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Credits.svg" alt="">
+            </div>
+            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Hot-to-play.svg" alt="">
+            </div>
+            <div class="button-option" onclick="navigate('tepa')"> <img class="img-credito-button" src="img/botones/TEPA.svg" alt="">
+            </div>
+            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Support.svg" alt="">
+            </div>
         </section>
 
-        <section class="credits screen center-items scrollDiv" id="creditsScreen">
-
-            <br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br>
-
+        <section class="credits screen center-items justify-content-between scrollDiv" id="creditsScreen">
             <h1>Créditos</h1>
             <div class="divCredits">
                 <br>
@@ -198,22 +199,21 @@
         </section>
 
         <section class="login screen center-items" id="loginScreen">
-            <form class="loginForm">
-                <h2 class="text-center">Iniciar Sesión</h2>
-                <div class="form-group">
-                    <label>Usuario</label><br>
-                    <input type="text" name="user" class="form-control">
+            <div id="loginDiv" class="ajustarImg">
+                <div id="user" class="ajustarImg text-center">
+                    <input type="text" placeholder="Username" name="username" class="inputStyle text-center" id="userInput" required>
                 </div>
-                <div class="form-group">
-                    <label>Contraseña</label><br>
-                    <input type="password" name="password" class="form-control">
+                <div id="password" class="ajustarImg">
+                    <input type="password" name="password" placeholder="Password" class="inputStyle text-center" id="passwordInput" required>
                 </div>
-                <input type="submit" value="Iniciar" class="btn btn-primary"><br>
-                <input type="submit" value="Ingresar con Facebook" class="btn btn-primary"><br><br>
-                <a href="#">Crear nueva cuenta</a>
-            </form>
-            <br>
-            <button onclick="navigate('home')">Go to home</button>
+                <div id="loginButton" class="btnStyle ajustarImg" onclick="navigate('home')">
+                    
+                </div>
+                <div id="signUp" class="btnStyle ajustarImg" onclick="navigate('home')">
+                    
+                </div>
+                <div id="loginFacebook" class="btnStyle ajustarImg" onclick="navigate('home')">
+            </div>
         </section>
 
     </main>
