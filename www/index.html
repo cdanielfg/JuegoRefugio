@@ -23,7 +23,7 @@
         </section>
 
         <section class="home screen active" id="homeScreen">
-            <img class="img-credito-button" onclick="navigate('')" src="img/Botones Nav/Play.svg">
+            <img class="img-credito-button" onclick="navigate('map')" src="img/Botones Nav/Play.svg">
             <img class="btn-block" onclick="navigate('instruction')" src="img/Botones Nav/How to play.svg">
             <img class="btn-block" onclick="navigate('setting')" src="img/Botones Nav/Support us.svg">
             <!--
@@ -68,7 +68,7 @@
                 <img class="map-background-short" src="img/mapa-1.svg">
                 <img class="map-city map-item" src="img/city-1.svg">
                 <img class="map-park map-item" src="img/park-1.svg">
-                <img class="map-restaurant map-item" src="img/restaurant-1.svg">
+                <img class="map-restaurant map-item" src="img/restaurant-1.svg" onclick="navigate('restaurant')">
                 <img class="map-x" src="img/x.svg">
             </div>
             
@@ -233,6 +233,11 @@
                 <div id="signupFacebook" class="btnStyle ajustarImg" onclick="navigate('home')">
 
                 </div>
+            </div>
+        </section>
+        <section id="restaurantScreen" class="restaurant screen center-items">
+            <div id="restaurant-background" class="ajustarImg" onclick="navigate('map')">
+
             </div>
         </section>
     </main>
