@@ -418,3 +418,10 @@ input::placeholder{
     height: 70px;
   background-image: url(../img/FB\ sign\ up.svg);
 }
+
+/* Store Styles */
+#restaurant-background{
+  background-image: url(../img/FONDO_Restaurante-1.svg);
+  width: 480px;
+  height: 990px;
+}
