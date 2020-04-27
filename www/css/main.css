@@ -27,7 +27,9 @@ html {
 
 /* Font defaults */
 /* TODO: Add title, text fonts */
-
+*{
+  font-family: Baloo2-Bold;
+}
 /* General purpose styles */
 
 .d-flex {
