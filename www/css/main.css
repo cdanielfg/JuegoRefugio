@@ -22,14 +22,7 @@ body {
   
   /* Font defaults */
   /* TODO: Add title, text fonts */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  span {
+* {
     font-family: Baloo2-Regular;
   }
 
@@ -85,6 +78,7 @@ body {
     font-family: KGBlankSpaceSolid, sans-serif;
     text-shadow: 0 2px 3px #000;
     letter-spacing: 1px;
+    margin:3px;
   }
   
   .btn.btn-primary {
@@ -195,6 +189,52 @@ body {
     width: 180px;
   }
 
+  .map {
+    background-position: center center;
+    justify-content: center;
+    align-items: center
+  }
+
+  .map-container {
+    margin: 20% 3% 30% 3%;
+    padding: 5px 20px 30px 20px;
+    text-align: center;
+    background-image: url("../img/descarga.jpg");
+    border-radius: 30px;
+    float: center;
+  }
+
+  .map-item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .store-container {
+    margin: 10% 3% 10% 3%;
+    padding: 1px 20px 30px 20px;
+    text-align: center;
+    background-color: #33E6FF;
+    border-radius: 30px;
+  }
+
+  .store-items-container {
+    margin-top: 5%;
+  }
+
+  .store-booster {
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 20px;
+  }
+
+  .store-logo-booster {
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    display: inline-block;
+  }
+
   .estilotextarea 
   {
     width:50%;
@@ -205,3 +245,53 @@ body {
 .connect{
   text-align: center;
 }
+
+.divCredits {
+  text-align: center;
+  width: 28%;
+  height: 26%;
+  margin-left: 0%;
+  padding-top: 0em;
+  background-color: white;
+  border-radius: 0%;
+}
+.divTepa{
+  text-align: center;
+  width: 28%;
+  height: 26%;
+  padding-left: 2em;
+
+  background-color: white;
+  border-radius: 4%;
+}
+
+.itemDiv{
+  display: inline-block;
+
+}
+#name{
+  font-size: 25px;
+}
+.scrollDiv{
+  overflow: auto;
+}
+
+.form-group{
+    text-align: center;
+    margin:10px;
+    padding:10px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .form-control{
+    margin-top:10px;
+  }
+  input{
+    padding: 5px;
+    border-radius:10px;
+  }
+  a{
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+  }

@@ -65,7 +65,13 @@
         var screens = {
             home: document.getElementById('homeScreen'),
             instruction: document.getElementById('instructionScreen'),
-            setting: document.getElementById('setting')
+            store: document.getElementById('storeScreen'),
+            map: document.getElementById('mapScreen'),
+            book: document.getElementById('bookScreen'),
+            setting: document.getElementById('settingScreen'),
+            credits: document.getElementById('creditsScreen'),
+            tepa: document.getElementById('tepaScreen'),
+            connection: document.getElementById('loginScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
@@ -112,3 +118,5 @@
  */
 // eslint-disable-next-line no-unused-vars
 var navigate = function (screen) { };
+
+"use strict";
