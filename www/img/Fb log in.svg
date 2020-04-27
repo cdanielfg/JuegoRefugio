@@ -1,0 +1,6 @@
+<svg id="Fb_log_in" data-name="Fb log in" xmlns="http://www.w3.org/2000/svg" width="200" height="75" viewBox="0 0 200 75">
+  <rect id="Rectangle_1433" data-name="Rectangle 1433" width="200" height="74" rx="37" fill="#3c5a9a"/>
+  <text id="Log_In_with_Facebook" data-name="Log In with
+Facebook" transform="translate(65.265 32.34)" fill="#f1e5d9" font-size="24" font-family="Baloo2-SemiBold, 'Baloo 2'" font-weight="600"><tspan x="0" y="0">Log In with</tspan><tspan x="0" y="22">Facebook</tspan></text>
+  <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" d="M30.713,32.71l1.615-10.524H22.23V15.356c0-2.879,1.411-5.686,5.933-5.686h4.591V.711A55.983,55.983,0,0,0,24.605,0C16.289,0,10.853,5.04,10.853,14.165v8.021H1.609V32.71h9.244V58.15H22.23V32.71Z" transform="translate(10.396 8.073)" fill="#fff"/>
+</svg>

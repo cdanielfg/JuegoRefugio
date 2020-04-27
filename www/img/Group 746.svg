@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="422" height="258" viewBox="0 0 422 258">
+  <g id="Group_746" data-name="Group 746" transform="translate(-0.331 14.549)">
+    <text id="what_is_it_" data-name="what is it?" transform="translate(0.331 39.451)" fill="#62892b" font-size="50" font-family="Baloo2-ExtraBold, 'Baloo 2'" font-weight="800"><tspan x="0" y="0">WHAT IS IT?</tspan></text>
+    <g id="Rectangle_1427" data-name="Rectangle 1427" transform="translate(0.331 38.451)" fill="#62892b" stroke="#707070" stroke-width="1">
+      <path d="M0,0H331a91,91,0,0,1,91,91v23a91,91,0,0,1-91,91H91A91,91,0,0,1,0,114V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1,.5H331A90.5,90.5,0,0,1,421.5,91v23A90.5,90.5,0,0,1,331,204.5H91A90.5,90.5,0,0,1,.5,114V1A.5.5,0,0,1,1,.5Z" fill="none"/>
+    </g>
+  </g>
+</svg>
