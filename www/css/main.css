@@ -295,3 +295,19 @@ body {
     text-decoration: none;
     margin: 5px;
   }
+
+  /* setting Screen Styles */
+  .setting {
+    background-image: url(../img/fondos/information.svg);
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+  }
+  .button-option{
+    text-align: center;
+  }
+  .img-credito-button{
+    width: 70%;
+  }

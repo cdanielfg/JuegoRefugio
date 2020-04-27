@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+
+
 </head>
 
 <body>
@@ -72,15 +74,17 @@
 
         <section class="instruction screen center-items" id="connect">
             <button class="btn-block home-btn">Conectar con facebook</button><br>
-            <button onclick="navigate('home')">Go to home</button>
         </section>
 
-        <section class="instruction screen center-items" id="settingScreen">
-            <button class="btn-block home-btn" onclick="navigate('credits')">Créditos</button><br>
-            <button class="btn-block home-btn">Instrucciones</button><br>
-            <button class="btn-block home-btn" onclick="navigate('tepa')">Fundación TEPA</button><br>
-            <button class="btn-block home-btn">Apoyar a la fundación</button><br>
-            <button onclick="navigate('home')">Go to home</button>
+        <section class="setting screen center-items" id="settingScreen">
+            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Credits.svg" alt="">
+            </div>
+            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Hot-to-play.svg" alt="">
+            </div>
+            <div class="button-option" onclick="navigate('tepa')"> <img class="img-credito-button" src="img/botones/TEPA.svg" alt="">
+            </div>
+            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Support.svg" alt="">
+            </div>
         </section>
 
         <section class="credits screen center-items scrollDiv" id="creditsScreen">
@@ -215,7 +219,7 @@
             <br>
             <button onclick="navigate('home')">Go to home</button>
         </section>
-        
+
     </main>
 
     <script type="text/javascript" src="js/main.js"></script>
