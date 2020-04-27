@@ -74,7 +74,8 @@
             setting: document.getElementById('settingScreen'),
             credits: document.getElementById('creditsScreen'),
             tepa: document.getElementById('tepaScreen'),
-            connection: document.getElementById('loginScreen')
+            connection: document.getElementById('loginScreen'),
+            signup: document.getElementById('signupScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
