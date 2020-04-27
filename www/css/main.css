@@ -200,11 +200,124 @@ html {
     font-family: Baloo2-Bold;
   }
 
-/* Login Styles */
+  /* Map Screen Styles */
+  
+  .map-background-short {
+    width: 450px;
+    height: 445px;
+    position: absolute;
+    margin-left: -15px;
+    margin-top: 0%;
+    z-index: -1;
+    margin-bottom: 5%;
+    
+  }
+
+  .map-background {
+    width: 420px;
+    height: 440px;
+    margin: 10% 10% 10% 10%;
+    background-image: url("../img/mapa-2.svg");
+    background-size: cover;
+  }
+
+  .map-restaurant {
+    margin-top: 12%;
+    margin-left: 70%;
+    margin-bottom: 20%;
+  }
+
+  .map-city {
+    margin-top: 10%;
+    margin-left: 15%;
+  }
+
+  .map-park {
+    margin-top: 20%;
+    margin-left: 12%;
+  }
+
+  .map-item {
+    width: 80px;
+    height: 80px;
+  }
+
+  .map-x {
+    margin-top: 38px;
+    margin-left: 45%;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Store Screen Styles */
+
+  .store-background-short {
+    width: 398px;
+    height: 350px;
+    position: absolute;
+    margin-left: 2.9%;
+    margin-top: 0%;
+    z-index: -1;
+    background-size: cover;
+  }
+
+  .store-background {
+    margin: 10% 10% 10% 10%;
+    background-image: url("../img/Store_Top.svg");
+    background-size: cover;
+    
+  }
+
+  .store-container {
+    width: 450px;
+    padding: 30px 5px 10px 5px;
+    text-align: center;
+    
+  }
+
+  .store-items-container {
+    margin-top: 5%;
+  }
+
+  .store-background-booster {
+    width: 80px;
+    height: 160px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 45px 8px 45px 8px;
+    background-image: url("../img/Rectangle 1429.svg");
+    
+  }
+
+  .store-image-treat {
+    width: 50px;
+    height: 50px;
+    margin-top: 20%;
+  }
+
+  .store-amount {
+    margin-top: -5%;
+    color: gray;
+  }
+
+
+  .estilotextarea 
+  {
+    width:50%;
+    height:3%;
+    border: 1px solid #990000;
+    border-radius: 5px;
+  }
+.connect{
+  text-align: center;
+
+  /* Login Styles */
+  
 #loginDiv {
   width: 480px;
   height: 990px;
   background-image: url(../img/Log-in.svg);
+
 }
 #loginFacebook {
   top: 418px;
