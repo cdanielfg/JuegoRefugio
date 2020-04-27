@@ -23,11 +23,14 @@
         </section>
 
         <section class="home screen active" id="homeScreen">
-            <img class="img-credito-button" onclick="navigate('map')" src="img/Botones Nav/Play.svg">
+            <img class="btn-block" onclick="navigate('map')" src="img/Botones Nav/Play.svg">
             <img class="btn-block" onclick="navigate('instruction')" src="img/Botones Nav/How to play.svg">
             <img class="btn-block" onclick="navigate('setting')" src="img/Botones Nav/Support us.svg">
-            <!--
-            <button class="btn-block home-btn" onclick="navigate('connection')">Conectar</button>-->
+            <div class="navbar" id="footerNavbar">
+                <img class="navbar-icons" onclick="navigate('setting')" src="img/Botones Nav/info-inactive.svg">
+                <img class="navbar-icons" src="img/Botones Nav/home-active.svg">
+                <img class="navbar-icons" src="img/Botones Nav/prices-inactive.svg">
+            </div>
         </section>
 
         <section class="instruction screen center-items" id="instructionScreen">
@@ -83,11 +86,16 @@
         <section class="setting screen center-items" id="settingScreen">
             <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Credits.svg" alt="">
             </div>
-            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Hot-to-play.svg" alt="">
+            <div class="button-option" onclick="navigate('instruction')"> <img class="img-credito-button" src="img/botones/Hot-to-play.svg" alt="">
             </div>
             <div class="button-option" onclick="navigate('tepa')"> <img class="img-credito-button" src="img/botones/TEPA.svg" alt="">
             </div>
-            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Support.svg" alt="">
+            <div class="button-option" onclick="navigate('')"> <img class="img-credito-button" src="img/botones/Support.svg" alt="">
+            </div>
+            <div class="navbar" id="footerNavbar">
+                <img class="navbar-icons" src="img/Botones Nav/info-active.svg">
+                <img class="navbar-icons" onclick="navigate('home')" src="img/Botones Nav/home-inactive.svg">
+                <img class="navbar-icons" src="img/Botones Nav/prices-inactive.svg">
             </div>
         </section>
 

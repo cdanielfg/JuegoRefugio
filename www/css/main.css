@@ -202,6 +202,21 @@ html {
     width: 180px;
   }
 
+  /* Navbar Styles */
+
+  .navbar {
+    background-color: #9b6622;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  .navbar-icons {
+    padding: 0px 50px 15px 65px;
+  }
+
   /* Map Screen Styles */
   
   .map-background-short {
