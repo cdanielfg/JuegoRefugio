@@ -12,16 +12,20 @@
 
 <body>
     <main class="app">
-        <section class="splash loading screen center-items" id="splashScreen">
-            <div>Aqui va el splash</div>
+        <section class="splash loading screen" id="splashScreen">
+            <video class="splash-app-video" src="img/SPLASH_Logo_BuddyFinder.mp4" autoplay muted loop></video>
+        </section>
+
+        <section class="splash loading screen center-items" id="thanksScreen">
+            <video class="splash-app-video" src="img/Welcome message.mp4" autoplay muted loop></video>
         </section>
 
         <section class="home screen active" id="homeScreen">
-            <h1>Buddy Finder</h1>
-            <button class="btn-block home-btn">Jugar</button>
-            <button class="btn-block home-btn" onclick="navigate('instruction')">Instrucciones</button>
-            <button class="btn-block home-btn" onclick="navigate('setting')">Acerca de</button>
-            <button class="btn-block home-btn" onclick="navigate('connection')">Conectar</button>
+            <div class="home-btn">PLAY</div>
+            <div class="home-btn" onclick="navigate('instruction')">HOW TO PLAY</div>
+            <div class="home-btn" onclick="navigate('setting')">SUPPORT US</div>
+            <!--
+            <button class="btn-block home-btn" onclick="navigate('connection')">Conectar</button>-->
         </section>
 
         <section class="instruction screen center-items" id="instructionScreen">

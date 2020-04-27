@@ -16,12 +16,18 @@ html {
 
 /* Font families */
 @font-face {
-  font-family: Baloo2-Regular;
-  src: url(../fonts/Baloo2-Regular.ttf);
-}
+    font-family: Baloo2-Regular;
+    src: url(../fonts/Baloo2-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: Baloo2-Bold;
+    src: url(../fonts/Baloo2-Bold.ttf);
+  }
 
 /* Font defaults */
 /* TODO: Add title, text fonts */
+
 * {
   font-family: Baloo2-Regular;
 }
@@ -134,59 +140,66 @@ html {
   transform: none;
 }
 
-/* Splash Screen styles */
+ /* Splash Screen styles */
+  
+  .splash {
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transform: scale(1.8);
+    transition: all .3s ease;
+    z-index: 100;
+  }
+  
+  .splash.loading {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .splash-title {
+    color: #e1e1e1;
+  }
 
-.splash {
-  background: linear-gradient(#ffb200, #a65300);
-  background-size: cover;
-  background-position: center center;
-  opacity: 0;
-  transform: scale(1.8);
-  transition: all 0.3s ease;
-  z-index: 100;
-}
+  .splash-app-video {
+    max-width: 100%;
+    width: 100%;
+  }
 
-.splash.loading {
-  opacity: 1;
-  transform: none;
-}
+ /* Home Screen Styles */
+  
+  .home {
+    background-image: url(../img/fondos/FONDO_HOME.png);
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+  }
+  
+  .home-play .home-app-logo {
+    width: 100%;
+  }
+  
+  .home.active .home-app-logo {
+    transform: none;
+  }
+  
+  .home-app-logo {
+    max-width: 100%;
+    width: 75%;
+    transform: scale(0.5);
+    transition-delay: 150ms;
+    transition: all 0.6s ease;
+    text-shadow: 0 10px #000;
+  }
+  
+  .home-btn {
+    margin-top: 1.5rem;
+    color: #9b6622;
+    font-size: 3.6em;
+    font-family: Baloo2-Bold;
+  }
 
-.splash-title {
-  color: #e1e1e1;
-}
-
-/* Home Screen Styles */
-
-.home {
-  transform: scale(1.5);
-  background-size: cover;
-  background-position: center center;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 10px;
-}
-
-.home-play .home-app-logo {
-  width: 100%;
-}
-
-.home.active .home-app-logo {
-  transform: none;
-}
-
-.home-app-logo {
-  max-width: 100%;
-  width: 75%;
-  transform: scale(0.5);
-  transition-delay: 150ms;
-  transition: all 0.6s ease;
-  text-shadow: 0 10px #000;
-}
-
-.home-btn {
-  margin-top: 1.5rem;
-  width: 180px;
-}
 /* Login Styles */
 #loginDiv {
   width: 480px;
@@ -245,4 +258,3 @@ input::placeholder{
   color:#a65300;
   font-weight: bold;
 }
-
