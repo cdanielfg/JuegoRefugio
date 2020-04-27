@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="421" height="504" viewBox="0 0 421 504">
+  <g id="Group_748" data-name="Group 748" transform="translate(0.296 14.648)">
+    <text id="how_to_donate_" data-name="how to donate?" transform="translate(-0.296 38.352)" fill="#62892b" font-size="49" font-family="Baloo2-ExtraBold, 'Baloo 2'" font-weight="800"><tspan x="0" y="0">HOW TO DONATE?</tspan></text>
+    <g id="Rectangle_1427" data-name="Rectangle 1427" transform="translate(-0.296 37.352)" fill="#62892b" stroke="#707070" stroke-width="1">
+      <path d="M0,0H330a91,91,0,0,1,91,91V361a91,91,0,0,1-91,91H91A91,91,0,0,1,0,361V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M1,.5H330A90.5,90.5,0,0,1,420.5,91V361A90.5,90.5,0,0,1,330,451.5H91A90.5,90.5,0,0,1,.5,361V1A.5.5,0,0,1,1,.5Z" fill="none"/>
+    </g>
+  </g>
+</svg>

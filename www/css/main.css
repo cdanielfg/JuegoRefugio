@@ -1,209 +1,247 @@
 /* Box sizing defaults overrides */
 
 body {
-    background-color: #e1e1e1;
-  }
-  
-  html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *::after,
-  *::before {
-    box-sizing: inherit;
-  }
-  
-  /* Font families */
+  background-color: #e1e1e1;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* Font families */
 @font-face {
-    font-family: Baloo2-Regular;
-    src: url(../fonts/Baloo2-Regular.ttf);
-  }
-  
-  /* Font defaults */
-  /* TODO: Add title, text fonts */
+  font-family: Baloo2-Regular;
+  src: url(../fonts/Baloo2-Regular.ttf);
+}
+
+/* Font defaults */
+/* TODO: Add title, text fonts */
 * {
-    font-family: Baloo2-Regular;
-  }
+  font-family: Baloo2-Regular;
+}
 
-  /* General purpose styles */
-  
-  .d-flex {
-    display: flex;
-  }
-  
-  .justify-content-center {
-    justify-content: center!important;
-  }
-  
-  .align-items-center {
-    align-items: center!important;
-  }
-  
-  .justify-content-between {
-    justify-content: space-between!important;
-  }
-  
-  .flex-one {
-    flex: 1;
-  }
-  
-  .center-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .flex-column {
-    flex-direction: column;
-  }
-  
-  .m-0 {
-    margin: 0!important;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .btn {
-    box-shadow: 0 5px 20px -10px #000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    opacity: 1;
-    transition: opacity 180ms ease;
-    color: #FFF;
-    background-color: #FFB200;
-    font-family: KGBlankSpaceSolid, sans-serif;
-    text-shadow: 0 2px 3px #000;
-    letter-spacing: 1px;
-    margin:3px;
-  }
-  
-  .btn.btn-primary {
-    background-color: #666565;
-  }
-  
-  .btn:focus {
-    outline: none;
-  }
-  
-  .btn:active {
-    opacity: 0.4;
-  }
-  
-  .btn-block {
-    display: block;
-    width: 100%;
-  }
-  
-  .close-btn {
-    width: 25px;
-    height: 25px;
-  }
-  
-  /* App styles */
-  
-  .app {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .screen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    z-index: 0;
-    opacity: 0;
-    transform: translateY(-20%);
-    transition: opacity 0.3s ease, transform 0.4s ease;
-    background-size: cover;
-    background-position: center center;
-  }
-  
-  
-  .screen.active {
-    z-index: 1;
-    opacity: 1;
-    transform: none;
-  }
+/* General purpose styles */
 
-  /* Splash Screen styles */
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.flex-one {
+  flex: 1;
+}
+
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  box-shadow: 0 5px 20px -10px #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 180ms ease;
+  color: #fff;
+  background-color: #ffb200;
+  font-family: KGBlankSpaceSolid, sans-serif;
+  text-shadow: 0 2px 3px #000;
+  letter-spacing: 1px;
+  margin: 3px;
+}
+
+.btn.btn-primary {
+  background-color: #666565;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  opacity: 0.4;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.close-btn {
+  width: 25px;
+  height: 25px;
+}
+
+/* App styles */
+
+.app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: opacity 0.3s ease, transform 0.4s ease;
+  background-size: cover;
+  background-position: center center;
+}
+
+.screen.active {
+  z-index: 1;
+  opacity: 1;
+  transform: none;
+}
+
+/* Splash Screen styles */
 
 .splash {
-    background: linear-gradient(#FFB200, #A65300);
-    background-size: cover;
-    background-position: center center;
-    opacity: 0;
-    transform: scale(1.8);
-    transition: all .3s ease;
-    z-index: 100;
-  }
+  background: linear-gradient(#ffb200, #a65300);
+  background-size: cover;
+  background-position: center center;
+  opacity: 0;
+  transform: scale(1.8);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.splash.loading {
+  opacity: 1;
+  transform: none;
+}
+
+.splash-title {
+  color: #e1e1e1;
+}
+
+/* Home Screen Styles */
+
+.home {
+  transform: scale(1.5);
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.home-play .home-app-logo {
+  width: 100%;
+}
+
+.home.active .home-app-logo {
+  transform: none;
+}
+
+.home-app-logo {
+  max-width: 100%;
+  width: 75%;
+  transform: scale(0.5);
+  transition-delay: 150ms;
+  transition: all 0.6s ease;
+  text-shadow: 0 10px #000;
+}
+
+.home-btn {
+  margin-top: 1.5rem;
+  width: 180px;
+}
+/* Login Styles */
+#loginDiv {
+  width: 480px;
+  height: 990px;
+  background-image: url(../img/Log-in.svg);
+}
+#loginFacebook {
+  top: 418px;
+  left: 147px;
+  width: 188px;
+  height: 70px;
+  background-image: url(../img/Fb\ log\ in.svg);
+}
+#userInput {
+  top: 327px;
+  left: 0px;
+  width: 350px;
+  height: 60px;
+}
+#passwordInput {
+  top: 350px;
+  left: 70px;
+  width: 350px;
+  height: 70px;
+}
+#loginButton {
+  top: 440px;
+  left: 30px;
+  width: 160px;
+  height: 70px;
+  background-image: url(../img/Log\ in.svg);
+}
+#signUp {
+  top: 370px;
+  left: 310px;
+  width: 160px;
+  height: 70px;
+  background-image: url(../img/Sign\ up.svg);
+}
+.inputStyle {
+  position: relative;
+  font-size: 46px;
+  border: 0;
+  background-color: transparent;
+}
+.btnStyle {
+  position: relative;
+  border: 0;
   
-  .splash.loading {
-    opacity: 1;
-    transform: none;
-  }
-  
-  .splash-title {
-    color: #e1e1e1;
-  }
-  
-  /* Home Screen Styles */
-  
-  .home {
-    transform: scale(1.5);
-    background-size: cover;
-    background-position: center center;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 10px;
-  }
-  
-  .home-play .home-app-logo {
-    width: 100%;
-  }
-  
-  .home.active .home-app-logo {
-    transform: none;
-  }
-  
-  .home-app-logo {
-    max-width: 100%;
-    width: 75%;
-    transform: scale(0.5);
-    transition-delay: 150ms;
-    transition: all 0.6s ease;
-    text-shadow: 0 10px #000;
-  }
-  
-  .home-btn {
-    margin-top: 1.5rem;
-    width: 180px;
-  }
-  .form-group{
-    text-align: center;
-    margin:10px;
-    padding:10px;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .form-control{
-    margin-top:10px;
-  }
-  input{
-    padding: 5px;
-    border-radius:10px;
-  }
-  a{
-    text-align: center;
-    text-decoration: none;
-    margin: 5px;
-  }
+}
+.ajustarImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input::placeholder{
+  color:#a65300;
+  font-weight: bold;
+}
