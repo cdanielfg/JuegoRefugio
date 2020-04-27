@@ -1,144 +1,148 @@
 /* Box sizing defaults overrides */
 
 body {
-    background-color: #e1e1e1;
-  }
-  
-  html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *::after,
-  *::before {
-    box-sizing: inherit;
-  }
-  
-  /* Font families */
+  background-color: #e1e1e1;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* Font families */
 @font-face {
     font-family: Baloo2-Regular;
     src: url(../fonts/Baloo2-Regular.ttf);
   }
-  
-  /* Font defaults */
-  /* TODO: Add title, text fonts */
+
+  @font-face {
+    font-family: Baloo2-Bold;
+    src: url(../fonts/Baloo2-Bold.ttf);
+  }
+
+/* Font defaults */
+/* TODO: Add title, text fonts */
+
 * {
-    font-family: Baloo2-Regular;
-  }
+  font-family: Baloo2-Regular;
+}
 
-  /* General purpose styles */
-  
-  .d-flex {
-    display: flex;
-  }
-  
-  .justify-content-center {
-    justify-content: center!important;
-  }
-  
-  .align-items-center {
-    align-items: center!important;
-  }
-  
-  .justify-content-between {
-    justify-content: space-between!important;
-  }
-  
-  .flex-one {
-    flex: 1;
-  }
-  
-  .center-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .flex-column {
-    flex-direction: column;
-  }
-  
-  .m-0 {
-    margin: 0!important;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .btn {
-    box-shadow: 0 5px 20px -10px #000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    opacity: 1;
-    transition: opacity 180ms ease;
-    color: #FFF;
-    background-color: #FFB200;
-    font-family: KGBlankSpaceSolid, sans-serif;
-    text-shadow: 0 2px 3px #000;
-    letter-spacing: 1px;
-    margin:3px;
-  }
-  
-  .btn.btn-primary {
-    background-color: #666565;
-  }
-  
-  .btn:focus {
-    outline: none;
-  }
-  
-  .btn:active {
-    opacity: 0.4;
-  }
-  
-  .btn-block {
-    display: block;
-    width: 100%;
-  }
-  
-  .close-btn {
-    width: 25px;
-    height: 25px;
-  }
-  
-  /* App styles */
-  
-  .app {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .screen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    z-index: 0;
-    opacity: 0;
-    transform: translateY(-20%);
-    transition: opacity 0.3s ease, transform 0.4s ease;
-    background-size: cover;
-    background-position: center center;
-  }
-  
-  
-  .screen.active {
-    z-index: 1;
-    opacity: 1;
-    transform: none;
-  }
+/* General purpose styles */
 
-  /* Splash Screen styles */
+.d-flex {
+  display: flex;
+}
 
-.splash {
-    background: linear-gradient(#FFB200, #A65300);
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.flex-one {
+  flex: 1;
+}
+
+.center-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  box-shadow: 0 5px 20px -10px #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 180ms ease;
+  color: #fff;
+  background-color: #ffb200;
+  font-family: KGBlankSpaceSolid, sans-serif;
+  text-shadow: 0 2px 3px #000;
+  letter-spacing: 1px;
+  margin: 3px;
+}
+
+.btn.btn-primary {
+  background-color: #666565;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  opacity: 0.4;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.close-btn {
+  width: 25px;
+  height: 25px;
+}
+
+/* App styles */
+
+.app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  opacity: 0;
+  transform: translateY(-20%);
+  transition: opacity 0.3s ease, transform 0.4s ease;
+  background-size: cover;
+  background-position: center center;
+}
+
+.screen.active {
+  z-index: 1;
+  opacity: 1;
+  transform: none;
+}
+
+ /* Splash Screen styles */
+  
+  .splash {
     background-size: cover;
     background-position: center center;
     opacity: 0;
@@ -155,11 +159,16 @@ body {
   .splash-title {
     color: #e1e1e1;
   }
-  
-  /* Home Screen Styles */
+
+  .splash-app-video {
+    max-width: 100%;
+    width: 100%;
+  }
+
+ /* Home Screen Styles */
   
   .home {
-    transform: scale(1.5);
+    background-image: url(../img/fondos/FONDO_HOME.png);
     background-size: cover;
     background-position: center center;
     justify-content: center;
@@ -186,94 +195,69 @@ body {
   
   .home-btn {
     margin-top: 1.5rem;
-    width: 180px;
+    color: #9b6622;
+    font-size: 3.6em;
+    font-family: Baloo2-Bold;
   }
 
-  .map {
-    background-position: center center;
-    justify-content: center;
-    align-items: center
-  }
-
-  .map-container {
-    margin: 20% 3% 30% 3%;
-    padding: 5px 20px 30px 20px;
-    text-align: center;
-    background-image: url("../img/descarga.jpg");
-    border-radius: 30px;
-    float: center;
-  }
-
-  .map-item {
-    width: 50px;
-    height: 50px;
-  }
-
-  .store-container {
-    margin: 10% 3% 10% 3%;
-    padding: 1px 20px 30px 20px;
-    text-align: center;
-    background-color: #33E6FF;
-    border-radius: 30px;
-  }
-
-  .store-items-container {
-    margin-top: 5%;
-  }
-
-  .store-booster {
-    width: 200px;
-    height: 50px;
-    margin-left: 20px;
-    border-radius: 20px;
-  }
-
-  .store-logo-booster {
-    width: 50px;
-    height: 50px;
-    border-radius: 150px;
-    display: inline-block;
-  }
-
-  .estilotextarea 
-  {
-    width:50%;
-    height:3%;
-    border: 1px solid #990000;
-    border-radius: 5px;
-  }
-.connect{
-  text-align: center;
+/* Login Styles */
+#loginDiv {
+  width: 480px;
+  height: 990px;
+  background-image: url(../img/Log-in.svg);
+}
+#loginFacebook {
+  top: 418px;
+  left: 147px;
+  width: 188px;
+  height: 70px;
+  background-image: url(../img/Fb\ log\ in.svg);
+}
+#userInput {
+  top: 327px;
+  left: 0px;
+  width: 350px;
+  height: 60px;
+}
+#passwordInput {
+  top: 350px;
+  left: 70px;
+  width: 350px;
+  height: 70px;
+}
+#loginButton {
+  top: 440px;
+  left: 30px;
+  width: 160px;
+  height: 70px;
+  background-image: url(../img/Log\ in.svg);
+}
+#signUp {
+  top: 370px;
+  left: 310px;
+  width: 160px;
+  height: 70px;
+  background-image: url(../img/Sign\ up.svg);
 }
 
-.divCredits {
-  text-align: center;
-  width: 28%;
-  height: 26%;
-  margin-left: 0%;
-  padding-top: 0em;
-  background-color: white;
-  border-radius: 0%;
+.inputStyle {
+  position: relative;
+  font-size: 46px;
+  border: 0;
+  background-color: transparent;
 }
-.divTepa{
-  text-align: center;
-  width: 28%;
-  height: 26%;
-  padding-left: 2em;
-
-  background-color: white;
-  border-radius: 4%;
+.btnStyle {
+  position: relative;
+  border: 0;
+  
 }
-
-.itemDiv{
-  display: inline-block;
-
+.ajustarImg {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#name{
-  font-size: 25px;
-}
-.scrollDiv{
-  overflow: auto;
+input::placeholder{
+  color:#a65300;
+  font-weight: bold;
 }
 
 .form-group{
