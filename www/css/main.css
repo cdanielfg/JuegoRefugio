@@ -19,6 +19,11 @@ body {
     font-family: Baloo2-Regular;
     src: url(../fonts/Baloo2-Regular.ttf);
   }
+
+  @font-face {
+    font-family: Baloo2-Bold;
+    src: url(../fonts/Baloo2-Bold.ttf);
+  }
   
   /* Font defaults */
   /* TODO: Add title, text fonts */
@@ -138,7 +143,6 @@ body {
   /* Splash Screen styles */
   
   .splash {
-    background: linear-gradient(#FFB200, #A65300);
     background-size: cover;
     background-position: center center;
     opacity: 0;
@@ -155,11 +159,16 @@ body {
   .splash-title {
     color: #e1e1e1;
   }
+
+  .splash-app-video {
+    max-width: 100%;
+    width: 100%;
+  }
   
   /* Home Screen Styles */
   
   .home {
-    transform: scale(1.5);
+    background-image: url(../img/fondos/FONDO_HOME.png);
     background-size: cover;
     background-position: center center;
     justify-content: center;
@@ -186,7 +195,9 @@ body {
   
   .home-btn {
     margin-top: 1.5rem;
-    width: 180px;
+    color: #9b6622;
+    font-size: 3.6em;
+    font-family: Baloo2-Bold;
   }
 
   /* Instructions Screen styles */

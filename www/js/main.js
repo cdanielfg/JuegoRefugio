@@ -12,6 +12,10 @@
                 return Object.assign(state, {
                     isLoading: false
                 });
+            case 'THANKS':
+                return Object.assign(state, {
+                    isLoading: false
+                });
             default:
                 return state;
         }
@@ -57,7 +61,6 @@
         isLoading: true,
     };
 
-
     // Función que inicializa todo
     function main() {
 
@@ -78,16 +81,16 @@
         // recargar, cuando se realiza esta acción el subscriptor desaparece
         var loadingUnsubscribe = store.subscribe(function (state) {
             if (!state.isLoading) {
-                var splashScreen = document.getElementById('splashScreen');
-                splashScreen.classList.remove('loading');
-                splashScreen.addEventListener('transitionend', function (event) {
-                    if (event.propertyName === 'opacity') {
-                        splashScreen.parentElement.removeChild(splashScreen);
-                    }
-                });
-                loadingUnsubscribe();
+              var thanksScreen = document.getElementById('thanksScreen');
+              thanksScreen.classList.remove('loading');
+              thanksScreen.addEventListener('transitionend', function (event) {
+                if (event.propertyName === 'opacity') {
+                    thanksScreen.parentElement.removeChild(thanksScreen);
+                }
+              });
+              loadingUnsubscribe();
             }
-        });
+          });
 
         // Escuchador que se encargará de mostrar las páginas seleccionadas
         store.subscribe(function (state) {
@@ -100,8 +103,26 @@
                 screens[screen].classList.remove('active');
             });
         });
-
-        setTimeout(function () { store.dispatch({ type: 'LOAD_APP' }); }, 2000);
+    
+        //Funcion timer para llevar el tiempo de los splash screens
+        setTimeout(function () {
+            store.dispatch({ type: 'LOAD_APP' });
+            var loadingUnsubscribe = store.subscribe(function (state) {
+                if (!state.isLoading) {
+                  var splashScreen = document.getElementById('splashScreen');
+                  splashScreen.classList.remove('loading');
+                  splashScreen.addEventListener('transitionend', function (event) {
+                    if (event.propertyName === 'opacity') {
+                      splashScreen.parentElement.removeChild(splashScreen);
+                    }
+                  });
+                  loadingUnsubscribe();
+                }
+              });
+            setTimeout(function () {
+                store.dispatch({ type: 'THANKS' });
+            }, 4000);
+        }, 10000);
 
         navigate = function (screen) {
             store.dispatch({ type: 'NAVIGATE', screen: screen });
