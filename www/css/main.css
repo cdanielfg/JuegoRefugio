@@ -27,11 +27,9 @@ html {
 
 /* Font defaults */
 /* TODO: Add title, text fonts */
-
-* {
-  font-family: Baloo2-Regular;
+*{
+  font-family: Baloo2-Bold;
 }
-
 /* General purpose styles */
 
 .d-flex {
@@ -306,11 +304,8 @@ html {
     border: 1px solid #990000;
     border-radius: 5px;
   }
-.connect{
-  text-align: center;
-
   /* Login Styles */
-  
+
 #loginDiv {
   width: 480px;
   height: 990px;
@@ -324,13 +319,13 @@ html {
   height: 70px;
   background-image: url(../img/Fb\ log\ in.svg);
 }
-#userInput {
+#userInputLogin {
   top: 327px;
   left: 0px;
   width: 350px;
   height: 60px;
 }
-#passwordInput {
+#passwordInputLogin {
   top: 350px;
   left: 70px;
   width: 350px;
@@ -343,7 +338,7 @@ html {
   height: 70px;
   background-image: url(../img/Log\ in.svg);
 }
-#signUp {
+#signUpLogin {
   top: 370px;
   left: 310px;
   width: 160px;
@@ -370,27 +365,6 @@ input::placeholder{
   color:#a65300;
   font-weight: bold;
 }
-
-.form-group{
-    text-align: center;
-    margin:10px;
-    padding:10px;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .form-control{
-    margin-top:10px;
-  }
-  input{
-    padding: 5px;
-    border-radius:10px;
-  }
-  a{
-    text-align: center;
-    text-decoration: none;
-    margin: 5px;
-  }
-
   /* setting Screen Styles */
   .setting {
     background-image: url(../img/fondos/information.svg);
@@ -406,3 +380,41 @@ input::placeholder{
   .img-credito-button{
     width: 70%;
   }
+/* Sign Up Styles */
+#signupDiv{
+  background-image: url(../img/Cuenta.svg);
+  width: 480px;
+  height: 990px;
+}
+#userInputSignup{
+  top: 300px;
+  left: 60px;
+  width: 360px;
+  height: 70px;
+}
+#emailInputSignup{
+  top: 330px;
+  left: 60px;
+  width: 360px;
+  height: 70px;
+}
+#passwordInputSignup{
+  top: 360px;
+    left: 60px;
+    width: 360px;
+    height: 70px;
+}
+#signupButton{
+  top: 427px;
+  left: 150px;
+  width: 170px;
+  height: 108px;
+  background-image: url(../img/Create.svg);
+}
+#signupFacebook{
+  top: 465px;
+    left: 140px;
+    width: 190px;
+    height: 70px;
+  background-image: url(../img/FB\ sign\ up.svg);
+}

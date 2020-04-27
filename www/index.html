@@ -200,22 +200,41 @@
 
         <section class="login screen center-items" id="loginScreen">
             <div id="loginDiv" class="ajustarImg">
-                <div id="user" class="ajustarImg text-center">
-                    <input type="text" placeholder="Username" name="username" class="inputStyle text-center" id="userInput" required>
+                <div id="userLogin" class="ajustarImg text-center">
+                    <input type="text" placeholder="Username" name="usernameLogin" class="inputStyle text-center" id="userInputLogin" required>
                 </div>
-                <div id="password" class="ajustarImg">
-                    <input type="password" name="password" placeholder="Password" class="inputStyle text-center" id="passwordInput" required>
+                <div id="passwordLogin" class="ajustarImg">
+                    <input type="password" name="passwordLogin" placeholder="Password" class="inputStyle text-center" id="passwordInputLogin" required>
                 </div>
                 <div id="loginButton" class="btnStyle ajustarImg" onclick="navigate('home')">
                     
                 </div>
-                <div id="signUp" class="btnStyle ajustarImg" onclick="navigate('home')">
+                <div id="signUpLogin" class="btnStyle ajustarImg" onclick="navigate('signup')">
                     
                 </div>
                 <div id="loginFacebook" class="btnStyle ajustarImg" onclick="navigate('home')">
+                </div>
             </div>
         </section>
+        <section id="signupScreen" class="signup screen center-items">
+            <div id="signupDiv" class="ajustarImg">
+                <div id="userSignup">
+                    <input type="text" placeholder="Username" name="usernameSignup" class="inputStyle text-center" id="userInputSignup" required>
+                </div>
+                <div id="emailSignup">
+                    <input type="text" placeholder="E-Mail" name="emailSignup" class="inputStyle text-center" id="emailInputSignup" required>
+                </div>
+                <div id="passwordSignup">
+                    <input type="password" name="passwordSignup" placeholder="Password" class="inputStyle text-center" id="passwordInputSignup" required>
+                </div>
+                <div id="signupButton" class="btnStyle ajustarImg" onclick="navigate('home')">
 
+                </div>
+                <div id="signupFacebook" class="btnStyle ajustarImg" onclick="navigate('home')">
+
+                </div>
+            </div>
+        </section>
     </main>
 
     <script type="text/javascript" src="js/main.js"></script>
