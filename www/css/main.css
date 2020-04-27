@@ -302,11 +302,8 @@ html {
     border: 1px solid #990000;
     border-radius: 5px;
   }
-<<<<<<< Updated upstream
   /* Login Styles */
-=======
->>>>>>> Stashed changes
-  
+
 #loginDiv {
   width: 480px;
   height: 990px;
@@ -366,10 +363,6 @@ input::placeholder{
   color:#a65300;
   font-weight: bold;
 }
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
   /* setting Screen Styles */
   .setting {
     background-image: url(../img/fondos/information.svg);
@@ -385,7 +378,6 @@ input::placeholder{
   .img-credito-button{
     width: 70%;
   }
-<<<<<<< Updated upstream
 /* Sign Up Styles */
 #signupDiv{
   background-image: url(../img/Cuenta.svg);
@@ -424,47 +416,3 @@ input::placeholder{
     height: 70px;
   background-image: url(../img/FB\ sign\ up.svg);
 }
-=======
-
-  /* Sign Up Styles */
-  #signupDiv{
-    background-image: url(../img/Cuenta.svg);
-    width: 480px;
-    height: 990px;
-  }
-  #userSignup{
-    top: 0px;
-    left: 0px;
-    width: 160px;
-    height: 70px;
-    background-color: red;
-  }
-#userSignup{
-  top: 0px;
-  left: 0px;
-  width: 160px;
-  height: 70px;
-  background-color: red;
-  }
-  #userSignup{
-    top: 0px;
-    left: 0px;
-    width: 160px;
-    height: 70px;
-    background-color: red;
-  }
-  #signupButton{
-    top: 0px;
-    left: 0px;
-    width: 160px;
-    height: 70px;
-    background-image: url(../img/Sign\ up.svg);
-  }
-  #signupFacebook{
-    top: 0px;
-    left: 0px;
-    width: 160px;
-    height: 70px;
-    background-image: url(../img/FB\ sign\ up.svg);
-  }
->>>>>>> Stashed changes
