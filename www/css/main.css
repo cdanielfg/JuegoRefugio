@@ -168,7 +168,7 @@ html {
  /* Home Screen Styles */
   
   .home {
-    background-image: url(../img/fondos/FONDO_HOME.png);
+    background-image: url(../img/fondos/home.svg);
     background-size: cover;
     background-position: center center;
     justify-content: center;
@@ -195,9 +195,7 @@ html {
   
   .home-btn {
     margin-top: 1.5rem;
-    color: #9b6622;
-    font-size: 3.6em;
-    font-family: Baloo2-Bold;
+    width: 180px;
   }
 
   /* Map Screen Styles */

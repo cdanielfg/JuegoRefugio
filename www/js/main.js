@@ -57,7 +57,7 @@
 
     // Estado inicial del app
     var initialState = {
-        selectedScreen: 'home',
+        selectedScreen: 'connection',
         isLoading: true,
     };
 
