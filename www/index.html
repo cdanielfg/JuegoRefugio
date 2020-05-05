@@ -208,12 +208,8 @@
 
         <section class="login screen center-items" id="loginScreen">
             <div id="loginDiv" class="ajustarImg">
-                <div id="userLogin" class="ajustarImg text-center">
-                    <input type="text" placeholder="Username" name="usernameLogin" class="inputStyle text-center" id="userInputLogin" required>
-                </div>
-                <div id="passwordLogin" class="ajustarImg">
-                    <input type="password" name="passwordLogin" placeholder="Password" class="inputStyle text-center" id="passwordInputLogin" required>
-                </div>
+                <input type="text" placeholder="Username" name="usernameLogin" class="inputStyle text-center" id="userInputLogin" required>
+                <input type="password" name="passwordLogin" placeholder="Password" class="inputStyle text-center" id="passwordInputLogin" required>
                 <div id="loginButton" class="btnStyle ajustarImg" onclick="navigate('home')">
                     
                 </div>
@@ -226,15 +222,9 @@
         </section>
         <section id="signupScreen" class="signup screen center-items">
             <div id="signupDiv" class="ajustarImg">
-                <div id="userSignup">
-                    <input type="text" placeholder="Username" name="usernameSignup" class="inputStyle text-center" id="userInputSignup" required>
-                </div>
-                <div id="emailSignup">
-                    <input type="text" placeholder="E-Mail" name="emailSignup" class="inputStyle text-center" id="emailInputSignup" required>
-                </div>
-                <div id="passwordSignup">
-                    <input type="password" name="passwordSignup" placeholder="Password" class="inputStyle text-center" id="passwordInputSignup" required>
-                </div>
+                <input type="text" placeholder="Username" name="usernameSignup" class="inputStyle text-center" id="userInputSignup" required>
+                <input type="text" placeholder="E-Mail" name="emailSignup" class="inputStyle text-center" id="emailInputSignup" required>
+                <input type="password" name="passwordSignup" placeholder="Password" class="inputStyle text-center" id="passwordInputSignup" required>
                 <div id="signupButton" class="btnStyle ajustarImg" onclick="navigate('home')">
 
                 </div>
@@ -244,22 +234,38 @@
             </div>
         </section>
         <section id="restaurantScreen" class="restaurant screen center-items">
-            <div id="restaurant-background" class="ajustarImg" onclick="navigate('map')">
-                <div id="restaurant-chair1" class="objeto"></div>
-                <div id="restaurant-chair2" class="objeto"></div>
-                <div id="restaurant-table" class="objeto"></div>
-                <div id="restaurant-car" class="objeto"></div>
-                <div id="restaurant-door1" class="objeto"></div>
-                <div id="restaurant-bush1" class="objeto"></div>
-                <div id="restaurant-bush2" class="objeto"></div>
-                <div id="restaurant-door2" class="objeto"></div>
-                <div id="money-bag" class="objeto"></div>
-                <div id="top-sign" class="objeto"></div>
+            <div id="restaurant-background" class="ajustarImg">
+                <div id="restaurant-chair1" class="objeto" onclick="processObject('restaurant-chair1')"></div>
+                <div id="restaurant-chair2" class="objeto" onclick="processObject('restaurant-chair2')"></div>
+                <div id="restaurant-table" class="objeto" onclick="processObject('restaurant-table')"></div>
+                <div id="restaurant-car" class="objeto" onclick="processObject('restaurant-car')"></div>
+                <div id="restaurant-door1" class="objeto" onclick="processObject('restaurant-door1')"></div>
+                <div id="restaurant-bush1" class="objeto" onclick="processObject('restaurant-bush1')"></div>
+                <div id="restaurant-bush2" class="objeto" onclick="processObject('restaurant-bush2')"></div>
+                <div id="restaurant-door2" class="objeto" onclick="processObject('restaurant-door2')"></div>
+                <div id="money-bag" class="objeto inputStyle"></div>
+                <div id="top-sign" class="objeto inputStyle">
+                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center" id="topSignText" readonly>
+                </div>
             </div>
         </section>
         <section id="parkScreen" class="park screen center-items">
-            <div id="park-background" class="ajustarImg" onclick="navigate('map')">
-
+            <div id="park-background" class="ajustarImg">
+                <div id="park-tree1" class="objeto" onclick="processObject('park-tree1')"></div>
+                <div id="park-tree2" class="objeto" onclick="processObject('park-tree2')"></div>
+                <div id="park-bush2" class="objeto" onclick="processObject('park-bush2')"></div>
+                <div id="park-bush3" class="objeto" onclick="processObject('park-bush3')"></div>
+                <div id="park-bush4" class="objeto" onclick="processObject('park-bush4')"></div>
+                <div id="park-bush5" class="objeto" onclick="processObject('park-bush5')"></div>
+                <div id="park-bush6" class="objeto" onclick="processObject('park-bush6')"></div>
+                <div id="park-basurero" class="objeto" onclick="processObject('park-basurero')"></div>
+                <div id="park-basurero2" class="objeto" onclick="processObject('park-basurero2')"></div>
+                <div id="park-bench1" class="objeto" onclick="processObject('park-bench1')"></div>
+                <div id="park-bench2" class="objeto" onclick="processObject('park-bench2')"></div>
+                <div id="money-bag" class="objeto inputStyle"></div>
+                <div id="top-sign" class="objeto inputStyle">
+                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center" id="topSignText" readonly>
+                </div>
             </div>
         </section>
     </main>
