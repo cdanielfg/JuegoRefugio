@@ -77,7 +77,8 @@
             connection: document.getElementById('loginScreen'),
             signup: document.getElementById('signupScreen'),
             restaurant: document.getElementById('restaurantScreen'),
-            park: document.getElementById('parkScreen')
+            park: document.getElementById('parkScreen'),
+            awards: document.getElementById('awardScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
