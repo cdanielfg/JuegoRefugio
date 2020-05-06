@@ -71,7 +71,7 @@
             store: document.getElementById('storeScreen'),
             map: document.getElementById('mapScreen'),
             book: document.getElementById('bookScreen'),
-            setting: document.getElementById('settingScreen'),
+            info: document.getElementById('infoScreen'),
             credits: document.getElementById('creditsScreen'),
             tepa: document.getElementById('tepaScreen'),
             connection: document.getElementById('loginScreen'),

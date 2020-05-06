@@ -107,6 +107,11 @@ html {
   height: 25px;
 }
 
+.scrollDiv{
+  overflow: auto;
+}
+
+
 /* App styles */
 
 .app {
@@ -376,6 +381,7 @@ html {
     border: 1px solid #990000;
     border-radius: 5px;
   }
+  
   /* Login Styles */
 
 #loginDiv {
@@ -437,8 +443,10 @@ input::placeholder{
   color:#a65300;
   font-weight: bold;
 }
-  /* setting Screen Styles */
-  .setting {
+
+  /* Info Screen Styles */
+
+  .info {
     background-image: url(../img/fondos/information.svg);
     background-size: cover;
     background-position: center center;
@@ -452,7 +460,9 @@ input::placeholder{
   .img-credito-button{
     width: 70%;
   }
+
 /* Sign Up Styles */
+
 #signupDiv{
   background-image: url(../img/Cuenta.svg);
   width: 480px;
