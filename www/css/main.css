@@ -214,7 +214,58 @@ html {
   }
 
   .navbar-icons {
-    padding: 0px 50px 15px 65px;
+    width: 25%;
+    margin: 0px -15px 0px 15px;
+    padding: 0px 0px 15px 65px;
+  }
+
+  /* Awards Screen Styles */
+
+  .awards {
+    background-image: url(../img/fondos/tablas.svg);
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .awards-content {
+    position: relative;
+  }
+
+  .awards-stats-bg {
+    position: fixed;
+    max-width: 100%;
+    width: 97%;
+    margin-top: -45px;
+  }
+
+  .awards-container {
+    justify-content: center;
+    position: relative;
+  }
+  
+  .awards-text-container {
+    font-family: Baloo2-Regular;
+    align-self: flex-end;
+    font-size: 1.2em;
+    color: #915e1e;
+    align-items: center;
+    margin: 0px 50px 0px 20px;
+    list-style: none;
+  }
+
+  .awards-img-content {
+    width: 12%;
+    vertical-align: middle;
+  }
+
+  .awards-text-container > li {
+    background-color: #eab16f;
+    margin-top: 10px;
+    padding-left: 20px;
+    border-radius: 6%;
   }
 
   /* Map Screen Styles */
