@@ -685,3 +685,79 @@ input::placeholder{
   background-image: url(../img/park_bench-2.svg);
   z-index: 3;
 }
+
+/*Styles Refuge*/
+
+.refuje{
+  width: 480px;
+  height: 990px;
+  background-image: url(../img/FONDO_Refugio-1.svg);
+}
+.place-one{
+  position: absolute;
+    top:320px;
+    left: 60px;
+}
+.place-two{
+  position: absolute;
+    top:359px;
+    left: 278px;
+}
+.place-three{
+  position: absolute;
+    top:450px;
+    left: 90px;
+}
+.place-four{
+  position: absolute;
+    top:500px;
+    left: 254px;
+}
+.place-five{
+  position: absolute;
+    top:660px;
+    left: 65px;
+}
+.place-six{
+  position: absolute;
+    top:750px;
+    left: 302px;
+}
+.img-size{
+  width: 120px;
+  height: 120px;
+}
+.button-refuje{
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.icon-refuge{
+    width: 35%;
+}
+.icons-map{
+  width: 20%;
+  padding-right: 29px;
+}
+.icons-book{
+  width: 22%;
+  padding-right: 40px;
+}
+.icons-house{
+  width: 14%;
+  margin-left:10px;
+  margin-right: 10px;
+}
+.icons-unknown{
+  width: 14%;
+  margin-left:10px;
+  margin-right: 10px;
+}
+.icons-center{
+  width: 19%;
+  padding-left: 7px;
+  padding-right: 27px;
+}
