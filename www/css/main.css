@@ -694,33 +694,33 @@ input::placeholder{
   background-image: url(../img/FONDO_Refugio-1.svg);
 }
 .place-one{
-  position: relative;;
-    top:325px;
+  position: absolute;
+    top:320px;
     left: 60px;
 }
 .place-two{
-  position: relative;;
-    top:217px;
+  position: absolute;
+    top:359px;
     left: 278px;
 }
 .place-three{
-  position: relative;;
-    top:220px;
+  position: absolute;
+    top:450px;
     left: 90px;
 }
 .place-four{
-  position: relative;;
-    top:150px;
+  position: absolute;
+    top:500px;
     left: 254px;
 }
 .place-five{
-  position: relative;;
-    top:200px;
+  position: absolute;
+    top:660px;
     left: 65px;
 }
 .place-six{
-  position: relative;;
-    top:137px;
+  position: absolute;
+    top:750px;
     left: 302px;
 }
 .img-size{
