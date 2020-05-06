@@ -14,6 +14,7 @@
 
 <body>
     <main class="app">
+        <!--
         <section class="splash loading screen" id="splashScreen">
             <video class="splash-app-video" src="img/SPLASH_Logo_BuddyFinder.mp4" autoplay muted loop></video>
         </section>
@@ -21,9 +22,10 @@
         <section class="splash loading screen center-items" id="thanksScreen">
             <video class="splash-app-video" src="img/Welcome message.mp4" autoplay muted loop></video>
         </section>
-
+-->
         <section class="home screen active" id="homeScreen">
-            <img class="btn-block" onclick="navigate('map')" src="img/Botones Nav/Play.svg">
+            <img class="btn-block" onclick="navigate('refuge')" src="img/Botones Nav/Play.svg">
+            <!--enviar a map-->
             <img class="btn-block" onclick="navigate('instruction')" src="img/Botones Nav/How to play.svg">
             <img class="btn-block" onclick="navigate('info')" src="img/Botones Nav/Support us.svg">
             <div class="navbar" id="footerNavbar">
@@ -33,69 +35,99 @@
             </div>
         </section>
 
+        <section class="refuje" id="refujeScreen">
+            <div class="place-one">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-two">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-three">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-four">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-five">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-six">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="button-refuje" id="footerNavbar">
+                <img class="icons-map"  onclick="navigate('map')" src="img/icon-map.svg">
+                <img class="icons-book" onclick="navigate('book')" src="img/icon-book.svg">
+                <img class="icons-center" src="img/Botones Nav/home-active.svg">
+                <img class="icons-house" onclick="navigate('info')" src="img/icon-house.svg">
+                <img class="icons-unknown" onclick="navigate('connect')" src="img/icon-unknown.svg">
+            </div>
+
+        </section>
+
+
         <section class="awards screen flex-one center-items flex-column" id="awardScreen">
             <div class="awards-content flex-one center-items flex-column">
-                <img class="awards-stats-bg" src="img/fondos/awards.svg">     
+                <img class="awards-stats-bg" src="img/fondos/awards.svg">
                 <div class="awards-container d-flex">
                     <ul class="awards-text-container">
-                      <li>
-                        <span>Watch a 30 seconds AD</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Connect with Facebook</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Get less than 50 'Try Again'</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Invite a facebook friend</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Find 10 pets</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Find a friend at downtown</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Find a friend at the park</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Find a friend at the restaurant</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Buy your pets a treat</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Find 5 friends at downtown</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Find 5 friends at the park </span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Find 5 friend at the restaurant</span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-                      <li>
-                        <span>Watch a 30 seconds AD! </span>
-                        <img class="awards-img-content" src="img/monedas-1.svg">
-                      </li>
-          
+                        <li>
+                            <span>Watch a 30 seconds AD</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Connect with Facebook</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Get less than 50 'Try Again'</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Invite a facebook friend</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 10 pets</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find a friend at downtown</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find a friend at the park</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find a friend at the restaurant</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Buy your pets a treat</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 5 friends at downtown</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 5 friends at the park </span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 5 friend at the restaurant</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Watch a 30 seconds AD! </span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+
                     </ul>
-                  </div>   
+                </div>
             </div>
             <div class="navbar" id="footerNavbar">
-                <img class="navbar-icons" onclick="navigate('info')" src="img/Botones Nav/info-inactive.svg">
+                <img class="navbar-icons" onclick="navigate('info')" src="./img//Botones Nav/info-inactive.svg">
                 <img class="navbar-icons" onclick="navigate('home')" src="img/Botones Nav/home-inactive.svg">
                 <img class="navbar-icons" src="img/Botones Nav/prices-active.svg">
             </div>
@@ -112,24 +144,24 @@
                 <img class="store-background-short" src="img/Store_Bottom_Short.svg">
                 <div class="store-container">
                     <div class="store-items-container"></div>
-                        <div class="store-background-booster">
-                            <img class="store-image-treat" src="img/Pet_Treats1.svg">
-                            <h2 class="store-amount">x10</h2>
-                        </div>
-                        <div class="store-background-booster">
-                            <img class="store-image-treat" src="img/Pet_Treats1.svg">
-                            <h2 class="store-amount">x10</h2>
-
-
-                        </div>
-                        <div class="store-background-booster">
-                            <img class="store-image-treat" src="img/Pet_Treats1.svg">
-                            <h2 class="store-amount">x10</h2>
-
-                        </div>
+                    <div class="store-background-booster">
+                        <img class="store-image-treat" src="img/Pet_Treats1.svg">
+                        <h2 class="store-amount">x10</h2>
                     </div>
+                    <div class="store-background-booster">
+                        <img class="store-image-treat" src="img/Pet_Treats1.svg">
+                        <h2 class="store-amount">x10</h2>
 
+
+                    </div>
+                    <div class="store-background-booster">
+                        <img class="store-image-treat" src="img/Pet_Treats1.svg">
+                        <h2 class="store-amount">x10</h2>
+
+                    </div>
                 </div>
+
+            </div>
             </div>
 
         </section>
@@ -142,7 +174,6 @@
                 <img class="map-restaurant map-item" src="img/restaurant-1.svg" onclick="navigate('restaurant')">
                 <img class="map-x" src="img/x.svg">
             </div>
-            
         </section>
 
         <section class="book screen center-items" id="bookScreen"></section>
@@ -152,13 +183,17 @@
         </section>
 
         <section class="info screen center-items" id="infoScreen">
-            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Credits.svg" alt="">
+            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button"
+                    src="img/botones/Credits.svg" alt="">
             </div>
-            <div class="button-option" onclick="navigate('instruction')"> <img class="img-credito-button" src="img/botones/Hot-to-play.svg" alt="">
+            <div class="button-option" onclick="navigate('instruction')"> <img class="img-credito-button"
+                    src="img/botones/Hot-to-play.svg" alt="">
             </div>
-            <div class="button-option" onclick="navigate('tepa')"> <img class="img-credito-button" src="img/botones/TEPA.svg" alt="">
+            <div class="button-option" onclick="navigate('tepa')"> <img class="img-credito-button"
+                    src="img/botones/TEPA.svg" alt="">
             </div>
-            <div class="button-option" onclick="navigate('home')"> <img class="img-credito-button" src="img/botones/Support.svg" alt="">
+            <div class="button-option" onclick="navigate('home')"> <img class="img-credito-button"
+                    src="img/botones/Support.svg" alt="">
             </div>
             <div class="navbar" id="footerNavbar">
                 <img class="navbar-icons" src="img/Botones Nav/info-active.svg">
@@ -276,13 +311,15 @@
 
         <section class="login screen center-items" id="loginScreen">
             <div id="loginDiv" class="ajustarImg">
-                <input type="text" placeholder="Username" name="usernameLogin" class="inputStyle text-center" id="userInputLogin" required>
-                <input type="password" name="passwordLogin" placeholder="Password" class="inputStyle text-center" id="passwordInputLogin" required>
+                <input type="text" placeholder="Username" name="usernameLogin" class="inputStyle text-center"
+                    id="userInputLogin" required>
+                <input type="password" name="passwordLogin" placeholder="Password" class="inputStyle text-center"
+                    id="passwordInputLogin" required>
                 <div id="loginButton" class="btnStyle ajustarImg" onclick="navigate('home')">
-                    
+
                 </div>
                 <div id="signUpLogin" class="btnStyle ajustarImg" onclick="navigate('signup')">
-                    
+
                 </div>
                 <div id="loginFacebook" class="btnStyle ajustarImg" onclick="navigate('home')">
                 </div>
@@ -291,9 +328,12 @@
 
         <section id="signupScreen" class="signup screen center-items">
             <div id="signupDiv" class="ajustarImg">
-                <input type="text" placeholder="Username" name="usernameSignup" class="inputStyle text-center" id="userInputSignup" required>
-                <input type="text" placeholder="E-Mail" name="emailSignup" class="inputStyle text-center" id="emailInputSignup" required>
-                <input type="password" name="passwordSignup" placeholder="Password" class="inputStyle text-center" id="passwordInputSignup" required>
+                <input type="text" placeholder="Username" name="usernameSignup" class="inputStyle text-center"
+                    id="userInputSignup" required>
+                <input type="text" placeholder="E-Mail" name="emailSignup" class="inputStyle text-center"
+                    id="emailInputSignup" required>
+                <input type="password" name="passwordSignup" placeholder="Password" class="inputStyle text-center"
+                    id="passwordInputSignup" required>
                 <div id="signupButton" class="btnStyle ajustarImg" onclick="navigate('home')">
 
                 </div>
@@ -315,7 +355,8 @@
                 <div id="restaurant-door2" class="objeto" onclick="processObject('restaurant-door2')"></div>
                 <div id="money-bag" class="objeto inputStyle"></div>
                 <div id="top-sign" class="objeto inputStyle">
-                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center" id="topSignText" readonly>
+                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                        id="topSignText" readonly>
                 </div>
             </div>
         </section>
@@ -335,7 +376,8 @@
                 <div id="park-bench2" class="objeto" onclick="processObject('park-bench2')"></div>
                 <div id="money-bag" class="objeto inputStyle"></div>
                 <div id="top-sign" class="objeto inputStyle">
-                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center" id="topSignText" readonly>
+                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                        id="topSignText" readonly>
                 </div>
             </div>
         </section>
