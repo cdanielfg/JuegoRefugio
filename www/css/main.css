@@ -239,24 +239,24 @@ html {
   }
 
   .map-restaurant {
-    margin-top: 12%;
-    margin-left: 70%;
+    margin-top: 2%;
+    margin-left: 65%;
     margin-bottom: 20%;
   }
 
   .map-city {
-    margin-top: 10%;
-    margin-left: 15%;
+    margin-top: 3%;
+    margin-left: 10%;
   }
 
   .map-park {
     margin-top: 20%;
-    margin-left: 12%;
+    margin-left: 4%;
   }
 
   .map-item {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
 
   .map-x {
@@ -316,6 +316,51 @@ html {
     margin-top: -5%;
     color: gray;
   }
+
+  /* Book front Screen Styles */
+
+  .book-front-background {
+    width: 440px;
+    height: 585px;
+    background-image: url("../img/Book_Closed.svg");
+  }
+
+  .book-front-x {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+  }
+
+  /* Book open Screen Styles */
+
+  .book-open-background {
+    width:470px;
+    height: 600px;
+    background-image: url("../img/Book_Open-1.svg");
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .book-open-pet-background {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #E8DEAA;
+    position: absolute; 
+    top: 40px;
+    left: 150px;
+  }
+
+  .book-open-pet-descp {
+    width: 240px;
+    height: 180px;
+    border-radius: 10%;
+    background-color: #E8DEAA;
+    position: absolute;
+    top: 45%;
+    left: 25%;
+  }
+
 
 
   .estilotextarea 
