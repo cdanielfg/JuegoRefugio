@@ -286,10 +286,20 @@ html {
     
   }
 
+  .map-background:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
   .map-background {
     width: 420px;
     height: 440px;
-    margin: 10% 10% 10% 10%;
     background-image: url("../img/mapa-2.svg");
     background-size: cover;
   }
@@ -324,6 +334,17 @@ html {
 
   /* Store Screen Styles */
 
+  .store-background:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
   .store-background-short {
     width: 398px;
     height: 350px;
@@ -335,7 +356,6 @@ html {
   }
 
   .store-background {
-    margin: 10% 10% 10% 10%;
     background-image: url("../img/Store_Top.svg");
     background-size: cover;
     
@@ -373,6 +393,10 @@ html {
     color: gray;
   }
 
+  .store-x {
+    margin-top: 10px;
+    height: 40px;
+  }
 
   .estilotextarea 
   {
@@ -688,7 +712,7 @@ input::placeholder{
 
 /*Styles Refuge*/
 
-.refuje{
+.refuge{
   width: 480px;
   height: 990px;
   background-image: url(../img/FONDO_Refugio-1.svg);
@@ -727,7 +751,7 @@ input::placeholder{
   width: 120px;
   height: 120px;
 }
-.button-refuje{
+.button-refuge{
     overflow: hidden;
     position: fixed;
     bottom: 0;

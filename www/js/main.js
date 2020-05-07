@@ -67,7 +67,7 @@
         // Pantallas de la aplicación referenciadas en un objeto
         var screens = {
             home: document.getElementById('homeScreen'),
-            refuje: document.getElementById('refujeScreen'),
+            refuge: document.getElementById('refugeScreen'),
             instruction: document.getElementById('instructionScreen'),
             store: document.getElementById('storeScreen'),
             map: document.getElementById('mapScreen'),
