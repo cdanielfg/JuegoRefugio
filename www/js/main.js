@@ -149,33 +149,50 @@ var navigate = function (screen) {
  };
  var winProbability = 0.2;
  var attempts = 5;
-var animalsImages = ['img/Artboard_2Animals.svg','img/Artboard_3Animals.svg',
-    'img/Artboard_6Animals.svg','img/Artboard_7Animals.svg',
-    'img/Artboard_9Animals.svg','img/Artboard_10Animals.svg',
-    'img/Artboard_12Animals.svg','img/Artboard_13Animals.svg',
-    'img/Artboard_15Animals.svg','img/Artboard_16Animals.svg',
-    'img/Artboard_18Animals.svg','img/Artboard_19Animals.svg',
-    'img/Artboard_21Animals.svg','img/Artboard_22Animals.svg',
-    'img/Artboard_24Animals.svg','img/Artboard_25Animals.svg',];
+var animalsImages = [['img/Artboard_1Animals.svg','img/Artboard_2Animals.svg','img/Artboard_3Animals.svg'],
+    ['img/Artboard_4Animals.svg','img/Artboard_6Animals.svg','img/Artboard_7Animals.svg'],
+    ['img/Artboard_8Animals.svg','img/Artboard_9Animals.svg','img/Artboard_10Animals.svg'],
+    ['img/Artboard_11Animals.svg','img/Artboard_12Animals.svg','img/Artboard_13Animals.svg'],
+    ['img/Artboard_14Animals.svg','img/Artboard_15Animals.svg','img/Artboard_16Animals.svg'],
+    ['img/Artboard_17Animals.svg','img/Artboard_18Animals.svg','img/Artboard_19Animals.svg'],
+    ['img/Artboard_20Animals.svg','img/Artboard_21Animals.svg','img/Artboard_22Animals.svg'],
+    ['img/Artboard_23Animals.svg','img/Artboard_24Animals.svg','img/Artboard_25Animals.svg']];
+var animalGanados;
 
+function reloadImages(containerObjects,object){
+    var animalFound = document.getElementById(object).style.backgroundImage = 'url(\''+object+'\')';
+    for (let index = 0; index < containerObjects.length; index++) {
+        containerObjects[index].style.display = "block";
+    }
+}
 
-function processObject(name){
+function processObject(name,container){
     var object = document.getElementById(name);
+    var containerObjects = document.getElementById(container).getElementsByTagName("DIV");
     var topSignText = document.getElementById('topSignText');
     if(attempts > 0){
         var aleatorio = Math.random();
         if(aleatorio <= winProbability){
             console.log('ganaste');
-            object.style.backgroundImage = 'url(\''+animalsImages[Math.floor(Math.random()*animalsImages.length)]+'\')';
-            console.log('url(\''+animalsImages[Math.floor(Math.random()*animalsImages.length)]+'\')');
-            
+            var fila = Math.floor(Math.random()*animalsImages.length);
+            var columna = Math.floor(Math.random()*(2-1)+1);
+            var mapName = container.split('-');
+            var animalAge = Math.floor(Math.random()*(15-1)+1);
+            object.style.backgroundImage = 'url(\''+animalsImages[fila][columna]+'\')';
+            animalGanado = {
+                imageURL: animalsImages[fila][0],
+                name: 'Rocky',
+                found: mapName[0],
+                age: animalAge,
+                race: 'Mixed'
+            };
+            window.localStorage.setItem('animal',JSON.stringify(animalGanado));
+            reloadImages(containerObjects,object);
+            console.log(window.localStorage.getItem('animal'));
         }else{
             attempts--;
             winProbability+=0.1;
             object.style.display = 'none';
-            console.log(aleatorio);
-            console.log(attempts);
-            console.log(winProbability);
         }
         topSignText.placeholder = '';
         topSignText.placeholder = 'Tries left: '+attempts;
