@@ -659,9 +659,10 @@ input::placeholder{
     background-image: url(../img/top-sign-10.svg);
     z-index: 6;
 }
-#topSignText{
-  top: 310px;
-  width: 260px;
+.topSignText{
+  top: 323px;
+  left: 54px;
+  font-size: 30px;
 }
 #money-bag{
   top: 10px;
