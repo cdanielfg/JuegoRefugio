@@ -82,7 +82,7 @@
             restaurant: document.getElementById('restaurantScreen'),
             park: document.getElementById('parkScreen'),
             awards: document.getElementById('awardScreen'),
-            supportUsScreen:document.getElementById('supportUsScreen')
+            support:document.getElementById('supportUsScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
