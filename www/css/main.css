@@ -761,6 +761,7 @@ input::placeholder{
     width: 120px;
   height: 120px;
   background-image: url(../img/Perro_Casa-5.svg);
+  visibility: hidden;
 }
 .place-four{
   position: absolute;
