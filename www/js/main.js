@@ -163,8 +163,7 @@ var animalsImages = ['img/Artboard_2Animals.svg','img/Artboard_3Animals.svg',
 
 function processObject(name){
     var object = document.getElementById(name);
-    var topSignEspecific = container.split('-');
-    var topSignText = document.getElementById('topSignText-'+topSignEspecific[0]);
+    var topSignText = document.getElementById('topSignText');
     if(attempts > 0){
         var aleatorio = Math.random();
         if(aleatorio <= winProbability){
