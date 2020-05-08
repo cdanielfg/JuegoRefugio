@@ -75,12 +75,14 @@
             bookopen: document.getElementById('bookopenScreen'),
             info: document.getElementById('infoScreen'),
             credits: document.getElementById('creditsScreen'),
+            credits2: document.getElementById('creditsScreen2'),
             tepa: document.getElementById('tepaScreen'),
             connection: document.getElementById('loginScreen'),
             signup: document.getElementById('signupScreen'),
             restaurant: document.getElementById('restaurantScreen'),
             park: document.getElementById('parkScreen'),
             awards: document.getElementById('awardScreen'),
+            support:document.getElementById('supportUsScreen'),
             downtown: document.getElementById('downtownScreen')
         };
 

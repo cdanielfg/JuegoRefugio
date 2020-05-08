@@ -253,7 +253,8 @@ html {
   }
   
   .awards-text-container {
-    font-family: Baloo2-Regular;
+    
+    
     align-self: flex-end;
     font-size: 1.2em;
     color: #915e1e;
@@ -983,3 +984,169 @@ input::placeholder{
   background-image: url(../img/Downtown/Artboard-11Asset.svg);
 }
 
+/*Style section credits*/
+
+.divCreditsTextProfile {
+  position: absolute;
+  font-family: Baloo2-Bold;
+  color: #915e1e;
+  top: 246px;
+  left: 77px;
+  text-align: center;
+  width: 70%;
+  height: 27%;
+}
+
+.itemCredits{
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+#creditsDivBackground{
+  background-image: url(../img/credits-1.svg);
+  width: 480px;
+  height: 990px;
+  
+}
+#nextCredits {
+  z-index: 1;
+  position: absolute;
+  top: 904px;
+  left: 416px;
+  
+}
+#PreviousCredits{
+  z-index: 1;
+  position: absolute;
+  top: 904px;
+  left: 19px;
+  
+}
+.divcreditsSpace{
+  height: 1016px;
+
+}
+
+
+/*Style section tepaFoundation*/
+
+.divTepaSpace{
+height: 1087px;
+}
+
+#divTepaFoundationImgs {
+  position: absolute;
+  top: 307px;
+  left: 30px;
+  right: 0;
+  bottom: 0;
+}
+#tepaFoundationAndSupportUsBackground{
+  background-image: url(../img/TepaInfo-1.svg);
+  width: 480px;
+  height: 985px;
+}
+
+.textWhat {
+  position: absolute;
+  font-family: Baloo2;
+  top: 61px;
+  left: 37px;
+  width: 363px;
+  font-size: 20px;
+  color: rgb(247, 237, 194);
+}
+
+#tepaText {
+  position: absolute;
+  top: 151px;
+  left: 181px;
+  width: 98px;
+  font-size: 51px;
+  font-weight: bold;
+  color: #915e1e;
+}
+
+#foundationText {
+  position: absolute;
+  top: 210px;
+  left: 130px;
+  width: 98px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #915e1e;
+}
+
+
+/*Style section SupportUs*/
+
+#divHowDonate{
+  position: absolute;
+  top: 330px;
+  left: 30px;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/Group\ 748.svg);
+  width: 400px;
+  height: 480px;
+}
+#divMoreInfo{
+position: absolute;
+top: 820px;
+left: 38px;
+right: 0;
+bottom: 0;
+background-image: url(../img/More\ information.svg);
+width: 400px;
+height: 200px;
+}
+
+
+#tepaBackgroundSupportUs{
+  background-image: url(../img/TepaInfo-1.svg);
+  width: 480px;
+  height: 985px;
+}
+
+
+#supportUs{
+  font-size: 20px;
+}
+
+.textHowToDonate {
+  z-index: 1;
+  position: absolute;
+  font-family: Baloo2;
+  top: 386px;
+  left: 72px;
+  width: 316px;
+  font-size: 18px;
+  color: rgb(247, 237, 194);
+}
+
+.divSupportUsSpaces{
+ 
+  height: 1097px;
+}
+
+#divSupportUs {
+  position: absolute;
+  top: 837px;
+  left: 36px;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/Support\ us\ TEPA.svg);
+  width: 405px;
+  height: 165px;
+}
+
+#supportUsTxt {
+  position: absolute;
+  top: 165px;
+  left: 83px;
+  width: 500PX;
+  font-size: 55px;
+  font-weight: bold;
+  color: #915e1e;
+}
