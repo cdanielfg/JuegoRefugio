@@ -660,8 +660,9 @@ input::placeholder{
     z-index: 6;
 }
 .topSignText{
-  top: 310px;
-  width: 260px;
+  top: 323px;
+  left: 54px;
+  font-size: 30px;
 }
 #money-bag{
   top: 10px;
