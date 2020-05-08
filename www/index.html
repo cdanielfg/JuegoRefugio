@@ -1,49 +1,498 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<html lang="en">
 
-    http://www.apache.org/licenses/LICENSE-2.0
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buddy Finder</title>
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body>
+    <main class="app">
+ 
+        <section class="splash loading screen" id="splashScreen">
+            <video class="splash-app-video" src="img/SPLASH_Logo_BuddyFinder.mp4" autoplay muted loop></video>
+        </section>
+
+        <section class="splash loading screen center-items" id="thanksScreen">
+            <video class="splash-app-video" src="img/Welcome message.mp4" autoplay muted loop></video>
+        </section>
+
+        <section class="home screen active" id="homeScreen">
+            <img class="btn-block" onclick="navigate('refuge')" src="img/Botones Nav/Play.svg">
+            <img class="btn-block" onclick="navigate('instruction')" src="img/Botones Nav/How to play.svg">
+            <img class="btn-block" onclick="navigate('support')" src="img/Botones Nav/Support us.svg">
+            <div class="navbar" id="footerNavbar">
+                <img class="navbar-icons" onclick="navigate('info')" src="img/Botones Nav/info-inactive.svg">
+                <img class="navbar-icons" src="img/Botones Nav/home-active.svg">
+                <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones Nav/prices-inactive.svg">
+            </div>
+        </section>
+
+        <section class="refuge" id="refugeScreen">
+            <div class="place-one">
+                <div id="shelter-1" class="ajustarImg">
+                    <img class="img-size" id="animal1" class="animal">
+                </div>
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-two">
+                
+                <div id="shelter-2" class="ajustarImg">
+                    <img class="img-size" id="animal2" class="animal">
+                </div>
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-three">
+                <div id="shelter-3" class="ajustarImg">
+                    <img class="img-size" id="animal3" class="animal">
+                </div>
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-four">
+                <div id="shelter-4" class="ajustarImg">
+                    <img class="img-size" id="animal4" class="animal">
+                </div>
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-five">
+                <div id="shelter-5" class="ajustarImg">
+                    <img class="img-size" id="animal5" class="animal">
+                </div>
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-six">
+                <div id="shelter-6" class="ajustarImg">
+                    <img class="img-size" id="animal6" class="animal">
+                </div>
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="button-refuge" id="footerNavbar">
+                <img class="icons-map"  onclick="navigate('map')" src="img/icon-map.svg">
+                <img class="icons-book" onclick="navigate('bookfront')" src="img/icon-book.svg">
+                <img class="icons-center" onclick="navigate('home')" src="img/Botones Nav/home-ingame.svg">
+                <img class="icons-house" onclick="navigate('store')" src="img/icon-house.svg">
+                <img class="icons-unknown" onclick="navigate('instruction')" src="img/icon-unknown.svg">
+            </div>
+
+        </section>
+
+        <section class="awards screen flex-one center-items flex-column" id="awardScreen">
+            <div class="awards-content flex-one center-items flex-column">
+                <img class="awards-stats-bg" src="img/fondos/awards.svg">
+                <div class="awards-container d-flex">
+                    <ul class="awards-text-container">
+                        <li>
+                            <span>Watch a 30 seconds AD</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Connect with Facebook</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Get less than 50 'Try Again'</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Invite a facebook friend</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 10 pets</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find a friend at downtown</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find a friend at the park</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find a friend at the restaurant</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Buy your pets a treat</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 5 friends at downtown</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 5 friends at the park </span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 5 friend at the restaurant</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Watch a 30 seconds AD! </span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar" id="footerNavbar">
+                <img class="navbar-icons" onclick="navigate('info')" src="./img//Botones Nav/info-inactive.svg">
+                <img class="navbar-icons" onclick="navigate('home')" src="img/Botones Nav/home-inactive.svg">
+                <img class="navbar-icons" src="img/Botones Nav/prices-active.svg">
+            </div>
+        </section>
+
+        <section class="instruction screen center-items" id="instructionScreen">
+            <h2>Instrucciones</h2>
+            <button onclick="navigate('home')">Go to home</button>
+        </section>
+
+        <section class="store screen center-items" id="storeScreen">
+            <div class="store-background">
+                <img class="store-background-short" src="img/Store_Bottom_Short.svg">
+                <div class="store-container">
+                    <div class="store-items-container"></div>
+                    <div class="store-background-booster">
+                        <img class="store-image-treat" src="img/Pet_Treats1.svg">
+                        <h2 class="store-amount">x10</h2>
+                    </div>
+                    <div class="store-background-booster">
+                        <img class="store-image-treat" src="img/Pet_Treats1.svg">
+                        <h2 class="store-amount">x10</h2>
+                    </div>
+                    <div class="store-background-booster">
+                        <img class="store-image-treat" src="img/Pet_Treats1.svg">
+                        <h2 class="store-amount">x10</h2>
+                    </div>
+                </div>
+
+            </div>
             </div>
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-    </body>
+        <img class="store-x" src="img/x.svg" onclick="navigate('refuge')">
+        </section>
+
+        <section class="map screen center-items" id="mapScreen">
+            <div class="map-background">
+                <img class="map-background-short" src="img/mapa-1.svg">
+                <img class="map-city map-item" src="img/city-1.svg" onclick="navigate('downtown')">
+                <img class="map-park map-item" src="img/park-1.svg" onclick="navigate('park')">
+                <img class="map-restaurant map-item" src="img/restaurant-1.svg" onclick="navigate('restaurant')">
+                <img class="map-x" src="img/x.svg" onclick="navigate('refuge')">
+            </div>
+        </section>
+
+        <section class="book-front screen center-items book-background" id="bookfrontScreen">
+            <div class="book-front-background" onclick="navigate('bookopen')"></div>
+            <img class="book-x" src="img/x.svg" onclick="navigate('refuge')"></div>
+        </section>
+
+        <section class="book-open screen center-items book-background" id="bookopenScreen">
+            <div class="book-open-background">
+                <div class="book-open-pet-background">
+                    <img id="imgMascota" src="img/Artboard_4Animals.svg">
+                    
+                </div>
+                <div class="book-open-pet-descp">
+                        
+                </div>
+            </div>
+            <img class="book-x" src="img/x.svg" onclick="navigate('refuge')"></div>
+        </section>
+
+        <section class="instruction screen center-items" id="connect">
+            <button class="btn-block home-btn">Conectar con facebook</button><br>
+        </section>
+
+        <section class="info screen center-items" id="infoScreen">
+            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button"
+                    src="img/botones/Credits.svg" alt="">
+            </div>
+            <div class="button-option" onclick="navigate('instruction')"> <img class="img-credito-button"
+                    src="img/botones/Hot-to-play.svg" alt="">
+            </div>
+            <div class="button-option" onclick="navigate('tepa')"> <img class="img-credito-button"
+                    src="img/botones/TEPA.svg" alt="">
+            </div>
+            <div class="button-option" onclick="navigate('support')"> <img class="img-credito-button"
+                    src="img/botones/Support.svg" alt="">
+            </div>
+            <div class="navbar" id="footerNavbar">
+                <img class="navbar-icons" src="img/Botones Nav/info-active.svg">
+                <img class="navbar-icons" onclick="navigate('home')" src="img/Botones Nav/home-inactive.svg">
+                <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones Nav/prices-inactive.svg">
+            </div>
+        </section>
+
+        <section class="screen  center-items justify-content-between scrollDiv" id="creditsScreen">
+            
+            <div class="" id="creditsDivBackground">
+                <div class="divcreditsSpace"></div>                
+                <div id="nextCredits">                                        
+                    <button onclick="navigate('credits2')"><h1>></h1></button>
+                </div>
+                <div id="PreviousCredits">
+                    <button onclick="navigate('credits2')"><h1><</h1></button>
+                </div>
+
+                <div class="divCreditsTextProfile">
+                    <img src="img/Mask Group 1.svg" alt=""><br>
+                    <span class="itemCredits"><b id="name">ANGÉLICA JARAMILLO </b><br id="profession">GRAPHIC DESIGNER, CONCEPT ARTIST<br>angelicajmllo@gmail.com</span>
+    
+                    <br><br><br><br><br><br><br>
+                    <img src="img/Mask Group 2.svg" alt=""><br>
+                    <span class="itemCredits"><b id="name">CARLOS FERNÁNDEZ</b><br id="profession">APP DEVELOPER
+                        <br>carlos.fernandez@upb.edu.co</span>
+    
+                    <br><br><br><br><br><br><br>
+                    <img src="img/Mask Group 3.svg" alt=""><br>
+                    <span class="itemCredits"><b id="name">EMILIO MARTÍNEZ</b><br id="profession">
+                        APP DEVELOPER<br>emilio.martinez@upb.edu.co</span>                      
+                </div>
+                <div class="navbar" id="footerNavbar">
+                    <img class="navbar-icons" onclick="navigate('info')" src="img/Botones Nav/info-active.svg">
+                    <img class="navbar-icons" onclick="navigate('home')" src="img/Botones Nav/home-inactive.svg">
+                    <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones Nav/prices-inactive.svg">
+                </div>
+
+            </div>      
+        </section>
+
+        <section class="credits2 screen center-items justify-content-between scrollDiv" id="creditsScreen2">
+            
+            <div class="ajustarImg" id="creditsDivBackground">
+            <div class="divcreditsSpace"></div>
+                <div id="nextCredits">                                        
+                    <button onclick="navigate('credits')"><h1>></h1></button>
+                </div>
+
+                <div id="PreviousCredits">
+                    <button onclick="navigate('credits')"><h1><</h1></button>
+                </div>
+                <div class="divCreditsTextProfile">
+                    <img src="img/Mask Group 8.svg" alt=""><br>
+                    <span class="itemCredits"><b id="name">SEBASTIAN FIGUEREDO</b><br id="profession">
+                        GRAPHIC DESIGNER, CONCEPT ARTIST<br>sebastian.figueredov@hotmail.com</span>
+    
+                    <br><br><br><br><br><br><br>
+                    <img src="img/Mask Group 7.svg" alt=""><br>
+                    <span class="itemCredits"><b id="name">LAURA BARRIOS</b><br id="profession"> DESIGNER, CONCEPT ARTIST
+                        <br>laura.barrios@upb.edu.co</span>
+    
+                    <br><br><br><br><br><br><br>
+                    <img src="img/Mask Group 5.svg" alt=""><br>
+                    <span class="itemCredits"><b id="name">JAROL MEDINA MARIN</b><br id="profession">
+                        APP DEVELOPER<br>jarol.medina@upb.edu.co</span>                      
+                </div>
+                <div class="navbar" id="footerNavbar">
+                    <img class="navbar-icons" onclick="navigate('info')" src="img/Botones Nav/info-inactive.svg">
+                    <img class="navbar-icons" src="img/Botones Nav/home-active.svg">
+                    <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones Nav/prices-inactive.svg">
+                </div>
+            </div>
+        </section>
+
+        <section class="tepa screen center-items scrollDiv" id="tepaScreen">   
+
+            <div id="tepaFoundationAndSupportUsBackground" class="ajustarImg">         
+                <div onclick="navigate('support')" id="divSupportUs" class="ajustarImg"></div>
+
+                <div id="tepaText"> 
+                    <p>TEPA</p>            
+                </div>
+
+                <div id="foundationText"> 
+                    <p>FOUNDATION</p>            
+                </div>  
+                <div id="divTepaFoundationImgs">
+                    <div class="textWhat">
+                        <p>
+                            It is a non-profit organization that
+                            seeks to proyect the lives of cats and dogs
+                            in a state of abuse and neglect. They provide
+                            them with food, medicine and shelter, in order
+                            to improve their quality of life and get them a home.
+                        </p>
+                        <br><br><br><br><br>
+                        <p>
+                            Promote collective awareness through
+                            sterilization, respect for life, NO to animal
+                            abuse and responsible adoption through 4 simple
+                            actions: adopt, sponsor, donate and spread.
+                        </p>
+                    </div>
+                    <img src="img/Group 746.svg" alt="">
+                    <br>
+                    <img src="img/Group 747.svg" alt="">
+                </div> 
+                <div class="divTepaSpace"></div>               
+                <div class="navbar" id="footerNavbar">
+                    <img class="navbar-icons" onclick="navigate('info')" src="img/Botones Nav/info-active.svg">
+                    <img class="navbar-icons" onclick="navigate('home')" src="img/Botones Nav/home-inactive.svg">
+                    <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones Nav/prices-inactive.svg">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="supportUsScreen screen center-items scrollDiv" id="supportUsScreen">  
+            <div id="divMoreInfo" class="ajustarImg"></div>         
+            <div id="tepaFoundationAndSupportUsBackground" class="ajustarImg">
+                <div id="supportUsTxt"> 
+                    <p>SUPPORT US</p>            
+                </div>
+                <div class="textHowToDonate">
+                    <p>
+                        The foundation goes to great lengths <tbody>
+                        help many animals on a small budget, as they
+                        have no official support. So they need your 
+                        help to ensure the well being and happiness of
+                        the animals that live in the foundation.<br><br>
+                        You can donate supplies from food and medicine
+                        to blankets or tiles to adapt the space. you can
+                        also spend time with the animals, help with
+                        the foundation or make money donations.<br><br>
+                        You can donate online through PayU safely
+                        and quickly by selecting the value you want
+                        to contribute. These contributions will be inveted
+                        in food, medicine and the adaptation of spaces 
+                        for pets.                    
+                    </p>
+                    
+                </div> 
+                <div id="divHowDonate" class="ajustarImg"></div> 
+                <div class="divSupportUsSpaces"></div>  
+                <div class="navbar" id="footerNavbar">
+                    <img class="navbar-icons" onclick="navigate('info')" src="img/Botones Nav/info-active.svg">
+                    <img class="navbar-icons" onclick="navigate('home')" src="img/Botones Nav/home-inactive.svg">
+                    <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones Nav/prices-inactive.svg">
+                </div>
+            </div>
+        </section>
+    
+
+        <section class="login screen center-items" id="loginScreen">
+            <div id="loginDiv" class="ajustarImg">
+                <input type="text" placeholder="Username" name="usernameLogin" class="inputStyle text-center"
+                    id="userInputLogin" required>
+                <input type="password" name="passwordLogin" placeholder="Password" class="inputStyle text-center"
+                    id="passwordInputLogin" required>
+                <div id="loginButton" class="btnStyle ajustarImg" onclick="navigate('home')">
+
+                </div>
+                <div id="signUpLogin" class="btnStyle ajustarImg" onclick="navigate('signup')">
+
+                </div>
+                <div id="loginFacebook" class="btnStyle ajustarImg" onclick="navigate('home')">
+                </div>
+            </div>
+        </section>
+
+        <section id="signupScreen" class="signup screen center-items">
+            <div id="signupDiv" class="ajustarImg">
+                <input type="text" placeholder="Username" name="usernameSignup" class="inputStyle text-center"
+                    id="userInputSignup" required>
+                <input type="text" placeholder="E-Mail" name="emailSignup" class="inputStyle text-center"
+                    id="emailInputSignup" required>
+                <input type="password" name="passwordSignup" placeholder="Password" class="inputStyle text-center"
+                    id="passwordInputSignup" required>
+                <div id="signupButton" class="btnStyle ajustarImg" onclick="navigate('home')">
+
+                </div>
+                <div id="signupFacebook" class="btnStyle ajustarImg" onclick="navigate('home')">
+
+                </div>
+            </div>
+        </section>
+
+        <section id="restaurantScreen" class="restaurant screen center-items">
+            <div id="restaurant-background" class="ajustarImg">
+                <div id="restaurant-chair1" class="objeto" onclick="processObject('restaurant-chair1','restaurant-background')"></div>
+                <div id="restaurant-chair2" class="objeto" onclick="processObject('restaurant-chair2','restaurant-background')"></div>
+                <div id="restaurant-table" class="objeto" onclick="processObject('restaurant-table','restaurant-background')"></div>
+                <div id="restaurant-car" class="objeto" onclick="processObject('restaurant-car','restaurant-background')"></div>
+                <div id="restaurant-door1" class="objeto" onclick="processObject('restaurant-door1','restaurant-background')"></div>
+                <div id="restaurant-bush1" class="objeto" onclick="processObject('restaurant-bush1','restaurant-background')"></div>
+                <div id="restaurant-bush2" class="objeto" onclick="processObject('restaurant-bush2','restaurant-background')"></div>
+                <div id="restaurant-door2" class="objeto" onclick="processObject('restaurant-door2','restaurant-background')"></div>
+                <div id="money-bag" class="objeto inputStyle"></div>
+                <div id="top-sign" class="objeto">
+                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                        id="topSignText-restaurant" readonly>
+                </div>
+            </div>
+            <div class="button-refuge" id="footerNavbar">
+                <img class="icons-map"  onclick="navigate('map')" src="img/icon-map.svg">
+                <img class="icons-book" onclick="navigate('bookfront')" src="img/icon-book.svg">
+                <img class="icons-center" onclick="navigate('home')" src="img/Botones Nav/home-ingame.svg">
+                <img class="icons-house" onclick="navigate('store')" src="img/icon-house.svg">
+                <img class="icons-unknown" onclick="navigate('instruction')" src="img/icon-unknown.svg">
+            </div>
+        </section>
+
+        <section id="parkScreen" class="park screen center-items">
+            <div id="park-background" class="ajustarImg">
+                <div id="park-tree1" class="objeto" onclick="processObject('park-tree1','park-background')"></div>
+                <div id="park-tree2" class="objeto" onclick="processObject('park-tree2','park-background')"></div>
+                <div id="park-bush2" class="objeto" onclick="processObject('park-bush2','park-background')"></div>
+                <div id="park-bush3" class="objeto" onclick="processObject('park-bush3','park-background')"></div>
+                <div id="park-bush4" class="objeto" onclick="processObject('park-bush4','park-background')"></div>
+                <div id="park-bush5" class="objeto" onclick="processObject('park-bush5','park-background')"></div>
+                <div id="park-bush6" class="objeto" onclick="processObject('park-bush6','park-background')"></div>
+                <div id="park-basurero" class="objeto" onclick="processObject('park-basurero','park-background')"></div>
+                <div id="park-basurero2" class="objeto" onclick="processObject('park-basurero2','park-background')"></div>
+                <div id="park-bench1" class="objeto" onclick="processObject('park-bench1','park-background')"></div>
+                <div id="park-bench2" class="objeto" onclick="processObject('park-bench2','park-background')"></div>
+                <div id="money-bag" class="objeto inputStyle"></div>
+                <div id="top-sign" class="objeto">
+                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                        id="topSignText-park" readonly>
+                </div>
+            </div>
+            <div class="button-refuge" id="footerNavbar">
+                <img class="icons-map"  onclick="navigate('map')" src="img/icon-map.svg">
+                <img class="icons-book" onclick="navigate('bookfront')" src="img/icon-book.svg">
+                <img class="icons-center" onclick="navigate('home')" src="img/Botones Nav/home-ingame.svg">
+                <img class="icons-house" onclick="navigate('store')" src="img/icon-house.svg">
+                <img class="icons-unknown" onclick="navigate('instruction')" src="img/icon-unknown.svg">
+            </div>
+        </section>
+
+        <section class="downtown screen center-items" id="downtownScreen">
+            <div id="downtown-background" class="ajustarImg">
+                <div id="garbage-can" class="objeto" onclick="processObject('garbage-can','downtown-background')"></div>
+                <div id="boxes-1" class="objeto" onclick="processObject('boxes-1','downtown-background')"></div>
+                <div id="boxes-2" class="objeto" onclick="processObject('boxes-2','downtown-background')"></div>
+                <div id="boxes-3" class="objeto" onclick="processObject('boxes-3','downtown-background')"></div>
+                <div id="papers-1" class="objeto" onclick="processObject('papers-1','downtown-background')"></div>
+                <div id="papers-2" class="objeto" onclick="processObject('papers-2','downtown-background')"></div>
+                <div id="garbage-1" class="objeto" onclick="processObject('garbage-1','downtown-background')"></div>
+                <div id="garbage-2" class="objeto" onclick="processObject('garbage-2','downtown-background')"></div>
+                <div id="money-bag" class="objeto inputStyle"></div>
+                <div id="top-sign" class="objeto">
+                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                        id="topSignText-downtown" readonly>
+                </div>
+            </div>
+            <div class="button-refuge" id="footerNavbar">
+                <img class="icons-map"  onclick="navigate('map')" src="img/icon-map.svg">
+                <img class="icons-book" onclick="navigate('bookfront')" src="img/icon-book.svg">
+                <img class="icons-center" onclick="navigate('home')" src="img/Botones Nav/home-ingame.svg">
+                <img class="icons-house" onclick="navigate('store')" src="img/icon-house.svg">
+                <img class="icons-unknown" onclick="navigate('instruction')" src="img/icon-unknown.svg">
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
 </html>
