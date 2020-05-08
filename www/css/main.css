@@ -773,35 +773,93 @@ input::placeholder{
   height: 990px;
   background-image: url(../img/FONDO_Refugio-1.svg);
 }
+.animal{
+  position: absolute;
+  top: 20px;
+}
 .place-one{
   position: absolute;
     top:320px;
     left: 60px;
+}
+#shelter-1{
+  position: absolute;
+  top: -60px;
+  left: 0px;
+  width: 120px;
+  height: 120px;
+  background-image: url(../img/Perro_Casa-1.svg);
+  visibility: hidden;
 }
 .place-two{
   position: absolute;
     top:359px;
     left: 278px;
 }
+#shelter-2{
+  position: absolute;
+  top: -60px;
+    left: 0px;
+  width: 120px;
+  height: 120px;
+  background-image: url(../img/Perro_Casa-1.svg);
+  visibility: hidden;
+}
 .place-three{
   position: absolute;
     top:450px;
     left: 90px;
+}
+#shelter-3{
+  position: absolute;
+  top: -60px;
+    left: 0px;
+    width: 120px;
+  height: 120px;
+  background-image: url(../img/Perro_Casa-5.svg);
+  visibility: hidden;
 }
 .place-four{
   position: absolute;
     top:500px;
     left: 254px;
 }
+#shelter-4{
+  position: absolute;
+  top: -60px;
+    left: 0px;
+    width: 120px;
+  height: 120px;
+  background-image: url(../img/Gato_Casa-1.svg);
+  visibility: hidden;
+}
 .place-five{
   position: absolute;
     top:660px;
     left: 65px;
 }
+#shelter-5{
+  position: absolute;
+  top: -60px;
+    left: 0px;
+    width: 120px;
+  height: 120px;
+  background-image: url(../img/Perro_Casa-1.svg);
+  visibility: hidden;
+}
 .place-six{
   position: absolute;
     top:750px;
     left: 302px;
+}
+#shelter-6{
+  position: absolute;
+  top: -60px;
+  left: 0px;
+    width: 120px;
+  height: 120px;
+  background-image: url(../img/Gato_Casa-1.svg);
+  visibility: hidden;
 }
 .img-size{
   width: 120px;
