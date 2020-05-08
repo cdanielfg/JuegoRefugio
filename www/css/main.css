@@ -581,7 +581,7 @@ input::placeholder{
   background-image: url(../img/FB\ sign\ up.svg);
 }
 
-/* Store Styles */
+/* Restaurant Styles */
 #restaurant-background{
   background-image: url(../img/FONDO_Restaurante-1.svg);
   width: 480px;
@@ -841,3 +841,86 @@ input::placeholder{
   padding-left: 7px;
   padding-right: 27px;
 }
+
+/* Downtown Styles */
+
+.downtown {
+  background-image: url(../img/Downtown/downtown-bg.svg);
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
+}
+
+#boxes-1 {
+  top: 428px;
+  left: 73px;
+  height: 96px;
+  width: 125px;
+  z-index: 3;
+  background-image: url(../img/Downtown/Artboard-14Asset.svg);
+}
+
+#boxes-2 {
+  top: 545px;
+  left: -84px;
+  height: 233px;
+  width: 302px;
+  z-index: 3;
+  background-image: url(../img/Downtown/Artboard-15Asset.svg);
+}
+
+#boxes-3 {
+  top: 520px;
+  left: 340px;
+  height: 153px;
+  width: 194px;
+  z-index: 3;
+  background-image: url(../img/Downtown/Artboard-16Asset.svg);
+}
+
+#papers-1 {
+  top: 508px;
+  left: 42px;
+  height: 80px;
+  width: 100px;
+  z-index: 3;
+  background-image: url(../img/Downtown/Artboard-13Asset.svg);
+}
+
+#papers-2 {
+  top: 646px;
+  left: 340px;
+  height: 130px;
+  width: 164px;
+  z-index: 3;
+  background-image: url(../img/Downtown/Artboard-13Asset.svg);
+}
+
+#garbage-1 {
+  top: 382px;
+  left: 162px;
+  height: 108px;
+  width: 117px;
+  z-index: 2;
+  background-image: url(../img/Downtown/Artboard-12Asset.svg);
+}
+
+#garbage-2 {
+  top: 419px;
+  left: 292px;
+  height: 130px;
+  width: 115px;
+  z-index: 3;
+  background-image: url(../img/Downtown/Artboard-12Asset.svg);
+}
+
+#garbage-can {
+  top: 332px;
+  left: 193px;
+  height: 161px;
+  width: 185px;
+  z-index: 3;
+  background-image: url(../img/Downtown/Artboard-11Asset.svg);
+}
+
