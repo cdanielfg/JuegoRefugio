@@ -82,7 +82,8 @@
             restaurant: document.getElementById('restaurantScreen'),
             park: document.getElementById('parkScreen'),
             awards: document.getElementById('awardScreen'),
-            support:document.getElementById('supportUsScreen')
+            support:document.getElementById('supportUsScreen'),
+            downtown: document.getElementById('downtownScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
@@ -187,7 +188,8 @@ function refillRefuge(){
 function processObject(name,container){
     var object = document.getElementById(name);
     var containerObjects = document.getElementById(container).getElementsByTagName("DIV");
-    var topSignText = document.getElementById('topSignText');
+    var topSignEspecific = container.split('-');
+    var topSignText = document.getElementById('topSignText-'+topSignEspecific[0]);
     if(attempts > 0){
         var aleatorio = Math.random();
         if(aleatorio <= winProbability){
