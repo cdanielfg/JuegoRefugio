@@ -75,12 +75,14 @@
             bookopen: document.getElementById('bookopenScreen'),
             info: document.getElementById('infoScreen'),
             credits: document.getElementById('creditsScreen'),
+            credits2: document.getElementById('creditsScreen2'),
             tepa: document.getElementById('tepaScreen'),
             connection: document.getElementById('loginScreen'),
             signup: document.getElementById('signupScreen'),
             restaurant: document.getElementById('restaurantScreen'),
             park: document.getElementById('parkScreen'),
-            awards: document.getElementById('awardScreen')
+            awards: document.getElementById('awardScreen'),
+            supportUsScreen:document.getElementById('supportUsScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
