@@ -67,18 +67,22 @@
         // Pantallas de la aplicación referenciadas en un objeto
         var screens = {
             home: document.getElementById('homeScreen'),
+            refuge: document.getElementById('refugeScreen'),
             instruction: document.getElementById('instructionScreen'),
             store: document.getElementById('storeScreen'),
             map: document.getElementById('mapScreen'),
             bookfront: document.getElementById('bookfrontScreen'),
             bookopen: document.getElementById('bookopenScreen'),
             setting: document.getElementById('settingScreen'),
+            book: document.getElementById('bookScreen'),
+            info: document.getElementById('infoScreen'),
             credits: document.getElementById('creditsScreen'),
             tepa: document.getElementById('tepaScreen'),
             connection: document.getElementById('loginScreen'),
             signup: document.getElementById('signupScreen'),
             restaurant: document.getElementById('restaurantScreen'),
-            park: document.getElementById('parkScreen')
+            park: document.getElementById('parkScreen'),
+            awards: document.getElementById('awardScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
@@ -132,6 +136,7 @@
             store.dispatch({ type: 'NAVIGATE', screen: screen });
         };
     }
+    
 
     // Escuchador del evento onload del window
     window.onload = main;
@@ -142,6 +147,47 @@
  * Navega entre diferentes pantallas, luego se sobreescribe su valor
  */
 // eslint-disable-next-line no-unused-vars
-var navigate = function (screen) { };
+var navigate = function (screen) {
+    
+ };
+ var winProbability = 0.2;
+ var attempts = 5;
+var animalsImages = ['img/Artboard_2Animals.svg','img/Artboard_3Animals.svg',
+    'img/Artboard_6Animals.svg','img/Artboard_7Animals.svg',
+    'img/Artboard_9Animals.svg','img/Artboard_10Animals.svg',
+    'img/Artboard_12Animals.svg','img/Artboard_13Animals.svg',
+    'img/Artboard_15Animals.svg','img/Artboard_16Animals.svg',
+    'img/Artboard_18Animals.svg','img/Artboard_19Animals.svg',
+    'img/Artboard_21Animals.svg','img/Artboard_22Animals.svg',
+    'img/Artboard_24Animals.svg','img/Artboard_25Animals.svg',];
 
+
+function processObject(name){
+    var object = document.getElementById(name);
+    var topSignText = document.getElementById('topSignText');
+    if(attempts > 0){
+        var aleatorio = Math.random();
+        if(aleatorio <= winProbability){
+            console.log('ganaste');
+            object.style.backgroundImage = 'url(\''+animalsImages[Math.floor(Math.random()*animalsImages.length)]+'\')';
+            console.log('url(\''+animalsImages[Math.floor(Math.random()*animalsImages.length)]+'\')');
+            
+        }else{
+            attempts--;
+            winProbability+=0.1;
+            object.style.display = 'none';
+            console.log(aleatorio);
+            console.log(attempts);
+            console.log(winProbability);
+        }
+        topSignText.placeholder = '';
+        topSignText.placeholder = 'Tries left: '+attempts;
+    }else{
+        window.alert('No more attempts available');
+        winProbability = 0.2;
+        attempts = 5;
+        navigate('map');
+    }
+    
+}
 "use strict";

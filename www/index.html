@@ -14,6 +14,7 @@
 
 <body>
     <main class="app">
+ 
         <section class="splash loading screen" id="splashScreen">
             <video class="splash-app-video" src="img/SPLASH_Logo_BuddyFinder.mp4" autoplay muted loop></video>
         </section>
@@ -23,13 +24,111 @@
         </section>
 
         <section class="home screen active" id="homeScreen">
-            <img class="btn-block" onclick="navigate('map')" src="img/Botones Nav/Play.svg">
+            <img class="btn-block" onclick="navigate('refuge')" src="img/Botones Nav/Play.svg">
             <img class="btn-block" onclick="navigate('instruction')" src="img/Botones Nav/How to play.svg">
-            <img class="btn-block" onclick="navigate('setting')" src="img/Botones Nav/Support us.svg">
+            <img class="btn-block" onclick="navigate('info')" src="img/Botones Nav/Support us.svg">
             <div class="navbar" id="footerNavbar">
-                <img class="navbar-icons" onclick="navigate('setting')" src="img/Botones Nav/info-inactive.svg">
+                <img class="navbar-icons" onclick="navigate('info')" src="img/Botones Nav/info-inactive.svg">
                 <img class="navbar-icons" src="img/Botones Nav/home-active.svg">
-                <img class="navbar-icons" src="img/Botones Nav/prices-inactive.svg">
+                <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones Nav/prices-inactive.svg">
+            </div>
+        </section>
+
+        <section class="refuge" id="refugeScreen">
+            <div class="place-one">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-two">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-three">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-four">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-five">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="place-six">
+                <img class="img-size" onclick="navigate('instruction')" src="./img/Artboard 43Asset.svg">
+            </div>
+            <div class="button-refuge" id="footerNavbar">
+                <img class="icons-map"  onclick="navigate('map')" src="img/icon-map.svg">
+                <img class="icons-book" onclick="navigate('book')" src="img/icon-book.svg">
+                <img class="icons-center" onclick="navigate('home')" src="img/Botones Nav/home-ingame.svg">
+                <img class="icons-house" onclick="navigate('store')" src="img/icon-house.svg">
+                <img class="icons-unknown" onclick="navigate('instruction')" src="img/icon-unknown.svg">
+            </div>
+
+        </section>
+
+
+        <section class="awards screen flex-one center-items flex-column" id="awardScreen">
+            <div class="awards-content flex-one center-items flex-column">
+                <img class="awards-stats-bg" src="img/fondos/awards.svg">
+                <div class="awards-container d-flex">
+                    <ul class="awards-text-container">
+                        <li>
+                            <span>Watch a 30 seconds AD</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Connect with Facebook</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Get less than 50 'Try Again'</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Invite a facebook friend</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 10 pets</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find a friend at downtown</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find a friend at the park</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find a friend at the restaurant</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Buy your pets a treat</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 5 friends at downtown</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 5 friends at the park </span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Find 5 friend at the restaurant</span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+                        <li>
+                            <span>Watch a 30 seconds AD! </span>
+                            <img class="awards-img-content" src="img/monedas-1.svg">
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar" id="footerNavbar">
+                <img class="navbar-icons" onclick="navigate('info')" src="./img//Botones Nav/info-inactive.svg">
+                <img class="navbar-icons" onclick="navigate('home')" src="img/Botones Nav/home-inactive.svg">
+                <img class="navbar-icons" src="img/Botones Nav/prices-active.svg">
             </div>
         </section>
 
@@ -44,26 +143,24 @@
                 <img class="store-background-short" src="img/Store_Bottom_Short.svg">
                 <div class="store-container">
                     <div class="store-items-container"></div>
-                        <div class="store-background-booster">
-                            <img class="store-image-treat" src="img/Pet_Treats1.svg">
-                            <h2 class="store-amount">x10</h2>
-                        </div>
-                        <div class="store-background-booster">
-                            <img class="store-image-treat" src="img/Pet_Treats1.svg">
-                            <h2 class="store-amount">x10</h2>
-
-
-                        </div>
-                        <div class="store-background-booster">
-                            <img class="store-image-treat" src="img/Pet_Treats1.svg">
-                            <h2 class="store-amount">x10</h2>
-
-                        </div>
+                    <div class="store-background-booster">
+                        <img class="store-image-treat" src="img/Pet_Treats1.svg">
+                        <h2 class="store-amount">x10</h2>
                     </div>
-
+                    <div class="store-background-booster">
+                        <img class="store-image-treat" src="img/Pet_Treats1.svg">
+                        <h2 class="store-amount">x10</h2>
+                    </div>
+                    <div class="store-background-booster">
+                        <img class="store-image-treat" src="img/Pet_Treats1.svg">
+                        <h2 class="store-amount">x10</h2>
+                    </div>
                 </div>
-            </div>
 
+            </div>
+            </div>
+        </div>
+        <img class="store-x" src="img/x.svg" onclick="navigate('refuge')">
         </section>
 
         <section class="map screen center-items" id="mapScreen">
@@ -72,7 +169,7 @@
                 <img class="map-city map-item" src="img/city-1.svg">
                 <img class="map-park map-item" src="img/park-1.svg" onclick="navigate('park')">
                 <img class="map-restaurant map-item" src="img/restaurant-1.svg" onclick="navigate('restaurant')">
-                <img class="map-x" src="img/x.svg">
+                <img class="map-x" src="img/x.svg" onclick="navigate('refuge')">
             </div>
         </section>
 
@@ -97,19 +194,23 @@
             <button class="btn-block home-btn">Conectar con facebook</button><br>
         </section>
 
-        <section class="setting screen center-items" id="settingScreen">
-            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button" src="img/botones/Credits.svg" alt="">
+        <section class="info screen center-items" id="infoScreen">
+            <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button"
+                    src="img/botones/Credits.svg" alt="">
             </div>
-            <div class="button-option" onclick="navigate('instruction')"> <img class="img-credito-button" src="img/botones/Hot-to-play.svg" alt="">
+            <div class="button-option" onclick="navigate('instruction')"> <img class="img-credito-button"
+                    src="img/botones/Hot-to-play.svg" alt="">
             </div>
-            <div class="button-option" onclick="navigate('tepa')"> <img class="img-credito-button" src="img/botones/TEPA.svg" alt="">
+            <div class="button-option" onclick="navigate('tepa')"> <img class="img-credito-button"
+                    src="img/botones/TEPA.svg" alt="">
             </div>
-            <div class="button-option" onclick="navigate('')"> <img class="img-credito-button" src="img/botones/Support.svg" alt="">
+            <div class="button-option" onclick="navigate('home')"> <img class="img-credito-button"
+                    src="img/botones/Support.svg" alt="">
             </div>
             <div class="navbar" id="footerNavbar">
                 <img class="navbar-icons" src="img/Botones Nav/info-active.svg">
                 <img class="navbar-icons" onclick="navigate('home')" src="img/Botones Nav/home-inactive.svg">
-                <img class="navbar-icons" src="img/Botones Nav/prices-inactive.svg">
+                <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones Nav/prices-inactive.svg">
             </div>
         </section>
 
@@ -179,7 +280,7 @@
                     Engineer<br>jarol.medina@upb.edu.co</span>
             </div>
             <br>
-            <button onclick="navigate('setting')">Go to about</button>
+            <button onclick="navigate('info')">Go to about</button>
             <br>
         </section>
 
@@ -216,39 +317,35 @@
                 </p>
             </div>
             <br>
-            <button onclick="navigate('setting')">Go to about</button>
+            <button onclick="navigate('info')">Go to about</button>
             <br>
         </section>
 
         <section class="login screen center-items" id="loginScreen">
             <div id="loginDiv" class="ajustarImg">
-                <div id="userLogin" class="ajustarImg text-center">
-                    <input type="text" placeholder="Username" name="usernameLogin" class="inputStyle text-center" id="userInputLogin" required>
-                </div>
-                <div id="passwordLogin" class="ajustarImg">
-                    <input type="password" name="passwordLogin" placeholder="Password" class="inputStyle text-center" id="passwordInputLogin" required>
-                </div>
+                <input type="text" placeholder="Username" name="usernameLogin" class="inputStyle text-center"
+                    id="userInputLogin" required>
+                <input type="password" name="passwordLogin" placeholder="Password" class="inputStyle text-center"
+                    id="passwordInputLogin" required>
                 <div id="loginButton" class="btnStyle ajustarImg" onclick="navigate('home')">
-                    
+
                 </div>
                 <div id="signUpLogin" class="btnStyle ajustarImg" onclick="navigate('signup')">
-                    
+
                 </div>
                 <div id="loginFacebook" class="btnStyle ajustarImg" onclick="navigate('home')">
                 </div>
             </div>
         </section>
+
         <section id="signupScreen" class="signup screen center-items">
             <div id="signupDiv" class="ajustarImg">
-                <div id="userSignup">
-                    <input type="text" placeholder="Username" name="usernameSignup" class="inputStyle text-center" id="userInputSignup" required>
-                </div>
-                <div id="emailSignup">
-                    <input type="text" placeholder="E-Mail" name="emailSignup" class="inputStyle text-center" id="emailInputSignup" required>
-                </div>
-                <div id="passwordSignup">
-                    <input type="password" name="passwordSignup" placeholder="Password" class="inputStyle text-center" id="passwordInputSignup" required>
-                </div>
+                <input type="text" placeholder="Username" name="usernameSignup" class="inputStyle text-center"
+                    id="userInputSignup" required>
+                <input type="text" placeholder="E-Mail" name="emailSignup" class="inputStyle text-center"
+                    id="emailInputSignup" required>
+                <input type="password" name="passwordSignup" placeholder="Password" class="inputStyle text-center"
+                    id="passwordInputSignup" required>
                 <div id="signupButton" class="btnStyle ajustarImg" onclick="navigate('home')">
 
                 </div>
@@ -257,23 +354,43 @@
                 </div>
             </div>
         </section>
+
         <section id="restaurantScreen" class="restaurant screen center-items">
-            <div id="restaurant-background" class="ajustarImg" onclick="navigate('map')">
-                <div id="restaurant-chair1" class="objeto"></div>
-                <div id="restaurant-chair2" class="objeto"></div>
-                <div id="restaurant-table" class="objeto"></div>
-                <div id="restaurant-car" class="objeto"></div>
-                <div id="restaurant-door1" class="objeto"></div>
-                <div id="restaurant-bush1" class="objeto"></div>
-                <div id="restaurant-bush2" class="objeto"></div>
-                <div id="restaurant-door2" class="objeto"></div>
-                <div id="money-bag" class="objeto"></div>
-                <div id="top-sign" class="objeto"></div>
+            <div id="restaurant-background" class="ajustarImg">
+                <div id="restaurant-chair1" class="objeto" onclick="processObject('restaurant-chair1')"></div>
+                <div id="restaurant-chair2" class="objeto" onclick="processObject('restaurant-chair2')"></div>
+                <div id="restaurant-table" class="objeto" onclick="processObject('restaurant-table')"></div>
+                <div id="restaurant-car" class="objeto" onclick="processObject('restaurant-car')"></div>
+                <div id="restaurant-door1" class="objeto" onclick="processObject('restaurant-door1')"></div>
+                <div id="restaurant-bush1" class="objeto" onclick="processObject('restaurant-bush1')"></div>
+                <div id="restaurant-bush2" class="objeto" onclick="processObject('restaurant-bush2')"></div>
+                <div id="restaurant-door2" class="objeto" onclick="processObject('restaurant-door2')"></div>
+                <div id="money-bag" class="objeto inputStyle"></div>
+                <div id="top-sign" class="objeto inputStyle">
+                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                        id="topSignText" readonly>
+                </div>
             </div>
         </section>
-        <section id="parkScreen" class="park screen center-items">
-            <div id="park-background" class="ajustarImg" onclick="navigate('map')">
 
+        <section id="parkScreen" class="park screen center-items">
+            <div id="park-background" class="ajustarImg">
+                <div id="park-tree1" class="objeto" onclick="processObject('park-tree1')"></div>
+                <div id="park-tree2" class="objeto" onclick="processObject('park-tree2')"></div>
+                <div id="park-bush2" class="objeto" onclick="processObject('park-bush2')"></div>
+                <div id="park-bush3" class="objeto" onclick="processObject('park-bush3')"></div>
+                <div id="park-bush4" class="objeto" onclick="processObject('park-bush4')"></div>
+                <div id="park-bush5" class="objeto" onclick="processObject('park-bush5')"></div>
+                <div id="park-bush6" class="objeto" onclick="processObject('park-bush6')"></div>
+                <div id="park-basurero" class="objeto" onclick="processObject('park-basurero')"></div>
+                <div id="park-basurero2" class="objeto" onclick="processObject('park-basurero2')"></div>
+                <div id="park-bench1" class="objeto" onclick="processObject('park-bench1')"></div>
+                <div id="park-bench2" class="objeto" onclick="processObject('park-bench2')"></div>
+                <div id="money-bag" class="objeto inputStyle"></div>
+                <div id="top-sign" class="objeto inputStyle">
+                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                        id="topSignText" readonly>
+                </div>
             </div>
         </section>
     </main>
