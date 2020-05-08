@@ -156,7 +156,6 @@
         </section>
 
         <section class="store screen center-items" id="storeScreen">
-
             <div class="store-background">
                 <img class="store-background-short" src="img/Store_Bottom_Short.svg">
                 <div class="store-container">
@@ -184,7 +183,7 @@
         <section class="map screen center-items" id="mapScreen">
             <div class="map-background">
                 <img class="map-background-short" src="img/mapa-1.svg">
-                <img class="map-city map-item" src="img/city-1.svg">
+                <img class="map-city map-item" src="img/city-1.svg" onclick="navigate('downtown')">
                 <img class="map-park map-item" src="img/park-1.svg" onclick="navigate('park')">
                 <img class="map-restaurant map-item" src="img/restaurant-1.svg" onclick="navigate('restaurant')">
                 <img class="map-x" src="img/x.svg" onclick="navigate('refuge')">
@@ -390,6 +389,13 @@
                         id="topSignText-restaurant" readonly>
                 </div>
             </div>
+            <div class="button-refuge" id="footerNavbar">
+                <img class="icons-map"  onclick="navigate('map')" src="img/icon-map.svg">
+                <img class="icons-book" onclick="navigate('bookfront')" src="img/icon-book.svg">
+                <img class="icons-center" onclick="navigate('home')" src="img/Botones Nav/home-ingame.svg">
+                <img class="icons-house" onclick="navigate('store')" src="img/icon-house.svg">
+                <img class="icons-unknown" onclick="navigate('instruction')" src="img/icon-unknown.svg">
+            </div>
         </section>
 
         <section id="parkScreen" class="park screen center-items">
@@ -410,6 +416,38 @@
                     <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
                         id="topSignText-park" readonly>
                 </div>
+            </div>
+            <div class="button-refuge" id="footerNavbar">
+                <img class="icons-map"  onclick="navigate('map')" src="img/icon-map.svg">
+                <img class="icons-book" onclick="navigate('bookfront')" src="img/icon-book.svg">
+                <img class="icons-center" onclick="navigate('home')" src="img/Botones Nav/home-ingame.svg">
+                <img class="icons-house" onclick="navigate('store')" src="img/icon-house.svg">
+                <img class="icons-unknown" onclick="navigate('instruction')" src="img/icon-unknown.svg">
+            </div>
+        </section>
+
+        <section class="downtown screen center-items" id="downtownScreen">
+            <div class="ajustarImg">
+                <div id="garbage-can" class="objeto" onclick="processObject('garbage-can')"></div>
+                <div id="boxes-1" class="objeto" onclick="processObject('boxes-1')"></div>
+                <div id="boxes-2" class="objeto" onclick="processObject('boxes-2')"></div>
+                <div id="boxes-3" class="objeto" onclick="processObject('boxes-3')"></div>
+                <div id="papers-1" class="objeto" onclick="processObject('papers-1')"></div>
+                <div id="papers-2" class="objeto" onclick="processObject('papers-2')"></div>
+                <div id="garbage-1" class="objeto" onclick="processObject('garbage-1')"></div>
+                <div id="garbage-2" class="objeto" onclick="processObject('garbage-2')"></div>
+                <div id="money-bag" class="objeto inputStyle"></div>
+                <div id="top-sign" class="objeto inputStyle">
+                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                        id="topSignText" readonly>
+                </div>
+            </div>
+            <div class="button-refuge" id="footerNavbar">
+                <img class="icons-map"  onclick="navigate('map')" src="img/icon-map.svg">
+                <img class="icons-book" onclick="navigate('bookfront')" src="img/icon-book.svg">
+                <img class="icons-center" onclick="navigate('home')" src="img/Botones Nav/home-ingame.svg">
+                <img class="icons-house" onclick="navigate('store')" src="img/icon-house.svg">
+                <img class="icons-unknown" onclick="navigate('instruction')" src="img/icon-unknown.svg">
             </div>
         </section>
     </main>

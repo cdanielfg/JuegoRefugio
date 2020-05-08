@@ -80,7 +80,8 @@
             signup: document.getElementById('signupScreen'),
             restaurant: document.getElementById('restaurantScreen'),
             park: document.getElementById('parkScreen'),
-            awards: document.getElementById('awardScreen')
+            awards: document.getElementById('awardScreen'),
+            downtown: document.getElementById('downtownScreen')
         };
 
         // Escuchador de cambio de estado, en este caso para cuando el app deje de  
