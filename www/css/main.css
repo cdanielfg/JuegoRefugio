@@ -659,7 +659,7 @@ input::placeholder{
     background-image: url(../img/top-sign-10.svg);
     z-index: 6;
 }
-#topSignText{
+.topSignText{
   top: 310px;
   width: 260px;
 }

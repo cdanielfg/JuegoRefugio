@@ -384,8 +384,8 @@
                 <div id="restaurant-bush2" class="objeto" onclick="processObject('restaurant-bush2','restaurant-background')"></div>
                 <div id="restaurant-door2" class="objeto" onclick="processObject('restaurant-door2','restaurant-background')"></div>
                 <div id="money-bag" class="objeto inputStyle"></div>
-                <div id="top-sign" class="objeto inputStyle">
-                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                <div id="top-sign" class="objeto">
+                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
                         id="topSignText-restaurant" readonly>
                 </div>
             </div>
@@ -412,8 +412,8 @@
                 <div id="park-bench1" class="objeto" onclick="processObject('park-bench1','park-background')"></div>
                 <div id="park-bench2" class="objeto" onclick="processObject('park-bench2','park-background')"></div>
                 <div id="money-bag" class="objeto inputStyle"></div>
-                <div id="top-sign" class="objeto inputStyle">
-                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                <div id="top-sign" class="objeto">
+                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
                         id="topSignText-park" readonly>
                 </div>
             </div>
@@ -427,19 +427,19 @@
         </section>
 
         <section class="downtown screen center-items" id="downtownScreen">
-            <div class="ajustarImg">
-                <div id="garbage-can" class="objeto" onclick="processObject('garbage-can')"></div>
-                <div id="boxes-1" class="objeto" onclick="processObject('boxes-1')"></div>
-                <div id="boxes-2" class="objeto" onclick="processObject('boxes-2')"></div>
-                <div id="boxes-3" class="objeto" onclick="processObject('boxes-3')"></div>
-                <div id="papers-1" class="objeto" onclick="processObject('papers-1')"></div>
-                <div id="papers-2" class="objeto" onclick="processObject('papers-2')"></div>
-                <div id="garbage-1" class="objeto" onclick="processObject('garbage-1')"></div>
-                <div id="garbage-2" class="objeto" onclick="processObject('garbage-2')"></div>
+            <div id="downtown-background" class="ajustarImg">
+                <div id="garbage-can" class="objeto" onclick="processObject('garbage-can','downtown-background')"></div>
+                <div id="boxes-1" class="objeto" onclick="processObject('boxes-1','downtown-background')"></div>
+                <div id="boxes-2" class="objeto" onclick="processObject('boxes-2','downtown-background')"></div>
+                <div id="boxes-3" class="objeto" onclick="processObject('boxes-3','downtown-background')"></div>
+                <div id="papers-1" class="objeto" onclick="processObject('papers-1','downtown-background')"></div>
+                <div id="papers-2" class="objeto" onclick="processObject('papers-2','downtown-background')"></div>
+                <div id="garbage-1" class="objeto" onclick="processObject('garbage-1','downtown-background')"></div>
+                <div id="garbage-2" class="objeto" onclick="processObject('garbage-2','downtown-background')"></div>
                 <div id="money-bag" class="objeto inputStyle"></div>
-                <div id="top-sign" class="objeto inputStyle">
-                    <input type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
-                        id="topSignText" readonly>
+                <div id="top-sign" class="objeto">
+                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
+                        id="topSignText-downtown" readonly>
                 </div>
             </div>
             <div class="button-refuge" id="footerNavbar">
