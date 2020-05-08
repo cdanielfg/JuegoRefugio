@@ -55,14 +55,13 @@
             </div>
             <div class="button-refuge" id="footerNavbar">
                 <img class="icons-map"  onclick="navigate('map')" src="img/icon-map.svg">
-                <img class="icons-book" onclick="navigate('book')" src="img/icon-book.svg">
+                <img class="icons-book" onclick="navigate('bookfront')" src="img/icon-book.svg">
                 <img class="icons-center" onclick="navigate('home')" src="img/Botones Nav/home-ingame.svg">
                 <img class="icons-house" onclick="navigate('store')" src="img/icon-house.svg">
                 <img class="icons-unknown" onclick="navigate('instruction')" src="img/icon-unknown.svg">
             </div>
 
         </section>
-
 
         <section class="awards screen flex-one center-items flex-column" id="awardScreen">
             <div class="awards-content flex-one center-items flex-column">
@@ -173,21 +172,22 @@
             </div>
         </section>
 
-        <section class="book-front screen center-items" id="bookfrontScreen">
+        <section class="book-front screen center-items book-background" id="bookfrontScreen">
             <div class="book-front-background" onclick="navigate('bookopen')"></div>
-            <img class="book-front-x" src="img/x.svg"></div>
+            <img class="book-x" src="img/x.svg" onclick="navigate('refuge')"></div>
         </section>
 
-        <section class="book-open screen center-items" id="bookopenScreen">
+        <section class="book-open screen center-items book-background" id="bookopenScreen">
             <div class="book-open-background">
                 <div class="book-open-pet-background">
-                    <img id="imgMascota" src="img/Artboard 4Animals.svg">
+                    <img id="imgMascota" src="img/Artboard_4Animals.svg">
                     
                 </div>
                 <div class="book-open-pet-descp">
                         
                 </div>
             </div>
+            <img class="book-x" src="img/x.svg" onclick="navigate('refuge')"></div>
         </section>
 
         <section class="instruction screen center-items" id="connect">

@@ -73,8 +73,6 @@
             map: document.getElementById('mapScreen'),
             bookfront: document.getElementById('bookfrontScreen'),
             bookopen: document.getElementById('bookopenScreen'),
-            setting: document.getElementById('settingScreen'),
-            book: document.getElementById('bookScreen'),
             info: document.getElementById('infoScreen'),
             credits: document.getElementById('creditsScreen'),
             tepa: document.getElementById('tepaScreen'),
