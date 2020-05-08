@@ -157,13 +157,28 @@ var animalsImages = [['img/Artboard_1Animals.svg','img/Artboard_2Animals.svg','i
     ['img/Artboard_17Animals.svg','img/Artboard_18Animals.svg','img/Artboard_19Animals.svg'],
     ['img/Artboard_20Animals.svg','img/Artboard_21Animals.svg','img/Artboard_22Animals.svg'],
     ['img/Artboard_23Animals.svg','img/Artboard_24Animals.svg','img/Artboard_25Animals.svg']];
-var animalGanados;
+var animalesGanados = [];
 
-function reloadImages(containerObjects,object){
-    var animalFound = document.getElementById(object).style.backgroundImage = 'url(\''+object+'\')';
+function reloadImages(containerObjects,previousImage,animal){
+    if(animal != null && animal != undefined){
+        var animalFound = document.getElementById(animal).style.backgroundImage = 'url('+previousImage+')'; 
+    }
     for (let index = 0; index < containerObjects.length; index++) {
         containerObjects[index].style.display = "block";
     }
+}
+
+function refillRefuge(){
+    var animals = JSON.parse(localStorage.getItem('animals'));
+    var count = 0;
+    var animalElement,shelter;
+    animals.forEach(animal => {
+        count++;
+        animalElement = document.getElementById('animal'+count);
+        shelter = document.getElementById('shelter-'+count);
+        shelter.style.visibility = 'visible';
+        animalElement.setAttribute('src',animal.imageURL);
+    });
 }
 
 function processObject(name,container){
@@ -174,10 +189,14 @@ function processObject(name,container){
         var aleatorio = Math.random();
         if(aleatorio <= winProbability){
             console.log('ganaste');
+            console.log(object);
             var fila = Math.floor(Math.random()*animalsImages.length);
             var columna = Math.floor(Math.random()*(2-1)+1);
             var mapName = container.split('-');
             var animalAge = Math.floor(Math.random()*(15-1)+1);
+            var backgroundImageSplit = window.getComputedStyle(object).getPropertyValue("background-image").split('www');
+            var previousImage = '../www'+backgroundImageSplit[1].substring(0,backgroundImageSplit[1].length-2);
+            console.log(previousImage);
             object.style.backgroundImage = 'url(\''+animalsImages[fila][columna]+'\')';
             animalGanado = {
                 imageURL: animalsImages[fila][0],
@@ -186,21 +205,26 @@ function processObject(name,container){
                 age: animalAge,
                 race: 'Mixed'
             };
-            window.localStorage.setItem('animal',JSON.stringify(animalGanado));
-            reloadImages(containerObjects,object);
-            console.log(window.localStorage.getItem('animal'));
+            animalesGanados.push(animalGanado);
+            window.localStorage.setItem('animals',JSON.stringify(animalesGanados));
+            winProbability = 0.2;
+            attempts = 5;
+            refillRefuge();
+            reloadImages(containerObjects,previousImage,object.id);
+            navigate('refuge');
         }else{
             attempts--;
             winProbability+=0.1;
             object.style.display = 'none';
         }
-        topSignText.placeholder = '';
         topSignText.placeholder = 'Tries left: '+attempts;
     }else{
+        refillRefuge();
+        reloadImages(containerObjects,previousImage,null);
         window.alert('No more attempts available');
         winProbability = 0.2;
         attempts = 5;
-        navigate('map');
+        navigate('refuge');
     }
     
 }
