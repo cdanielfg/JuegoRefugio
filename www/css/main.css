@@ -30,6 +30,7 @@ html {
 *{
   font-family: Baloo2-Bold;
 }
+
 /* General purpose styles */
 
 .d-flex {
@@ -305,24 +306,24 @@ html {
   }
 
   .map-restaurant {
-    margin-top: 12%;
-    margin-left: 70%;
+    margin-top: 2%;
+    margin-left: 65%;
     margin-bottom: 20%;
   }
 
   .map-city {
-    margin-top: 10%;
-    margin-left: 15%;
+    margin-top: 3%;
+    margin-left: 10%;
   }
 
   .map-park {
     margin-top: 20%;
-    margin-left: 12%;
+    margin-left: 4%;
   }
 
   .map-item {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
 
   .map-x {
@@ -393,19 +394,74 @@ html {
     color: gray;
   }
 
-  .store-x {
+ .store-x {
     margin-top: 10px;
     height: 40px;
   }
 
-  .estilotextarea 
+ .estilotextarea 
   {
     width:50%;
     height:3%;
     border: 1px solid #990000;
     border-radius: 5px;
   }
-  
+
+  /* Book front Screen Styles */
+
+  .book-front-background {
+    width: 440px;
+    height: 585px;
+    background-image: url("../img/Book_Closed.svg");
+  }
+
+  .book-background:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+  .book-x {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+  }
+
+  /* Book open Screen Styles */
+
+  .book-open-background {
+    width:470px;
+    height: 600px;
+    background-image: url("../img/Book_Open-1.svg");
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .book-open-pet-background {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #E8DEAA;
+    position: absolute; 
+    top: 40px;
+    left: 150px;
+  }
+
+  .book-open-pet-descp {
+    width: 240px;
+    height: 180px;
+    border-radius: 10%;
+    background-color: #E8DEAA;
+    position: absolute;
+    top: 45%;
+    left: 25%;
+  }
+
   /* Login Styles */
 
 #loginDiv {
