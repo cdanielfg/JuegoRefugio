@@ -82,7 +82,7 @@
             restaurant: document.getElementById('restaurantScreen'),
             park: document.getElementById('parkScreen'),
             awards: document.getElementById('awardScreen'),
-            support:document.getElementById('supportUsScreen'),
+            support: document.getElementById('supportUsScreen'),
             downtown: document.getElementById('downtownScreen')
         };
 
@@ -90,16 +90,16 @@
         // recargar, cuando se realiza esta acción el subscriptor desaparece
         var loadingUnsubscribe = store.subscribe(function (state) {
             if (!state.isLoading) {
-              var thanksScreen = document.getElementById('thanksScreen');
-              thanksScreen.classList.remove('loading');
-              thanksScreen.addEventListener('transitionend', function (event) {
-                if (event.propertyName === 'opacity') {
-                    thanksScreen.parentElement.removeChild(thanksScreen);
-                }
-              });
-              loadingUnsubscribe();
+                var thanksScreen = document.getElementById('thanksScreen');
+                thanksScreen.classList.remove('loading');
+                thanksScreen.addEventListener('transitionend', function (event) {
+                    if (event.propertyName === 'opacity') {
+                        thanksScreen.parentElement.removeChild(thanksScreen);
+                    }
+                });
+                loadingUnsubscribe();
             }
-          });
+        });
 
         // Escuchador que se encargará de mostrar las páginas seleccionadas
         store.subscribe(function (state) {
@@ -112,22 +112,22 @@
                 screens[screen].classList.remove('active');
             });
         });
-    
+
         //Funcion timer para llevar el tiempo de los splash screens
         setTimeout(function () {
             store.dispatch({ type: 'LOAD_APP' });
             var loadingUnsubscribe = store.subscribe(function (state) {
                 if (!state.isLoading) {
-                  var splashScreen = document.getElementById('splashScreen');
-                  splashScreen.classList.remove('loading');
-                  splashScreen.addEventListener('transitionend', function (event) {
-                    if (event.propertyName === 'opacity') {
-                      splashScreen.parentElement.removeChild(splashScreen);
-                    }
-                  });
-                  loadingUnsubscribe();
+                    var splashScreen = document.getElementById('splashScreen');
+                    splashScreen.classList.remove('loading');
+                    splashScreen.addEventListener('transitionend', function (event) {
+                        if (event.propertyName === 'opacity') {
+                            splashScreen.parentElement.removeChild(splashScreen);
+                        }
+                    });
+                    loadingUnsubscribe();
                 }
-              });
+            });
             setTimeout(function () {
                 store.dispatch({ type: 'THANKS' });
             }, 4000);
@@ -137,7 +137,7 @@
             store.dispatch({ type: 'NAVIGATE', screen: screen });
         };
     }
-    
+
 
     // Escuchador del evento onload del window
     window.onload = main;
@@ -149,60 +149,60 @@
  */
 // eslint-disable-next-line no-unused-vars
 var navigate = function (screen) {
-    
- };
- var winProbability = 0.2;
- var attempts = 5;
-var animalsImages = [['img/Artboard_1Animals.svg','img/Artboard_2Animals.svg','img/Artboard_3Animals.svg'],
-    ['img/Artboard_4Animals.svg','img/Artboard_6Animals.svg','img/Artboard_7Animals.svg'],
-    ['img/Artboard_8Animals.svg','img/Artboard_9Animals.svg','img/Artboard_10Animals.svg'],
-    ['img/Artboard_11Animals.svg','img/Artboard_12Animals.svg','img/Artboard_13Animals.svg'],
-    ['img/Artboard_14Animals.svg','img/Artboard_15Animals.svg','img/Artboard_16Animals.svg'],
-    ['img/Artboard_17Animals.svg','img/Artboard_18Animals.svg','img/Artboard_19Animals.svg'],
-    ['img/Artboard_20Animals.svg','img/Artboard_21Animals.svg','img/Artboard_22Animals.svg'],
-    ['img/Artboard_23Animals.svg','img/Artboard_24Animals.svg','img/Artboard_25Animals.svg']];
+
+};
+var winProbability = 0.2;
+var attempts = 5;
+var animalsImages = [['img/Artboard_1Animals.svg', 'img/Artboard_2Animals.svg', 'img/Artboard_3Animals.svg'],
+['img/Artboard_4Animals.svg', 'img/Artboard_6Animals.svg', 'img/Artboard_7Animals.svg'],
+['img/Artboard_8Animals.svg', 'img/Artboard_9Animals.svg', 'img/Artboard_10Animals.svg'],
+['img/Artboard_11Animals.svg', 'img/Artboard_12Animals.svg', 'img/Artboard_13Animals.svg'],
+['img/Artboard_14Animals.svg', 'img/Artboard_15Animals.svg', 'img/Artboard_16Animals.svg'],
+['img/Artboard_17Animals.svg', 'img/Artboard_18Animals.svg', 'img/Artboard_19Animals.svg'],
+['img/Artboard_20Animals.svg', 'img/Artboard_21Animals.svg', 'img/Artboard_22Animals.svg'],
+['img/Artboard_23Animals.svg', 'img/Artboard_24Animals.svg', 'img/Artboard_25Animals.svg']];
 var animalesGanados = [];
 
-function reloadImages(containerObjects,previousImage,animal){
-    if(animal != null && animal != undefined){
-        var animalFound = document.getElementById(animal).style.backgroundImage = 'url('+previousImage+')'; 
+function reloadImages(containerObjects, previousImage, animal) {
+    if (animal != null && animal != undefined) {
+        var animalFound = document.getElementById(animal).style.backgroundImage = 'url(' + previousImage + ')';
     }
     for (let index = 0; index < containerObjects.length; index++) {
         containerObjects[index].style.display = "block";
     }
 }
 
-function refillRefuge(){
+function refillRefuge() {
     var animals = JSON.parse(localStorage.getItem('animals'));
     var count = 0;
-    var animalElement,shelter;
+    var animalElement, shelter;
     animals.forEach(animal => {
         count++;
-        animalElement = document.getElementById('animal'+count);
-        shelter = document.getElementById('shelter-'+count);
+        animalElement = document.getElementById('animal' + count);
+        shelter = document.getElementById('shelter-' + count);
         shelter.style.visibility = 'visible';
-        animalElement.setAttribute('src',animal.imageURL);
+        animalElement.setAttribute('src', animal.imageURL);
     });
 }
 
-function processObject(name,container){
+function processObject(name, container) {
     var object = document.getElementById(name);
     var containerObjects = document.getElementById(container).getElementsByTagName("DIV");
     var topSignEspecific = container.split('-');
-    var topSignText = document.getElementById('topSignText-'+topSignEspecific[0]);
-    if(attempts > 0){
+    var topSignText = document.getElementById('topSignText-' + topSignEspecific[0]);
+    if (attempts > 0) {
         var aleatorio = Math.random();
-        if(aleatorio <= winProbability){
+        if (aleatorio <= winProbability) {
             console.log('ganaste');
             console.log(object);
-            var fila = Math.floor(Math.random()*animalsImages.length);
-            var columna = Math.floor(Math.random()*(2-1)+1);
+            var fila = Math.floor(Math.random() * animalsImages.length);
+            var columna = Math.floor(Math.random() * (2 - 1) + 1);
             var mapName = container.split('-');
-            var animalAge = Math.floor(Math.random()*(15-1)+1);
+            var animalAge = Math.floor(Math.random() * (15 - 1) + 1);
             var backgroundImageSplit = window.getComputedStyle(object).getPropertyValue("background-image").split('www');
-            var previousImage = '../www'+backgroundImageSplit[1].substring(0,backgroundImageSplit[1].length-2);
+            var previousImage = '../www' + backgroundImageSplit[1].substring(0, backgroundImageSplit[1].length - 2);
             console.log(previousImage);
-            object.style.backgroundImage = 'url(\''+animalsImages[fila][columna]+'\')';
+            object.style.backgroundImage = 'url(\'' + animalsImages[fila][columna] + '\')';
             animalGanado = {
                 imageURL: animalsImages[fila][0],
                 name: 'Rocky',
@@ -211,26 +211,75 @@ function processObject(name,container){
                 race: 'Mixed'
             };
             animalesGanados.push(animalGanado);
-            window.localStorage.setItem('animals',JSON.stringify(animalesGanados));
+            window.localStorage.setItem('animals', JSON.stringify(animalesGanados));
             winProbability = 0.2;
             attempts = 5;
             refillRefuge();
-            reloadImages(containerObjects,previousImage,object.id);
+            reloadImages(containerObjects, previousImage, object.id);
             navigate('refuge');
-        }else{
+        } else {
             attempts--;
-            winProbability+=0.1;
+            winProbability += 0.1;
             object.style.display = 'none';
         }
-        topSignText.placeholder = 'Tries left: '+attempts;
-    }else{
+        topSignText.placeholder = 'Tries left: ' + attempts;
+    } else {
         refillRefuge();
-        reloadImages(containerObjects,previousImage,null);
+        reloadImages(containerObjects, previousImage, null);
         window.alert('No more attempts available');
         winProbability = 0.2;
         attempts = 5;
         navigate('refuge');
     }
-    
+
 }
 "use strict";
+
+function register() {
+    var email = document.getElementById('emailInputSignup').value;
+    var password = document.getElementById('passwordInputSignup').value;
+
+    console.log(email)
+
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        console.log('No se pudo acceder')
+    }); email - password.html
+}
+
+function login() {
+    var email = document.getElementById('userInputLogin').value;
+    var password = document.getElementById('passwordInputLogin').value;
+
+    var loged = true;
+
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        loged = 'error';
+        console.log("Por favor verifique que sus datos sean válidos");
+        navigate('connection');
+
+    }); email - password.html
+
+    
+    if (loged != 'error') {
+        navigate('home');
+        console.log("Entré");
+    }
+   
+}
+
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds) {
+            break;
+        }
+    }
+}
+
