@@ -162,6 +162,8 @@ var animalsImages = [['img/Artboard_1Animals.svg','img/Artboard_2Animals.svg','i
     ['img/Artboard_20Animals.svg','img/Artboard_21Animals.svg','img/Artboard_22Animals.svg'],
     ['img/Artboard_23Animals.svg','img/Artboard_24Animals.svg','img/Artboard_25Animals.svg']];
 var animalesGanados = [];
+var winner;
+var previousImage;
 
 function reloadImages(containerObjects,previousImage,animal){
     if(animal != null && animal != undefined){
@@ -192,7 +194,11 @@ function processObject(name,container){
     var topSignText = document.getElementById('topSignText-'+topSignEspecific[0]);
     if(attempts > 0){
         var aleatorio = Math.random();
-        if(aleatorio <= winProbability){
+        if(name == winner){
+            refillRefuge();
+            reloadImages(containerObjects,previousImage,winner);
+            navigate('refuge');
+        }else if(aleatorio <= winProbability){
             console.log('ganaste');
             console.log(object);
             var fila = Math.floor(Math.random()*animalsImages.length);
@@ -200,7 +206,7 @@ function processObject(name,container){
             var mapName = container.split('-');
             var animalAge = Math.floor(Math.random()*(15-1)+1);
             var backgroundImageSplit = window.getComputedStyle(object).getPropertyValue("background-image").split('www');
-            var previousImage = '../www'+backgroundImageSplit[1].substring(0,backgroundImageSplit[1].length-2);
+            previousImage = '../www'+backgroundImageSplit[1].substring(0,backgroundImageSplit[1].length-2);
             console.log(previousImage);
             object.style.backgroundImage = 'url(\''+animalsImages[fila][columna]+'\')';
             animalGanado = {
@@ -214,9 +220,8 @@ function processObject(name,container){
             window.localStorage.setItem('animals',JSON.stringify(animalesGanados));
             winProbability = 0.2;
             attempts = 5;
-            refillRefuge();
-            reloadImages(containerObjects,previousImage,object.id);
-            navigate('refuge');
+            winner = object.id;
+            
         }else{
             attempts--;
             winProbability+=0.1;
