@@ -139,6 +139,8 @@
     }
 
 
+
+
     // Escuchador del evento onload del window
     window.onload = main;
     //document.addEventListener('deviceready', main, false);
@@ -246,40 +248,39 @@ function register() {
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
-        console.log('No se pudo acceder')
+        alert("La cuenta no se creó correctamente");
     }); email - password.html
 }
+
 
 function login() {
     var email = document.getElementById('userInputLogin').value;
     var password = document.getElementById('passwordInputLogin').value;
 
-    var loged = true;
 
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        loged = 'error';
-        console.log("Por favor verifique que sus datos sean válidos");
-        navigate('connection');
+        alert("Por favor verifique que sus datos sean válidos");
+
 
     }); email - password.html
 
-    
-    if (loged != 'error') {
-        navigate('home');
-        console.log("Entré");
-    }
-   
+
 }
 
-function sleep(milliseconds) {
-    var start = new Date().getTime();
-    for (var i = 0; i < 1e7; i++) {
-        if ((new Date().getTime() - start) > milliseconds) {
-            break;
+function userLoged() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            // User is signed in.
+            navigate('home');
+        } else {
+            // No user is signed in.
         }
-    }
-}
+    });
+} userLoged();
+
+
+
 

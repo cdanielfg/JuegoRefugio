@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script src="js/init-firebase.js"></script>
 
 
 </head>
@@ -163,14 +167,22 @@
                     <div class="store-background-booster">
                         <img class="store-image-treat" src="img/Pet_Treats1.svg">
                         <h2 class="store-amount">x10</h2>
+                        <img class="store-coins"  src="img/monedas-1.svg">
+                        <img src="img/Buy-1.svg">
                     </div>
                     <div class="store-background-booster">
                         <img class="store-image-treat" src="img/Pet_Treats1.svg">
                         <h2 class="store-amount">x10</h2>
+                        <img class="store-coins" src="img/monedas-1.svg">
+                        <img src="img/Buy-1.svg">
+
                     </div>
                     <div class="store-background-booster">
                         <img class="store-image-treat" src="img/Pet_Treats1.svg">
                         <h2 class="store-amount">x10</h2>
+                        <img class="store-coins" src="img/monedas-1.svg">
+                        <img src="img/Buy-1.svg">
+
                     </div>
                 </div>
 
@@ -518,28 +530,10 @@
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
 
     <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBbqqg95ShyTtVclQ7nejGJIMEjHsw6ZkA",
-            authDomain: "buddy-finder-13316.firebaseapp.com",
-            databaseURL: "https://buddy-finder-13316.firebaseio.com",
-            projectId: "buddy-finder-13316",
-            storageBucket: "buddy-finder-13316.appspot.com",
-            messagingSenderId: "599257045995",
-            appId: "1:599257045995:web:f845badb8ae8a7e9a4d7ae",
-            measurementId: "G-QR5MXP6R1Y"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-
-    </script>
+    
+    
 </body>
 
 </html>
