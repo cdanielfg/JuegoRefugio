@@ -161,7 +161,10 @@ var animalsImages = [['img/Artboard_1Animals.svg','img/Artboard_2Animals.svg','i
     ['img/Artboard_17Animals.svg','img/Artboard_18Animals.svg','img/Artboard_19Animals.svg'],
     ['img/Artboard_20Animals.svg','img/Artboard_21Animals.svg','img/Artboard_22Animals.svg'],
     ['img/Artboard_23Animals.svg','img/Artboard_24Animals.svg','img/Artboard_25Animals.svg']];
+var animalsName = ['Rocky','Max','Lupe','Ares','Atenea','Tommy','Chelsea','Trueno','Liz'];
+var animalsRace = ['Mixed', 'Pure','Pedigree'];
 var animalesGanados = [];
+var animalAge;
 var winner;
 var previousImage;
 
@@ -204,17 +207,17 @@ function processObject(name,container){
             var fila = Math.floor(Math.random()*animalsImages.length);
             var columna = Math.floor(Math.random()*(2-1)+1);
             var mapName = container.split('-');
-            var animalAge = Math.floor(Math.random()*(15-1)+1);
+            animalAge = Math.floor(Math.random()*(15-1)+1);
             var backgroundImageSplit = window.getComputedStyle(object).getPropertyValue("background-image").split('www');
             previousImage = '../www'+backgroundImageSplit[1].substring(0,backgroundImageSplit[1].length-2);
             console.log(previousImage);
             object.style.backgroundImage = 'url(\''+animalsImages[fila][columna]+'\')';
             animalGanado = {
                 imageURL: animalsImages[fila][0],
-                name: 'Rocky',
+                name: animalsName[Math.floor(Math.random()*animalsName.length)],
                 found: mapName[0],
                 age: animalAge,
-                race: 'Mixed'
+                race: animalsRace[Math.floor(Math.random()*animalsRace.length)]
             };
             animalesGanados.push(animalGanado);
             window.localStorage.setItem('animals',JSON.stringify(animalesGanados));
