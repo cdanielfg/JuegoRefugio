@@ -478,7 +478,7 @@ html {
   left: 147px;
   width: 188px;
   height: 70px;
-  background-image: url(../img/Fb\ log\ in.svg);
+  background-image: url(../img/Botones/Fb-log-in.png);
 }
 #userInputLogin {
   top: 327px;
@@ -497,14 +497,14 @@ html {
     left: 30px;
     width: 160px;
     height: 70px;
-    background-image: url(../img/Log\ in.svg);
+    background-image: url(../img/Botones/Log-in.png);
 }
 #signUpLogin {
   top: 570px;
   left: 310px;
   width: 160px;
   height: 70px;
-  background-image: url(../img/Sign\ up.svg);
+  background-image: url(../img/Botones/Sign-up.png);
 }
 
 .inputStyle {
@@ -577,14 +577,14 @@ input::placeholder{
     left: 150px;
     width: 170px;
     height: 108px;
-    background-image: url(../img/Create.svg);
+    background-image: url(../img/Botones/Create.png);
 }
 #signupFacebook{
   top: 785px;
   left: 140px;
   width: 190px;
   height: 70px;
-  background-image: url(../img/FB\ sign\ up.svg);
+  background-image: url(../img/Botones/FB-Sign-up.png);
 }
 
 /* Restaurant Styles */
@@ -1145,7 +1145,7 @@ height: 200px;
   left: 36px;
   right: 0;
   bottom: 0;
-  background-image: url(../img/Support\ us\ TEPA.svg);
+  background-image: url(../img/Botones/Support-us.png);
   width: 405px;
   height: 165px;
 }
