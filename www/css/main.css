@@ -390,6 +390,13 @@ html {
     margin-top: 20%;
   }
 
+  .store-coins {
+    width: 15px;
+    height: 15px;
+    margin-left: 2%;
+    margin-top: 0%;
+  }
+
   .store-amount {
     margin-top: -5%;
     color: gray;

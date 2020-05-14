@@ -8,13 +8,17 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script src="js/init-firebase.js"></script>
 
 
 </head>
 
 <body>
     <main class="app">
- 
+
         <section class="splash loading screen" id="splashScreen">
             <video class="splash-app-video" src="img/SPLASH_Logo_BuddyFinder.mp4" autoplay muted loop></video>
         </section>
@@ -42,7 +46,7 @@
                 <img class="img-size" onclick="navigate('instruction')" src="./img/Refuge/Tierra.svg">
             </div>
             <div class="place-two">
-                
+
                 <div id="shelter-2" class="ajustarImg">
                     <img class="img-size" id="animal2" class="animal">
                 </div>
@@ -163,21 +167,29 @@
                     <div class="store-background-booster">
                         <img class="store-image-treat" src="img/Pet_Treats1.svg">
                         <h2 class="store-amount">x10</h2>
+                        <img class="store-coins"  src="img/monedas-1.svg">
+                        <img src="img/Buy-1.svg">
                     </div>
                     <div class="store-background-booster">
                         <img class="store-image-treat" src="img/Pet_Treats1.svg">
                         <h2 class="store-amount">x10</h2>
+                        <img class="store-coins" src="img/monedas-1.svg">
+                        <img src="img/Buy-1.svg">
+
                     </div>
                     <div class="store-background-booster">
                         <img class="store-image-treat" src="img/Pet_Treats1.svg">
                         <h2 class="store-amount">x10</h2>
+                        <img class="store-coins" src="img/monedas-1.svg">
+                        <img src="img/Buy-1.svg">
+
                     </div>
                 </div>
 
             </div>
             </div>
-        </div>
-        <img class="store-x" src="img/x.svg" onclick="navigate('refuge')">
+            </div>
+            <img class="store-x" src="img/x.svg" onclick="navigate('refuge')">
         </section>
 
         <section class="map screen center-items" id="mapScreen">
@@ -199,10 +211,10 @@
             <div class="book-open-background">
                 <div class="book-open-pet-background">
                     <img id="imgMascota" src="img/Artboard_4Animals.svg">
-                    
+
                 </div>
                 <div class="book-open-pet-descp">
-                        
+
                 </div>
             </div>
             <img class="book-x" src="img/x.svg" onclick="navigate('refuge')"></div>
@@ -233,29 +245,35 @@
         </section>
 
         <section class="screen  center-items justify-content-between scrollDiv" id="creditsScreen">
-            
+
             <div class="" id="creditsDivBackground">
-                <div class="divcreditsSpace"></div>                
-                <div id="nextCredits">                                        
-                    <button onclick="navigate('credits2')"><h1>></h1></button>
+                <div class="divcreditsSpace"></div>
+                <div id="nextCredits">
+                    <button onclick="navigate('credits2')">
+                        <h1>></h1>
+                    </button>
                 </div>
                 <div id="PreviousCredits">
-                    <button onclick="navigate('credits2')"><h1><</h1></button>
+                    <button onclick="navigate('credits2')">
+                        <h1>
+                            << /h1>
+                    </button>
                 </div>
 
                 <div class="divCreditsTextProfile">
                     <img src="img/Mask Group 1.svg" alt=""><br>
-                    <span class="itemCredits"><b id="name">ANGÉLICA JARAMILLO </b><br id="profession">GRAPHIC DESIGNER, CONCEPT ARTIST<br>angelicajmllo@gmail.com</span>
-    
+                    <span class="itemCredits"><b id="name">ANGÉLICA JARAMILLO </b><br id="profession">GRAPHIC DESIGNER,
+                        CONCEPT ARTIST<br>angelicajmllo@gmail.com</span>
+
                     <br><br><br><br><br><br><br>
                     <img src="img/Mask Group 2.svg" alt=""><br>
                     <span class="itemCredits"><b id="name">CARLOS FERNÁNDEZ</b><br id="profession">APP DEVELOPER
                         <br>carlos.fernandez@upb.edu.co</span>
-    
+
                     <br><br><br><br><br><br><br>
                     <img src="img/Mask Group 3.svg" alt=""><br>
                     <span class="itemCredits"><b id="name">EMILIO MARTÍNEZ</b><br id="profession">
-                        APP DEVELOPER<br>emilio.martinez@upb.edu.co</span>                      
+                        APP DEVELOPER<br>emilio.martinez@upb.edu.co</span>
                 </div>
                 <div class="navbar" id="footerNavbar">
                     <img class="navbar-icons" onclick="navigate('info')" src="img/Botones/info-active.png">
@@ -263,33 +281,39 @@
                     <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones/prices-inactive.png">
                 </div>
 
-            </div>      
+            </div>
         </section>
 
         <section class="credits2 screen center-items justify-content-between scrollDiv" id="creditsScreen2">           
             <div class="ajustarImg" id="creditsDivBackground">
-            <div class="divcreditsSpace"></div>
-                <div id="nextCredits">                                        
-                    <button onclick="navigate('credits')"><h1>></h1></button>
+                <div class="divcreditsSpace"></div>
+                <div id="nextCredits">
+                    <button onclick="navigate('credits')">
+                        <h1></h1>
+                    </button>
                 </div>
 
                 <div id="PreviousCredits">
-                    <button onclick="navigate('credits')"><h1><</h1></button>
+                    <button onclick="navigate('credits')">
+                        <h1>
+                        </h1>
+                    </button>
                 </div>
                 <div class="divCreditsTextProfile">
                     <img src="img/Mask Group 8.svg" alt=""><br>
                     <span class="itemCredits"><b id="name">SEBASTIAN FIGUEREDO</b><br id="profession">
                         GRAPHIC DESIGNER, CONCEPT ARTIST<br>sebastian.figueredov@hotmail.com</span>
-    
+
                     <br><br><br><br><br><br><br>
                     <img src="img/Mask Group 7.svg" alt=""><br>
-                    <span class="itemCredits"><b id="name">LAURA BARRIOS</b><br id="profession"> DESIGNER, CONCEPT ARTIST
+                    <span class="itemCredits"><b id="name">LAURA BARRIOS</b><br id="profession"> DESIGNER, CONCEPT
+                        ARTIST
                         <br>laura.barrios@upb.edu.co</span>
-    
+
                     <br><br><br><br><br><br><br>
                     <img src="img/Mask Group 5.svg" alt=""><br>
                     <span class="itemCredits"><b id="name">JAROL MEDINA MARIN</b><br id="profession">
-                        APP DEVELOPER<br>jarol.medina@upb.edu.co</span>                      
+                        APP DEVELOPER<br>jarol.medina@upb.edu.co</span>
                 </div>
                 <div class="navbar" id="footerNavbar">
                     <img class="navbar-icons" onclick="navigate('info')" src="img/Botones/info-inactive.png">
@@ -303,13 +327,13 @@
             <div id="tepaFoundationAndSupportUsBackground" class="ajustarImg">         
                 <div onclick="navigate('support')" id="divSupportUs" class="ajustarImg"></div>
 
-                <div id="tepaText"> 
-                    <p>TEPA</p>            
+                <div id="tepaText">
+                    <p>TEPA</p>
                 </div>
 
-                <div id="foundationText"> 
-                    <p>FOUNDATION</p>            
-                </div>  
+                <div id="foundationText">
+                    <p>FOUNDATION</p>
+                </div>
                 <div id="divTepaFoundationImgs">
                     <div class="textWhat">
                         <p>
@@ -330,44 +354,43 @@
                     <img src="img/Group 746.svg" alt="">
                     <br>
                     <img src="img/Group 747.svg" alt="">
-                </div> 
-                <div class="divTepaSpace"></div>               
+                </div>
+                <div class="divTepaSpace"></div>
                 <div class="navbar" id="footerNavbar">
                     <img class="navbar-icons" onclick="navigate('info')" src="img/Botones/info-active.png">
                     <img class="navbar-icons" onclick="navigate('home')" src="img/Botones/home-inactive.png">
                     <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones/prices-inactive.png">
                 </div>
             </div>
-
         </section>
 
-        <section class="supportUsScreen screen center-items scrollDiv" id="supportUsScreen">  
-            <div id="divMoreInfo" class="ajustarImg"></div>         
+        <section class="supportUsScreen screen center-items scrollDiv" id="supportUsScreen">
+            <div id="divMoreInfo" class="ajustarImg"></div>
             <div id="tepaFoundationAndSupportUsBackground" class="ajustarImg">
-                <div id="supportUsTxt"> 
-                    <p>SUPPORT US</p>            
+                <div id="supportUsTxt">
+                    <p>SUPPORT US</p>
                 </div>
                 <div class="textHowToDonate">
                     <p>
                         The foundation goes to great lengths <tbody>
-                        help many animals on a small budget, as they
-                        have no official support. So they need your 
-                        help to ensure the well being and happiness of
-                        the animals that live in the foundation.<br><br>
-                        You can donate supplies from food and medicine
-                        to blankets or tiles to adapt the space. you can
-                        also spend time with the animals, help with
-                        the foundation or make money donations.<br><br>
-                        You can donate online through PayU safely
-                        and quickly by selecting the value you want
-                        to contribute. These contributions will be inveted
-                        in food, medicine and the adaptation of spaces 
-                        for pets.                    
+                            help many animals on a small budget, as they
+                            have no official support. So they need your
+                            help to ensure the well being and happiness of
+                            the animals that live in the foundation.<br><br>
+                            You can donate supplies from food and medicine
+                            to blankets or tiles to adapt the space. you can
+                            also spend time with the animals, help with
+                            the foundation or make money donations.<br><br>
+                            You can donate online through PayU safely
+                            and quickly by selecting the value you want
+                            to contribute. These contributions will be inveted
+                            in food, medicine and the adaptation of spaces
+                            for pets.
                     </p>
-                    
-                </div> 
-                <div id="divHowDonate" class="ajustarImg"></div> 
-                <div class="divSupportUsSpaces"></div>  
+
+                </div>
+                <div id="divHowDonate" class="ajustarImg"></div>
+                <div class="divSupportUsSpaces"></div>
                 <div class="navbar" id="footerNavbar">
                     <img class="navbar-icons" onclick="navigate('info')" src="img/Botones/info-active.png">
                     <img class="navbar-icons" onclick="navigate('home')" src="img/Botones/home-inactive.png">
@@ -375,14 +398,14 @@
                 </div>
             </div>
         </section>
-    
+
         <section class="login screen center-items" id="loginScreen">
             <div class="ajustarImg">
                 <input type="text" placeholder="Username" name="usernameLogin" class="inputStyle text-center"
                     id="userInputLogin" required>
                 <input type="password" name="passwordLogin" placeholder="Password" class="inputStyle text-center"
                     id="passwordInputLogin" required>
-                <div id="loginButton" class="btnStyle ajustarImg" onclick="navigate('home')">
+                <div id="loginButton" class="btnStyle ajustarImg" onclick="login()">
 
                 </div>
                 <div id="signUpLogin" class="btnStyle ajustarImg" onclick="navigate('signup')">
@@ -401,10 +424,10 @@
                     id="emailInputSignup" required>
                 <input type="password" name="passwordSignup" placeholder="Password" class="inputStyle text-center"
                     id="passwordInputSignup" required>
-                <div id="signupButton" class="btnStyle ajustarImg" onclick="navigate('home')">
+                <div id="signupButton" class="btnStyle ajustarImg" onclick="register(), navigate('connection')">
 
                 </div>
-                <div id="signupFacebook" class="btnStyle ajustarImg" onclick="navigate('home')">
+                <div id="signupFacebook" class="btnStyle ajustarImg" onclick="navigate('login')">
 
                 </div>
             </div>
@@ -412,18 +435,26 @@
 
         <section id="restaurantScreen" class="restaurant screen center-items">
             <div id="restaurant-background" class="ajustarImg">
-                <div id="restaurant-chair1" class="objeto" onclick="processObject('restaurant-chair1','restaurant-background')"></div>
-                <div id="restaurant-chair2" class="objeto" onclick="processObject('restaurant-chair2','restaurant-background')"></div>
-                <div id="restaurant-table" class="objeto" onclick="processObject('restaurant-table','restaurant-background')"></div>
-                <div id="restaurant-car" class="objeto" onclick="processObject('restaurant-car','restaurant-background')"></div>
-                <div id="restaurant-door1" class="objeto" onclick="processObject('restaurant-door1','restaurant-background')"></div>
-                <div id="restaurant-bush1" class="objeto" onclick="processObject('restaurant-bush1','restaurant-background')"></div>
-                <div id="restaurant-bush2" class="objeto" onclick="processObject('restaurant-bush2','restaurant-background')"></div>
-                <div id="restaurant-door2" class="objeto" onclick="processObject('restaurant-door2','restaurant-background')"></div>
+                <div id="restaurant-chair1" class="objeto"
+                    onclick="processObject('restaurant-chair1','restaurant-background')"></div>
+                <div id="restaurant-chair2" class="objeto"
+                    onclick="processObject('restaurant-chair2','restaurant-background')"></div>
+                <div id="restaurant-table" class="objeto"
+                    onclick="processObject('restaurant-table','restaurant-background')"></div>
+                <div id="restaurant-car" class="objeto"
+                    onclick="processObject('restaurant-car','restaurant-background')"></div>
+                <div id="restaurant-door1" class="objeto"
+                    onclick="processObject('restaurant-door1','restaurant-background')"></div>
+                <div id="restaurant-bush1" class="objeto"
+                    onclick="processObject('restaurant-bush1','restaurant-background')"></div>
+                <div id="restaurant-bush2" class="objeto"
+                    onclick="processObject('restaurant-bush2','restaurant-background')"></div>
+                <div id="restaurant-door2" class="objeto"
+                    onclick="processObject('restaurant-door2','restaurant-background')"></div>
                 <div id="money-bag" class="objeto inputStyle"></div>
                 <div id="top-sign" class="objeto">
-                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
-                        id="topSignText-restaurant" readonly>
+                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText"
+                        class="inputStyle text-center" id="topSignText-restaurant" readonly>
                 </div>
             </div>
             <div class="button-refuge" id="footerNavbar">
@@ -445,13 +476,14 @@
                 <div id="park-bush5" class="objeto" onclick="processObject('park-bush5','park-background')"></div>
                 <div id="park-bush6" class="objeto" onclick="processObject('park-bush6','park-background')"></div>
                 <div id="park-basurero" class="objeto" onclick="processObject('park-basurero','park-background')"></div>
-                <div id="park-basurero2" class="objeto" onclick="processObject('park-basurero2','park-background')"></div>
+                <div id="park-basurero2" class="objeto" onclick="processObject('park-basurero2','park-background')">
+                </div>
                 <div id="park-bench1" class="objeto" onclick="processObject('park-bench1','park-background')"></div>
                 <div id="park-bench2" class="objeto" onclick="processObject('park-bench2','park-background')"></div>
                 <div id="money-bag" class="objeto inputStyle"></div>
                 <div id="top-sign" class="objeto">
-                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
-                        id="topSignText-park" readonly>
+                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText"
+                        class="inputStyle text-center" id="topSignText-park" readonly>
                 </div>
             </div>
             <div class="button-refuge" id="footerNavbar">
@@ -475,8 +507,8 @@
                 <div id="garbage-2" class="objeto" onclick="processObject('garbage-2','downtown-background')"></div>
                 <div id="money-bag" class="objeto inputStyle"></div>
                 <div id="top-sign" class="objeto">
-                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText" class="inputStyle text-center"
-                        id="topSignText-downtown" readonly>
+                    <input class="topSignText inputStyle" type="text" placeholder="Tries left: 5" name="topSignText"
+                        class="inputStyle text-center" id="topSignText-downtown" readonly>
                 </div>
             </div>
             <div class="button-refuge" id="footerNavbar">
@@ -490,6 +522,14 @@
     </main>
 
     <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+
+    <!-- Add Firebase products that you want to use -->
+    
+    
 </body>
 
 </html>
