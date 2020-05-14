@@ -302,7 +302,7 @@ html {
   .map-background {
     width: 420px;
     height: 440px;
-    background-image: url("../img/mapa-2.svg");
+    background-image: url("../img/Map/mapa-2.svg");
     background-size: cover;
   }
 
