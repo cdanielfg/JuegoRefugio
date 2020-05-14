@@ -1055,6 +1055,7 @@ height: 1087px;
   position: absolute;
   top: 307px;
   left: 30px;
+  height: 30px;
   right: 0;
   bottom: 0;
 }
@@ -1148,13 +1149,13 @@ height: 200px;
 
 #divSupportUs {
   position: absolute;
-  top: 837px;
-  left: 36px;
+  top: 869px;
+  left: 55px;
   right: 0;
   bottom: 0;
-  background-image: url(../img/Botones/Support-us.png);
-  width: 405px;
-  height: 165px;
+  background-image: url(../img/Botones/Support.png);
+  width: 373px;
+  height: 111px;
 }
 
 #supportUsTxt {
