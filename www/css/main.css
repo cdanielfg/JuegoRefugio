@@ -359,7 +359,7 @@ html {
   }
 
   .store-background {
-    background-image: url("../img/Store_Top.svg");
+    background-image: url("../img/Store/Store_Top.svg");
     background-size: cover;
     
   }
@@ -381,7 +381,7 @@ html {
     border-radius: 20px;
     display: inline-block;
     margin: 45px 8px 45px 8px;
-    background-image: url("../img/Rectangle 1429.svg");
+    background-image: url("../img/Store/Rectangle.svg");
     
   }
 
@@ -421,7 +421,13 @@ html {
   .book-front-background {
     width: 440px;
     height: 585px;
-    background-image: url("../img/Book_Closed.svg");
+    background-image: url("../img/Book/Book_cover.svg");
+  }
+
+  .book-end-background {
+    width: 440px;
+    height: 585px;
+    background-image: url("../img/Book/Book_Closed2.svg");
   }
 
   .book-background:before {
@@ -446,7 +452,7 @@ html {
   .book-open-background {
     width:470px;
     height: 600px;
-    background-image: url("../img/Book_Open-1.svg");
+    background-image: url("../img/Book/Book_Open-1.svg");
     background-repeat: no-repeat;
     position: relative;
   }
@@ -680,7 +686,7 @@ input::placeholder{
     left: 112px;
     width: 260px;
     height: 370px;
-    background-image: url(../img/top-sign-10.svg);
+    background-image: url(../img/Restaurant/top-sign.svg);
     z-index: 6;
 }
 .topSignText{
@@ -693,7 +699,7 @@ input::placeholder{
   left: 350px;
   width: 40px;
   height: 40px;
-  background-image: url(../img/Money_Bag-1.svg);
+  background-image: url(../img/Restaurant/Money_Bag-1.svg);
   z-index: 6;
 }
 
@@ -1068,7 +1074,7 @@ height: 1087px;
   bottom: 0;
 }
 #tepaFoundationAndSupportUsBackground{
-  background-image: url(../img/TepaInfo-1.svg);
+  background-image: url(../img/Fondos/TepaInfo.jpg);
   width: 480px;
   height: 985px;
 }
@@ -1112,7 +1118,7 @@ height: 1087px;
   left: 30px;
   right: 0;
   bottom: 0;
-  background-image: url(../img/Group\ 748.svg);
+  background-image: url(../img/TEPA/Group-748.svg);
   width: 400px;
   height: 480px;
 }
@@ -1122,14 +1128,14 @@ top: 820px;
 left: 38px;
 right: 0;
 bottom: 0;
-background-image: url(../img/More\ information.svg);
+background-image: url(../img/TEPA/More-information.svg);
 width: 400px;
 height: 200px;
 }
 
 
 #tepaFondosupportUs{
-  background-image: url(../img/TepaInfo-1.svg);
+  background-image: url(../img/Fondos/TepaInfo.jpg);
   width: 480px;
   height: 985px;
 }
