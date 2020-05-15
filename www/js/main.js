@@ -84,7 +84,6 @@
             bookopen: document.getElementById('bookopenScreen'),
             info: document.getElementById('infoScreen'),
             credits: document.getElementById('creditsScreen'),
-            credits2: document.getElementById('creditsScreen2'),
             tepa: document.getElementById('tepaScreen'),
             connection: document.getElementById('loginScreen'),
             signup: document.getElementById('signupScreen'),
@@ -262,6 +261,15 @@ function processObject(name, container) {
     }
 
 }
+
+function callInstructions() {
+    document.getElementById("videoInstructions").play();
+    navigate('instruction');
+    setTimeout(function () {
+        navigate('home');
+    }, 35500);
+}
+
 "use strict";
 
 function register() {

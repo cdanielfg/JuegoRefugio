@@ -1017,48 +1017,57 @@ input::placeholder{
 
 /*Style section credits*/
 
-.divCreditsTextProfile {
+.credits {
+  background-size: cover;
+  background-position: inherit;
+  background-attachment: fixed;
+  background-image: url(../img/Fondos/credits.jpg);
+}
+
+.credits-header {
+  padding: 110px;
+  justify-content: flex-end;
+}
+
+.credits-content {
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.author-container {
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../img/Fondos/tablones-creditos.png);
+  width: 425px;
+  height: 193px;
+  margin: 15px;
+}
+
+.author-image-container {
   position: absolute;
+  margin-top: 10px;
+}
+
+.author-text-container {
+  align-self: flex-end;
+  text-align: center;
+  padding: 15px;
   font-family: Baloo2-Bold;
   color: #915e1e;
-  top: 246px;
-  left: 77px;
-  text-align: center;
-  width: 70%;
-  height: 27%;
 }
 
-.itemCredits{
-  font-size: 18px;
-  font-weight: bold;
-
+.author-text-container > * {
+  margin: 0;
 }
 
-#creditsDivBackground{
-  background-image: url(../img/credits-1.svg);
-  width: 480px;
-  height: 990px;
-  
-}
-#nextCredits {
-  z-index: 1;
-  position: absolute;
-  top: 904px;
-  left: 416px;
-  
-}
-#PreviousCredits{
-  z-index: 1;
-  position: absolute;
-  top: 904px;
-  left: 19px;
-  
-}
-.divcreditsSpace{
-  height: 1016px;
-
+.author-name {
+  font-size: 1.8em;
 }
 
+.author-role {
+  font-size: 1.06em;
+}
 
 /*Style section tepaFoundation*/
 
@@ -1070,6 +1079,7 @@ height: 1087px;
   position: absolute;
   top: 307px;
   left: 30px;
+  height: 30px;
   right: 0;
   bottom: 0;
 }
@@ -1163,13 +1173,13 @@ height: 200px;
 
 #divSupportUs {
   position: absolute;
-  top: 837px;
-  left: 36px;
+  top: 869px;
+  left: 55px;
   right: 0;
   bottom: 0;
-  background-image: url(../img/Botones/Support-us.png);
-  width: 405px;
-  height: 165px;
+  background-image: url(../img/Botones/Support.png);
+  width: 373px;
+  height: 111px;
 }
 
 #supportUsTxt {
