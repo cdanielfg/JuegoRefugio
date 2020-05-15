@@ -79,6 +79,7 @@
             instruction: document.getElementById('instructionScreen'),
             store: document.getElementById('storeScreen'),
             map: document.getElementById('mapScreen'),
+            bookend: document.getElementById('bookendScreen'),
             bookfront: document.getElementById('bookfrontScreen'),
             bookopen: document.getElementById('bookopenScreen'),
             info: document.getElementById('infoScreen'),
@@ -386,7 +387,7 @@ function nextAnimal() {
         bookage.innerHTML = "AGE: " + bookAnimal.age;
         bookrace.innerHTML = "RACE: " + bookAnimal.race;
     } else {
-        navigate('bookfront');
+        navigate('bookend');
         index = 0;
         loadBook();
     }
