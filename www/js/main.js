@@ -64,6 +64,24 @@
     // Función que inicializa todo
     function main() {
 
+        function loadRefuge() {
+            animalesGanados = JSON.parse(localStorage.getItem('animals'));
+            if(animalesGanados == null){
+                animalesGanados = [];
+            }
+            var count = 0;
+            var animalElement, shelter;
+            if(animalesGanados!=null){
+                animalesGanados.forEach(animal => {
+                    count++;
+                    animalElement = document.getElementById('animal' + count);
+                    shelter = document.getElementById('shelter-' + count);
+                    shelter.style.visibility = 'visible';
+                    animalElement.setAttribute('src', animal.imageURL);
+                });
+            }
+        }
+
         // Pantallas de la aplicación referenciadas en un objeto
         var screens = {
             home: document.getElementById('homeScreen'),
@@ -132,7 +150,7 @@
                 store.dispatch({ type: 'THANKS' });
             }, 4000);
         }, 10000);
-
+        loadRefuge();
         navigate = function (screen) {
             store.dispatch({ type: 'NAVIGATE', screen: screen });
         };
@@ -179,17 +197,22 @@ function reloadImages(containerObjects, previousImage, animal) {
     }
 }
 
+
 function refillRefuge() {
-    var animals = JSON.parse(localStorage.getItem('animals'));
-    var count = 0;
+    animalesGanados = JSON.parse(localStorage.getItem('animals'));
     var animalElement, shelter;
-    animals.forEach(animal => {
-        count++;
-        animalElement = document.getElementById('animal' + count);
-        shelter = document.getElementById('shelter-' + count);
-        shelter.style.visibility = 'visible';
-        animalElement.setAttribute('src', animal.imageURL);
-    });
+    var count = 0;
+    if(count < 6){
+        animalesGanados.forEach(animal => {
+            count++;
+            animalElement = document.getElementById('animal' + count);
+            shelter = document.getElementById('shelter-' + count);
+            shelter.style.visibility = 'visible';
+            animalElement.setAttribute('src', animal.imageURL);
+        });
+    }else{
+        window.alert('There\'s no more shelters');
+    }
 }
 
 function processObject(name, container) {
@@ -222,7 +245,9 @@ function processObject(name, container) {
                 race: animalsRace[Math.floor(Math.random()*animalsRace.length)]
             };
             animalesGanados.push(animalGanado);
-            window.localStorage.setItem('animals', JSON.stringify(animalesGanados));
+            if(animalesGanados.length < 6){
+                window.localStorage.setItem('animals', JSON.stringify(animalesGanados));
+            }
             winProbability = 0.2;
             attempts = 5;
             winner = object.id;
