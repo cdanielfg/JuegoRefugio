@@ -183,7 +183,7 @@ function reloadImages(containerObjects, previousImage, animal) {
     if (animal != null && animal != undefined) {
         var animalFound = document.getElementById(animal).style.backgroundImage = 'url(' + previousImage + ')';
     }
-    for (let index = 0; index < containerObjects.length; index++) {
+    for (var index = 0; index < containerObjects.length; index++) {
         containerObjects[index].style.display = "block";
     }
 }
@@ -194,7 +194,7 @@ function refillRefuge() {
     var animalElement, shelter;
     var count = 0;
     if (count < 6) {
-        animalesGanados.forEach(animal => {
+        animalesGanados.forEach(function(animal) {
             count++;
             animalElement = document.getElementById('animal' + count);
             shelter = document.getElementById('shelter-' + count);
@@ -348,8 +348,8 @@ function saveInfo(object) {
 }
 
 function getInfo() {
-    db.collection("users").doc(email).collection("animals").get().then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
+    db.collection("users").doc(email).collection("animals").get().then(function(querySnapshot){
+        querySnapshot.forEach(function(doc){
             animalsDB.push(doc.data());
         });
         loadRefuge();
@@ -365,7 +365,7 @@ function loadRefuge() {
     var count = 0;
     var animalElement, shelter;
     console.log(animalsDB);
-    animalsDB.forEach(animal => {
+    animalsDB.forEach(function(animal) {
         console.log(animal);
         count++;
         animalElement = document.getElementById('animal' + count);

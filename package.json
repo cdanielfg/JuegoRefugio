@@ -11,5 +11,10 @@
         "ecosystem:cordova"
     ],
     "author": "Apache Cordova Team",
-    "license": "Apache-2.0"
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "grunt": "^1.1.0",
+        "grunt-contrib-cssmin": "^3.0.0",
+        "grunt-contrib-uglify": "^4.0.1"
+    }
 }
