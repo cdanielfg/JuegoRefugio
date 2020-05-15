@@ -217,6 +217,10 @@ function processObject(name, container) {
             refillRefuge();
             reloadImages(containerObjects, previousImage, winner);
             navigate('refuge');
+            animalsDB = [];
+            animalesGanados = [];
+            getInfo();
+
         } else if (aleatorio <= winProbability) {
             console.log('ganaste');
             console.log(object);
@@ -236,6 +240,8 @@ function processObject(name, container) {
                 race: animalsRace[Math.floor(Math.random() * animalsRace.length)]
             };
             saveInfo(animalGanado);
+            
+
             animalesGanados.push(animalGanado);
             if (animalesGanados.length < 6) {
                 window.localStorage.setItem('animals', JSON.stringify(animalesGanados));
@@ -244,6 +250,7 @@ function processObject(name, container) {
             winProbability = 0.2;
             attempts = 5;
             winner = object.id;
+            
 
         } else {
             attempts--;
@@ -258,6 +265,7 @@ function processObject(name, container) {
         winProbability = 0.2;
         attempts = 5;
         navigate('refuge');
+        
     }
 
 }
@@ -312,6 +320,7 @@ function userLoged() {
             navigate('home');
             email = user.email;
             getInfo();
+            loadBook();
         } else {
             // No user is signed in.
         }
@@ -369,11 +378,13 @@ function loadRefuge() {
 
 function loadBook() {
     firstAnimal = animalsDB[0];
-    bookimg.src = firstAnimal.imageURL;
-    bookname.innerHTML = "NAME: " + firstAnimal.name;
-    bookfound.innerHTML = "FOUND: " + firstAnimal.found;
-    bookage.innerHTML = "AGE: " + firstAnimal.age;
-    bookrace.innerHTML = "RACE: " + firstAnimal.race;
+    if (firstAnimal) {
+        bookimg.src = firstAnimal.imageURL;
+        bookname.innerHTML = "NAME: " + firstAnimal.name;
+        bookfound.innerHTML = "FOUND: " + firstAnimal.found;
+        bookage.innerHTML = "AGE: " + firstAnimal.age;
+        bookrace.innerHTML = "RACE: " + firstAnimal.race;
+    }
 }
 
 index = 0;
