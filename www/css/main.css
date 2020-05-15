@@ -1001,6 +1001,15 @@ input::placeholder{
 }
 
 /*Style section credits*/
+#divCreditsImg {
+  position: absolute;
+  top: 500px;
+  left: 51px;
+  right: 0;
+  bottom: 0;
+  width: 373px;
+  height: 172px;
+}
 
 .divCreditsTextProfile {
   position: absolute;
@@ -1029,6 +1038,12 @@ input::placeholder{
   height: 990px;
   
 }
+#creditsDivBackground2{
+  background-image: url(../img/Fondos/credits.jpg);
+  width: 480px;
+  height: 990px;
+  
+}
 #nextCredits {
   z-index: 1;
   position: absolute;
@@ -1047,7 +1062,15 @@ input::placeholder{
   height: 1016px;
 
 }
-
+#divCreditsImg2{
+  position: absolute;
+  top: 240px;
+  left: 51px;
+  right: 0;
+  bottom: 0;
+  width: 373px;
+  height: 172px;
+}
 
 /*Style section tepaFoundation*/
 
