@@ -1,5 +1,4 @@
 (function () {
-
     function reducer(state, action) {
         if (!state) state = initialState;
 
@@ -63,7 +62,7 @@
 
     // Función que inicializa todo
     function main() {
-
+        signOut();
         // Pantallas de la aplicación referenciadas en un objeto
         var screens = {
             home: document.getElementById('homeScreen'),
@@ -98,6 +97,7 @@
                     }
                 });
                 loadingUnsubscribe();
+
             }
         });
 
@@ -137,7 +137,6 @@
             store.dispatch({ type: 'NAVIGATE', screen: screen });
         };
     }
-
 
 
 
@@ -212,6 +211,7 @@ function processObject(name, container) {
                 age: animalAge,
                 race: 'Mixed'
             };
+            saveInfo(animalGanado, fila);
             animalesGanados.push(animalGanado);
             window.localStorage.setItem('animals', JSON.stringify(animalesGanados));
             winProbability = 0.2;
@@ -270,16 +270,37 @@ function login() {
 
 }
 
+var email;
 function userLoged() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
             navigate('home');
+            email = user.email;
         } else {
             // No user is signed in.
         }
     });
 } userLoged();
+
+function signOut() {
+    firebase.auth().signOut().then(function () {
+        // Sign-out successful.
+    }).catch(function (error) {
+        // An error happened.
+    });
+}
+
+var firestore = firebase.firestore();
+function saveInfo(object, fila) {
+    const docRef = firestore.doc(email + "/petsData"+fila);
+    docRef.set(object).then(function() {
+        console.log("It works")
+    }).catch(function(error){
+        console.log("Error", error)
+    })
+
+}
 
 
 
