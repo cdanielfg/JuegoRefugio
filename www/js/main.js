@@ -64,6 +64,14 @@
     function main() {
         signOut();
 
+        //Obtiene elementos del libro de animales
+        bookimg = document.getElementById('imgMascota');
+        bookname = document.getElementById('book-open-pet-name');
+        bookfound = document.getElementById('book-open-pet-found');
+        bookage = document.getElementById('book-open-pet-age');
+        bookrace = document.getElementById('book-open-pet-race');
+
+
         // Pantallas de la aplicación referenciadas en un objeto
         var screens = {
             home: document.getElementById('homeScreen'),
@@ -231,7 +239,7 @@ function processObject(name, container) {
             animalesGanados.push(animalGanado);
             if (animalesGanados.length < 6) {
                 window.localStorage.setItem('animals', JSON.stringify(animalesGanados));
-                
+
             }
             winProbability = 0.2;
             attempts = 5;
@@ -313,12 +321,12 @@ var db = firebase.firestore();
 
 function saveInfo(object) {
     db.collection("users").doc(email).collection("animals").add(object)
-    .then(function(docRef) {
-        console.log("Document written with ID: ", docRef.id);
-    })
-    .catch(function(error) {
-        console.error("Error adding document: ", error);
-    });
+        .then(function (docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function (error) {
+            console.error("Error adding document: ", error);
+        });
 }
 
 function getInfo() {
@@ -327,6 +335,7 @@ function getInfo() {
             animalsDB.push(doc.data());
         });
         loadRefuge();
+        loadBook();
     });
 }
 
@@ -347,6 +356,32 @@ function loadRefuge() {
         animalElement.setAttribute('src', animal.imageURL);
         animalesGanados.push(animal);
     });
+}
+
+function loadBook() {
+    firstAnimal = animalsDB[0];
+    bookimg.src = firstAnimal.imageURL;
+    bookname.innerHTML = "NAME: " + firstAnimal.name;
+    bookfound.innerHTML = "FOUND: " + firstAnimal.found;
+    bookage.innerHTML = "AGE: " + firstAnimal.age;
+    bookrace.innerHTML = "RACE: " + firstAnimal.race;
+}
+
+index = 0;
+function nextAnimal() {
+    index++;
+    bookAnimal = animalsDB[index];
+    if (bookAnimal) {
+        bookimg.src = bookAnimal.imageURL;
+        bookname.innerHTML = "NAME: " + bookAnimal.name;
+        bookfound.innerHTML = "FOUND: " + bookAnimal.found;
+        bookage.innerHTML = "AGE: " + bookAnimal.age;
+        bookrace.innerHTML = "RACE: " + bookAnimal.race;
+    } else {
+        navigate('bookfront');
+        index = 0;
+        loadBook();
+    }
 }
 
 
