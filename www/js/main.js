@@ -75,8 +75,6 @@
             bookopen: document.getElementById('bookopenScreen'),
             info: document.getElementById('infoScreen'),
             credits: document.getElementById('creditsScreen'),
-            credits2: document.getElementById('creditsScreen2'),
-            credits3: document.getElementById('creditsScreen3'),
             tepa: document.getElementById('tepaScreen'),
             connection: document.getElementById('loginScreen'),
             signup: document.getElementById('signupScreen'),
