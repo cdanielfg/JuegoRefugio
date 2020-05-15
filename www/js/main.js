@@ -244,6 +244,15 @@ function processObject(name, container) {
     }
 
 }
+
+function callInstructions() {
+    document.getElementById("videoInstructions").play();
+    navigate('instruction');
+    setTimeout(function () {
+        navigate('home');
+    }, 35500);
+}
+
 "use strict";
 
 function register() {

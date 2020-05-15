@@ -29,7 +29,7 @@
 
         <section class="home screen active" id="homeScreen">
             <img class="btn-block" onclick="navigate('refuge')" src="img/Botones/Play.png">
-            <img class="btn-block" onclick="navigate('instruction')" src="img/Botones/How-to-play.png">
+            <img class="btn-block" onclick="callInstructions()" src="img/Botones/How-to-play.png">
             <img class="btn-block" onclick="navigate('support')" src="img/Botones/Support-us.png">
             <div class="navbar" id="footerNavbar">
                 <img class="navbar-icons" onclick="navigate('info')" src="img/Botones/info-inactive.png">
@@ -155,13 +155,7 @@
         </section>
 
         <section class="instruction screen center-items" id="instructionScreen">
-            <video class="splash-app-video" src="img/instructions.mp4" autoplay muted loop></video>
-            <div id="backHombreInstructions">
-                <button onclick="navigate('info')">
-                    <h1>
-                    <</h1>
-                </button>
-            </div>
+            <video id="videoInstructions" class="splash-app-video" src="img/instructions.mp4"></video>
         </section>
 
         <section class="store screen center-items" id="storeScreen">
