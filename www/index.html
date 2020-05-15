@@ -29,7 +29,7 @@
 
         <section class="home screen active" id="homeScreen">
             <img class="btn-block" onclick="navigate('refuge')" src="img/Botones/Play.png">
-            <img class="btn-block" onclick="navigate('instruction')" src="img/Botones/How-to-play.png">
+            <img class="btn-block" onclick="callInstructions()" src="img/Botones/How-to-play.png">
             <img class="btn-block" onclick="navigate('support')" src="img/Botones/Support-us.png">
             <div class="navbar" id="footerNavbar">
                 <img class="navbar-icons" onclick="navigate('info')" src="img/Botones/info-inactive.png">
@@ -43,45 +43,45 @@
                 <div id="shelter-1" class="ajustarImg">
                     <img class="img-size" id="animal1" class="animal">
                 </div>
-                <img class="img-size" onclick="navigate('instruction')" src="./img/Refuge/Tierra.svg">
+                <img class="img-size" src="./img/Refuge/Tierra.svg">
             </div>
             <div class="place-two">
 
                 <div id="shelter-2" class="ajustarImg">
                     <img class="img-size" id="animal2" class="animal">
                 </div>
-                <img class="img-size" onclick="navigate('instruction')" src="./img/Refuge/Tierra.svg">
+                <img class="img-size"  src="./img/Refuge/Tierra.svg">
             </div>
             <div class="place-three">
                 <div id="shelter-3" class="ajustarImg">
                     <img class="img-size" id="animal3" class="animal">
                 </div>
-                <img class="img-size" onclick="navigate('instruction')" src="./img/Refuge/Tierra.svg">
+                <img class="img-size"  src="./img/Refuge/Tierra.svg">
             </div>
             <div class="place-four">
                 <div id="shelter-4" class="ajustarImg">
                     <img class="img-size" id="animal4" class="animal">
                 </div>
-                <img class="img-size" onclick="navigate('instruction')" src="./img/Refuge/Tierra.svg">
+                <img class="img-size"  src="./img/Refuge/Tierra.svg">
             </div>
             <div class="place-five">
                 <div id="shelter-5" class="ajustarImg">
                     <img class="img-size" id="animal5" class="animal">
                 </div>
-                <img class="img-size" onclick="navigate('instruction')" src="./img/Refuge/Tierra.svg">
+                <img class="img-size" src="./img/Refuge/Tierra.svg">
             </div>
             <div class="place-six">
                 <div id="shelter-6" class="ajustarImg">
                     <img class="img-size" id="animal6" class="animal">
                 </div>
-                <img class="img-size" onclick="navigate('instruction')" src="./img/Refuge/Tierra.svg">
+                <img class="img-size"  src="./img/Refuge/Tierra.svg">
             </div>
             <div class="button-refuge" id="footerNavbar">
-                <img class="icons-map"  onclick="navigate('map')" src="img/Botones/icon-map.png">
+                <img class="icons-map" onclick="navigate('map')" src="img/Botones/icon-map.png">
                 <img class="icons-book" onclick="navigate('bookfront')" src="img/Botones/icon-book.png">
                 <img class="icons-center" onclick="navigate('home')" src="img/Botones/home-ingame.png">
                 <img class="icons-house" onclick="navigate('store')" src="img/Botones/icon-house.png">
-                <img class="icons-unknown" onclick="navigate('instruction')" src="img/Botones/icon-unknown.png">
+                <img class="icons-unknown" onclick="callInstructions()" src="img/Botones/icon-unknown.png">
             </div>
         </section>
 
@@ -153,13 +153,7 @@
         </section>
 
         <section class="instruction screen center-items" id="instructionScreen">
-            <video class="splash-app-video" src="img/instructions.mp4" autoplay muted loop></video>
-            <div id="backHombreInstructions">
-                <button onclick="navigate('info')">
-                    <h1><</h1>
-                       
-                </button>
-            </div>
+            <video id="videoInstructions" class="splash-app-video" src="img/instructions.mp4"></video>
         </section>
 
         <section class="store screen center-items" id="storeScreen">
@@ -170,7 +164,7 @@
                     <div class="store-background-booster">
                         <img class="store-image-treat" src="img/Pet_Treats1.svg">
                         <h2 class="store-amount">x10</h2>
-                        <img class="store-coins"  src="img/monedas-1.svg">
+                        <img class="store-coins" src="img/monedas-1.svg">
                         <img src="img/Buy-1.svg">
                     </div>
                     <div class="store-background-booster">
@@ -234,7 +228,7 @@
             <div class="button-option" onclick="navigate('credits')"> <img class="img-credito-button"
                     src="img/Botones/Credits.png" alt="">
             </div>
-            <div class="button-option" onclick="navigate('instruction')"> <img class="img-credito-button"
+            <div class="button-option" onclick="callInstructions()"> <img class="img-credito-button"
                     src="img/Botones/How-to-play2.png" alt="">
             </div>
             <div class="button-option" onclick="navigate('tepa')"> <img class="img-credito-button"
@@ -250,87 +244,93 @@
             </div>
         </section>
 
-        <section class="screen  center-items justify-content-between scrollDiv" id="creditsScreen">
-
-            <div class="" id="creditsDivBackground">
-                <div class="divcreditsSpace"></div>
-                <div id="nextCredits">
-                    <button onclick="navigate('credits2')">
-                        <h1>></h1>
-                    </button>
-                </div>
-                <div id="PreviousCredits">
-                    <button onclick="navigate('credits2')">
-                        <h1><</h1>
-                           
-                    </button>
+        <section class="credits screen center-items justify-content-between scrollDiv" id="creditsScreen">
+            <div class="credits-header"></div>
+            <div class="credits-content center-items flex-column">
+                <div class="author-container d-flex">
+                    <img class="author-image-container" src="img/Credits/angelica.svg" alt="">
+                    <div class="author-text-container">
+                        <p class="author-name">Angélica Jaramillo</p>
+                        <p class="author-role">GRAPHIC DESIGNER, CONCEPT ARTIST</p>
+                        <p class="author-email">angelicajmllo@gmail.com</p>
+                    </div>
                 </div>
 
-                <div class="divCreditsTextProfile">
-                    <img src="img/Mask Group 1.svg" alt=""><br>
-                    <span class="itemCredits"><b id="name">ANGÉLICA JARAMILLO </b><br id="profession">GRAPHIC DESIGNER,
-                        CONCEPT ARTIST<br>angelicajmllo@gmail.com</span>
-
-                    <br><br><br><br><br><br><br>
-                    <img src="img/Mask Group 2.svg" alt=""><br>
-                    <span class="itemCredits"><b id="name">CARLOS FERNÁNDEZ</b><br id="profession">APP DEVELOPER
-                        <br>carlos.fernandez@upb.edu.co</span>
-
-                    <br><br><br><br><br><br><br>
-                    <img src="img/Mask Group 3.svg" alt=""><br>
-                    <span class="itemCredits"><b id="name">EMILIO MARTÍNEZ</b><br id="profession">
-                        APP DEVELOPER<br>emilio.martinez@upb.edu.co</span>
+                <div class="author-container d-flex">
+                    <img class="author-image-container" src="img/Credits/sebastian.svg" alt="">
+                    <div class="author-text-container">
+                        <p class="author-name">Sebastian Figueredo</p>
+                        <p class="author-role">GRAPHIC DESIGNER, CONCEPT ARTIST</p>
+                        <p class="author-email">sebastian.figueredov@hotmail.com</p>
+                    </div>
                 </div>
-                <div class="navbar" id="footerNavbar">
-                    <img class="navbar-icons" onclick="navigate('info')" src="img/Botones/info-active.png">
-                    <img class="navbar-icons" onclick="navigate('home')" src="img/Botones/home-inactive.png">
-                    <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones/prices-inactive.png">
+
+                <div class="author-container d-flex">
+                    <img class="author-image-container" src="img/Credits/laura.svg" alt="">
+                    <div class="author-text-container">
+                        <p class="author-name">Laura Barrios</p>
+                        <p class="author-role">GRAPHIC DESIGNER, CONCEPT ARTIST</p>
+                        <p class="author-email">laura.barrios@upb.edu.co</p>
+                    </div>
                 </div>
+
+                <div class="author-container d-flex">
+                    <img class="author-image-container" src="img/Credits/carlos.svg" alt="">
+                    <div class="author-text-container">
+                        <p class="author-name">Carlos Fernández</p>
+                        <p class="author-role">APP DEVELOPER</p>
+                        <p class="author-email">carlos.fernandez@upb.edu.co</p>
+                    </div>
+                </div>
+
+                <div class="author-container d-flex">
+                    <img class="author-image-container" src="img/Credits/juan.svg" alt="">
+                    <div class="author-text-container">
+                        <p class="author-name">Juan Pablo García</p>
+                        <p class="author-role">APP DEVELOPER</p>
+                        <p class="author-email">juanpablo_gd_@hotmail.com</p>
+                    </div>
+                </div>
+
+                <div class="author-container d-flex">
+                    <img class="author-image-container" src="img/Credits/esteban.svg" alt="">
+                    <div class="author-text-container">
+                        <p class="author-name">Esteban Palacio</p>
+                        <p class="author-role">APP DEVELOPER</p>
+                        <p class="author-email">esteban.palacio@upb.edu.co</p>
+                    </div>
+                </div>
+
+                <div class="author-container d-flex">
+                    <img class="author-image-container" src="img/Credits/jarol.svg" alt="">
+                    <div class="author-text-container">
+                        <p class="author-name">Jarol Medina</p>
+                        <p class="author-role">APP DEVELOPER</p>
+                        <p class="author-email">jarol.medina@upb.edu.co</p>
+                    </div>
+                </div>
+
+                <div class="author-container d-flex">
+                    <img class="author-image-container" src="img/Credits/emilio.svg" alt="">
+                    <div class="author-text-container">
+                        <p class="author-name">Emilio Martínez</p>
+                        <p class="author-role">APP DEVELOPER</p>
+                        <p class="author-email"> </p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="navbar" id="footerNavbar">
+                <img class="navbar-icons" onclick="navigate('info')" src="img/Botones/info-active.png">
+                <img class="navbar-icons" onclick="navigate('home')" src="img/Botones/home-inactive.png">
+                <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones/prices-inactive.png">
+            </div>
 
             </div>
         </section>
 
-        <section class="credits2 screen center-items justify-content-between scrollDiv" id="creditsScreen2">           
-            <div class="ajustarImg" id="creditsDivBackground">
-                <div class="divcreditsSpace"></div>
-                <div id="nextCredits">
-                    <button onclick="navigate('credits')">
-                        <h1>></h1>
-                    </button>
-                </div>
-
-                <div id="PreviousCredits">
-                    <button onclick="navigate('credits')">
-                        <h1><
-                        </h1>
-                    </button>
-                </div>
-                <div class="divCreditsTextProfile">
-                    <img src="img/Mask Group 8.svg" alt=""><br>
-                    <span class="itemCredits"><b id="name">SEBASTIAN FIGUEREDO</b><br id="profession">
-                        GRAPHIC DESIGNER, CONCEPT ARTIST<br>sebastian.figueredov@hotmail.com</span>
-
-                    <br><br><br><br><br><br><br>
-                    <img src="img/Mask Group 7.svg" alt=""><br>
-                    <span class="itemCredits"><b id="name">LAURA BARRIOS</b><br id="profession"> DESIGNER, CONCEPT
-                        ARTIST
-                        <br>laura.barrios@upb.edu.co</span>
-
-                    <br><br><br><br><br><br><br>
-                    <img src="img/Mask Group 5.svg" alt=""><br>
-                    <span class="itemCredits"><b id="name">JAROL MEDINA MARIN</b><br id="profession">
-                        APP DEVELOPER<br>jarol.medina@upb.edu.co</span>
-                </div>
-                <div class="navbar" id="footerNavbar">
-                    <img class="navbar-icons" onclick="navigate('info')" src="img/Botones/info-inactive.png">
-                    <img class="navbar-icons" src="img/Botones/home-active.png">
-                    <img class="navbar-icons" onclick="navigate('awards')" src="img/Botones/prices-inactive.png">
-                </div>
-            </div>
-        </section>
-
-        <section class="tepa screen center-items scrollDiv" id="tepaScreen">   
-            <div id="tepaFoundationAndSupportUsBackground" class="ajustarImg">         
+        <section class="tepa screen center-items scrollDiv" id="tepaScreen">
+            <div id="tepaFoundationAndSupportUsBackground" class="ajustarImg">
                 <div onclick="navigate('support')" id="divSupportUs" class="ajustarImg"></div>
 
                 <div id="tepaText">
@@ -371,7 +371,8 @@
         </section>
 
         <section class="supportUsScreen screen center-items scrollDiv" id="supportUsScreen">
-            <div id="divMoreInfo" class="ajustarImg"></div>
+            <div id="divMoreInfo" onclick="location.href='https://www.fundaciontepa.org/como-ayudar/'"
+                class="ajustarImg"></div>
             <div id="tepaFoundationAndSupportUsBackground" class="ajustarImg">
                 <div id="supportUsTxt">
                     <p>SUPPORT US</p>
@@ -464,11 +465,11 @@
                 </div>
             </div>
             <div class="button-refuge" id="footerNavbar">
-                <img class="icons-map"  onclick="navigate('map')" src="img/Botones/icon-map.png">
+                <img class="icons-map" onclick="navigate('map')" src="img/Botones/icon-map.png">
                 <img class="icons-book" onclick="navigate('bookfront')" src="img/Botones/icon-book.png">
                 <img class="icons-center" onclick="navigate('home')" src="img/Botones/home-ingame.png">
                 <img class="icons-house" onclick="navigate('store')" src="img/Botones/icon-house.png">
-                <img class="icons-unknown" onclick="navigate('instruction')" src="img/Botones/icon-unknown.png">
+                <img class="icons-unknown" onclick="callInstructions()" src="img/Botones/icon-unknown.png">
             </div>
         </section>
 
@@ -493,11 +494,11 @@
                 </div>
             </div>
             <div class="button-refuge" id="footerNavbar">
-                <img class="icons-map"  onclick="navigate('map')" src="img/Botones/icon-map.png">
+                <img class="icons-map" onclick="navigate('map')" src="img/Botones/icon-map.png">
                 <img class="icons-book" onclick="navigate('bookfront')" src="img/Botones/icon-book.png">
                 <img class="icons-center" onclick="navigate('home')" src="img/Botones/home-ingame.png">
                 <img class="icons-house" onclick="navigate('store')" src="img/Botones/icon-house.png">
-                <img class="icons-unknown" onclick="navigate('instruction')" src="img/Botones/icon-unknown.png">
+                <img class="icons-unknown" onclick="callInstructions()" src="img/Botones/icon-unknown.png">
             </div>
         </section>
 
@@ -518,11 +519,11 @@
                 </div>
             </div>
             <div class="button-refuge" id="footerNavbar">
-                <img class="icons-map"  onclick="navigate('map')" src="img/Botones/icon-map.png">
+                <img class="icons-map" onclick="navigate('map')" src="img/Botones/icon-map.png">
                 <img class="icons-book" onclick="navigate('bookfront')" src="img/Botones/icon-book.png">
                 <img class="icons-center" onclick="navigate('home')" src="img/Botones/home-ingame.png">
                 <img class="icons-house" onclick="navigate('store')" src="img/Botones/icon-house.png">
-                <img class="icons-unknown" onclick="navigate('instruction')" src="img/Botones/icon-unknown.png">
+                <img class="icons-unknown" onclick="callInstructions()" src="img/Botones/icon-unknown.png">
             </div>
         </section>
     </main>
@@ -534,8 +535,8 @@
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
 
     <!-- Add Firebase products that you want to use -->
-    
-    
+
+
 </body>
 
 </html>
