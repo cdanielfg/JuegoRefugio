@@ -178,7 +178,7 @@ html {
  /* Home Screen Styles */
   
   .home {
-    background-image: url(../img/fondos/home.svg);
+    background-image: url(../img/Fondos/home.jpg);
     background-size: cover;
     background-position: center center;
     justify-content: center;
@@ -228,7 +228,7 @@ html {
   /* Awards Screen Styles */
 
   .awards {
-    background-image: url(../img/fondos/tablas.svg);
+    background-image: url(../img/Fondos/tablas.jpg);
     background-size: cover;
     background-position: center center;
     justify-content: center;
@@ -302,7 +302,7 @@ html {
   .map-background {
     width: 420px;
     height: 440px;
-    background-image: url("../img/mapa-2.svg");
+    background-image: url("../img/Map/mapa-2.svg");
     background-size: cover;
   }
 
@@ -472,10 +472,12 @@ html {
 
   /* Login Styles */
 
-#loginDiv {
-  width: 480px;
-  height: 990px;
-  background-image: url(../img/Log-in.svg);
+.login {
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/Fondos/Log-in.jpg);
 
 }
 #loginFacebook {
@@ -483,7 +485,7 @@ html {
   left: 147px;
   width: 188px;
   height: 70px;
-  background-image: url(../img/Fb\ log\ in.svg);
+  background-image: url(../img/Botones/Fb-log-in.png);
 }
 #userInputLogin {
   top: 327px;
@@ -502,14 +504,14 @@ html {
     left: 30px;
     width: 160px;
     height: 70px;
-    background-image: url(../img/Log\ in.svg);
+    background-image: url(../img/Botones/Log-in.png);
 }
 #signUpLogin {
   top: 570px;
   left: 310px;
   width: 160px;
   height: 70px;
-  background-image: url(../img/Sign\ up.svg);
+  background-image: url(../img/Botones/Sign-up.png);
 }
 
 .inputStyle {
@@ -535,7 +537,7 @@ input::placeholder{
   /* Info Screen Styles */
 
   .info {
-    background-image: url(../img/fondos/information.svg);
+    background-image: url(../img/Fondos/information.jpg);
     background-size: cover;
     background-position: center center;
     justify-content: center;
@@ -551,11 +553,14 @@ input::placeholder{
 
 /* Sign Up Styles */
 
-#signupDiv{
-  background-image: url(../img/Cuenta.svg);
-  width: 480px;
-  height: 990px;
+.signup {
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/Fondos/Cuenta.jpg);
 }
+
 #userInputSignup{
   top: 300px;
     left: 60px;
@@ -579,28 +584,30 @@ input::placeholder{
     left: 150px;
     width: 170px;
     height: 108px;
-    background-image: url(../img/Create.svg);
+    background-image: url(../img/Botones/Create.png);
 }
 #signupFacebook{
   top: 785px;
   left: 140px;
   width: 190px;
   height: 70px;
-  background-image: url(../img/FB\ sign\ up.svg);
+  background-image: url(../img/Botones/FB-Sign-up.png);
 }
 
 /* Restaurant Styles */
-#restaurant-background{
-  background-image: url(../img/FONDO_Restaurante-1.svg);
-  width: 480px;
-  height: 990px;
+.restaurant{
+  background-image: url(../img/Fondos/Restaurante.jpg);
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
 }
 #restaurant-chair1{
   top: 530px;
     left: 100px;
     width: 130px;
     height: 130px;
-    background-image: url(../img/restaurant_chair-1.svg);
+    background-image: url(../img/Restaurant/restaurant_chair-1.svg);
     z-index: 4;
 }
 #restaurant-chair2{
@@ -608,7 +615,7 @@ input::placeholder{
   left: -80px;
   width: 130px;
   height: 130px;
-  background-image: url(../img/restaurant_chair-2.svg);
+  background-image: url(../img/Restaurant/restaurant_chair-2.svg);
   z-index: 5;
 }
 #restaurant-door1{
@@ -616,7 +623,7 @@ input::placeholder{
   left: 180px;
   width: 200px;
   height: 195px;
-  background-image: url(../img/restaurant_door-1.svg);
+  background-image: url(../img/Restaurant/restaurant_door-1.svg);
   z-index: 2;
 }
 #restaurant-door2{
@@ -624,7 +631,7 @@ input::placeholder{
     left: 142px;
     width: 200px;
     height: 230px;
-    background-image: url(../img/restaurant_door-7.svg);
+    background-image: url(../img/Restaurant/restaurant_door-7.svg);
     z-index: 1;
     visibility: hidden;
 }
@@ -633,14 +640,14 @@ input::placeholder{
   left: 140px;
   width: 340px;
   height: 312px;
-  background-image: url(../img/restaurant_car.svg);
+  background-image: url(../img/Restaurant/restaurant_car.svg);
 }
 #restaurant-table{
   top: 530px;
   left: 7px;
   width: 150px;
   height: 130px;
-  background-image: url(../img/restaurant_table-1.svg);
+  background-image: url(../img/Restaurant/restaurant_table-1.svg);
   z-index: 3;
 }
 #restaurant-bush1{
@@ -648,7 +655,7 @@ input::placeholder{
     left: -20px;
     width: 140px;
     height: 80px;
-    background-image: url(../img/restaurant_bush-1.svg);
+    background-image: url(../img/Restaurant/restaurant_bush-1.svg);
     z-index: 1;
 }
 #restaurant-bush2{
@@ -656,7 +663,7 @@ input::placeholder{
   left: 60px;
   width: 140px;
   height: 80px;
-  background-image: url(../img/restaurant_bush-2.svg);
+  background-image: url(../img/Restaurant/restaurant_bush-2.svg);
   z-index: 2;
 }
 #top-sign{
@@ -682,10 +689,12 @@ input::placeholder{
 }
 
 /* Park Styles */
-#park-background{
-  background-image: url(../img/FONDO_Parque-1.svg);
-  width: 480px;
-  height: 990px;
+.park{
+  background-image: url(../img/Fondos/Parque.jpg);
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
 }
 
 #park-tree1{
@@ -693,7 +702,7 @@ input::placeholder{
   left: 268px;
   width: 190px;
   height: 320px;
-  background-image: url(../img/park_tree-1.svg);
+  background-image: url(../img/Park/park_tree-1.svg);
   z-index: 2;
 }
 #park-tree2{
@@ -701,7 +710,7 @@ input::placeholder{
     left: -155px;
     width: 390px;
     height: 680px;
-    background-image: url(../img/park_tree-2.svg);
+    background-image: url(../img/Park/park_tree-2.svg);
     z-index: 1;
 }
 #park-bush2{
@@ -709,7 +718,7 @@ input::placeholder{
   left: 10px;
   width: 180px;
   height: 120px;
-  background-image: url(../img/park_bush-2.svg);
+  background-image: url(../img/Park/park_bush.svg);
   z-index: 2;
 }
 #park-bush3{
@@ -717,7 +726,7 @@ input::placeholder{
     left: 323px;
     width: 90px;
     height: 60px;
-    background-image: url(../img/park_bush-2.svg);
+    background-image: url(../img/Park/park_bush.svg);
     z-index: 1;
 }
 #park-bush4{
@@ -725,7 +734,7 @@ input::placeholder{
     left: 50px;
     width: 90px;
     height: 60px;
-    background-image: url(../img/park_bush-2.svg);
+    background-image: url(../img/Park/park_bush.svg);
     z-index: 1;
 }
 #park-bush5{
@@ -733,7 +742,7 @@ input::placeholder{
   left: 113px;
   width: 90px;
   height: 60px;
-  background-image: url(../img/park_bush-2.svg);
+  background-image: url(../img/Park/park_bush.svg);
   z-index: 1;
 }
 #park-bush6{
@@ -741,7 +750,7 @@ input::placeholder{
     left: 170px;
     width: 90px;
     height: 60px;
-    background-image: url(../img/park_bush-2.svg);
+    background-image: url(../img/Park/park_bush.svg);
     z-index: 0;
 }
 #park-basurero{
@@ -749,21 +758,21 @@ input::placeholder{
   left: 260px;
   width: 90px;
   height: 100px;
-  background-image: url(../img/park_basurero.svg);
+  background-image: url(../img/Park/park_basurero.svg);
 }
 #park-basurero2{
   top: 314px;
   left: 268px;
   width: 60px;
   height: 60px;
-  background-image: url(../img/park_basurero.svg);
+  background-image: url(../img/Park/park_basurero.svg);
 }
 #park-bench1{
   top: 302px;
     left: 310px;
     width: 200px;
     height: 90px;
-    background-image: url(../img/park_bench-1.svg);
+    background-image: url(../img/Park/park_bench-1.svg);
     z-index: 3;
 }
 #park-bench2{
@@ -771,16 +780,16 @@ input::placeholder{
   left: -110px;
   width: 440px;
   height: 190px;
-  background-image: url(../img/park_bench-2.svg);
+  background-image: url(../img/Park/park_bench-2.svg);
   z-index: 3;
 }
 
 /*Styles Refuge*/
 
-.refuge{
-  width: 480px;
-  height: 990px;
-  background-image: url(../img/FONDO_Refugio-1.svg);
+.refuge {
+  background-image: url(../img/Fondos/Refugio.jpg);
+  width: 100%;
+  height: 100%;
 }
 .animal{
   position: absolute;
@@ -797,7 +806,7 @@ input::placeholder{
   left: 0px;
   width: 120px;
   height: 120px;
-  background-image: url(../img/Perro_Casa-1.svg);
+  background-image: url(../img/Refuge/Casa_Perro_1.svg);
   visibility: hidden;
 }
 .place-two{
@@ -811,7 +820,7 @@ input::placeholder{
     left: 0px;
   width: 120px;
   height: 120px;
-  background-image: url(../img/Perro_Casa-1.svg);
+  background-image: url(../img/Refuge/Casa_Gato_1.svg);
   visibility: hidden;
 }
 .place-three{
@@ -825,7 +834,7 @@ input::placeholder{
     left: 0px;
     width: 120px;
   height: 120px;
-  background-image: url(../img/Perro_Casa-5.svg);
+  background-image: url(../img/Refuge/Casa_Perro_2.svg);
   visibility: hidden;
 }
 .place-four{
@@ -839,7 +848,7 @@ input::placeholder{
     left: 0px;
     width: 120px;
   height: 120px;
-  background-image: url(../img/Gato_Casa-1.svg);
+  background-image: url(../img/Refuge/Casa_Gato_2.svg);
   visibility: hidden;
 }
 .place-five{
@@ -853,7 +862,7 @@ input::placeholder{
     left: 0px;
     width: 120px;
   height: 120px;
-  background-image: url(../img/Perro_Casa-1.svg);
+  background-image: url(../img/Refuge/Casa_Perro_3.svg);
   visibility: hidden;
 }
 .place-six{
@@ -867,7 +876,7 @@ input::placeholder{
   left: 0px;
     width: 120px;
   height: 120px;
-  background-image: url(../img/Gato_Casa-1.svg);
+  background-image: url(../img/Refuge/Casa_Gato_3.svg);
   visibility: hidden;
 }
 .img-size{
@@ -912,7 +921,7 @@ input::placeholder{
 /* Downtown Styles */
 
 .downtown {
-  background-image: url(../img/Downtown/downtown-bg.svg);
+  background-image: url(../img/Fondos/downtown.jpg);
   background-size: cover;
   background-position: center center;
   justify-content: center;
@@ -1110,7 +1119,7 @@ height: 200px;
 }
 
 
-#tepaBackgroundSupportUs{
+#tepaFondosupportUs{
   background-image: url(../img/TepaInfo-1.svg);
   width: 480px;
   height: 985px;
@@ -1143,7 +1152,7 @@ height: 200px;
   left: 36px;
   right: 0;
   bottom: 0;
-  background-image: url(../img/Support\ us\ TEPA.svg);
+  background-image: url(../img/Botones/Support-us.png);
   width: 405px;
   height: 165px;
 }
@@ -1156,4 +1165,10 @@ height: 200px;
   font-size: 55px;
   font-weight: bold;
   color: #915e1e;
+}
+#backHombreInstructions{
+  z-index: 1;
+  position: absolute;
+  top: -5px;
+  left: 19px; 
 }
