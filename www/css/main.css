@@ -1012,6 +1012,10 @@ input::placeholder{
   width: 70%;
   height: 27%;
 }
+#previousAndNextCredits{
+  width: 44px;
+  height: 35px;
+}
 
 .itemCredits{
   font-size: 18px;
@@ -1028,15 +1032,15 @@ input::placeholder{
 #nextCredits {
   z-index: 1;
   position: absolute;
-  top: 904px;
-  left: 416px;
+  top: 927px;
+  left: 408px;
   
 }
 #PreviousCredits{
   z-index: 1;
   position: absolute;
-  top: 904px;
-  left: 19px;
+  top: 928px;
+  left: 20px;
   
 }
 .divcreditsSpace{
