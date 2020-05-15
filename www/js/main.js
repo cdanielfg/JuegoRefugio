@@ -64,24 +64,6 @@
     function main() {
         signOut();
 
-        function loadRefuge() {
-            animalesGanados = JSON.parse(localStorage.getItem('animals'));
-            if (animalesGanados == null) {
-                animalesGanados = [];
-            }
-            var count = 0;
-            var animalElement, shelter;
-            if (animalesGanados != null) {
-                animalesGanados.forEach(animal => {
-                    count++;
-                    animalElement = document.getElementById('animal' + count);
-                    shelter = document.getElementById('shelter-' + count);
-                    shelter.style.visibility = 'visible';
-                    animalElement.setAttribute('src', animal.imageURL);
-                });
-            }
-        }
-
         // Pantallas de la aplicación referenciadas en un objeto
         var screens = {
             home: document.getElementById('homeScreen'),
@@ -184,6 +166,7 @@ var animalsImages = [['img/Artboard_1Animals.svg', 'img/Artboard_2Animals.svg', 
 var animalsName = ['Rocky', 'Max', 'Lupe', 'Ares', 'Atenea', 'Tommy', 'Chelsea', 'Trueno', 'Liz'];
 var animalsRace = ['Mixed', 'Pure', 'Pedigree'];
 var animalesGanados = [];
+var animalsDB = [];
 var animalAge;
 var winner;
 var previousImage;
@@ -248,6 +231,7 @@ function processObject(name, container) {
             animalesGanados.push(animalGanado);
             if (animalesGanados.length < 6) {
                 window.localStorage.setItem('animals', JSON.stringify(animalesGanados));
+                
             }
             winProbability = 0.2;
             attempts = 5;
@@ -301,7 +285,6 @@ function login() {
 
     }); email - password.html
 
-
 }
 
 var email;
@@ -311,6 +294,7 @@ function userLoged() {
             // User is signed in.
             navigate('home');
             email = user.email;
+            getInfo();
         } else {
             // No user is signed in.
         }
@@ -340,11 +324,29 @@ function saveInfo(object) {
 function getInfo() {
     db.collection("users").doc(email).collection("animals").get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data()}`);
+            animalsDB.push(doc.data());
         });
+        loadRefuge();
     });
 }
 
-
+function loadRefuge() {
+    if (animalsDB == null || animalesGanados == null) {
+        animalesDB = [];
+        animalesGanados = [];
+    }
+    var count = 0;
+    var animalElement, shelter;
+    console.log(animalsDB);
+    animalsDB.forEach(animal => {
+        console.log(animal);
+        count++;
+        animalElement = document.getElementById('animal' + count);
+        shelter = document.getElementById('shelter-' + count);
+        shelter.style.visibility = 'visible';
+        animalElement.setAttribute('src', animal.imageURL);
+        animalesGanados.push(animal);
+    });
+}
 
 
